@@ -1,0 +1,1010 @@
+Archive member included to satisfy reference by file (symbol)
+
+./User/libCH56x_usb30.a(usb30_int.o)
+                              ./build/CH56x_usb30.o (USB30_Device_Init)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+                              ./build/CH56x_usb30.o (memcpy)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+                              ./build/CH56x_usb30.o (puts)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o) (__swbuf_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o) (__swsetup_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o) (_fflush_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o) (__sinit)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o) (_fwalk)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o) (_global_impure_ptr)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o) (__retarget_lock_init_recursive)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o) (__smakebuf_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o) (memset)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o) (_free_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o) (_malloc_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o) (__sread)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o) (_write_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o) (_close_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o) (_fstat_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o) (_isatty_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o) (_lseek_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o) (_read_r)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o) (errno)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o) (_close)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o) (_fstat)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o) (_isatty)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o) (_lseek)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o) (_read)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o) (_sbrk)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o) (_write)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o) (_conv_stat)
+/home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+                              /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o) (__errno)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 ./build/Main.o
+ .data          0x0000000000000000        0x0 ./build/Main.o
+ .bss           0x0000000000000000        0x0 ./build/Main.o
+ .text.DebugInit
+                0x0000000000000000       0x52 ./build/Main.o
+ .text          0x0000000000000000        0x0 ./build/CH56x_sys.o
+ .data          0x0000000000000000        0x0 ./build/CH56x_sys.o
+ .bss           0x0000000000000000        0x0 ./build/CH56x_sys.o
+ .text.SYS_GetInfoSta
+                0x0000000000000000       0x12 ./build/CH56x_sys.o
+ .text.SYS_ResetExecute
+                0x0000000000000000       0x26 ./build/CH56x_sys.o
+ .text.WWDG_ITCfg
+                0x0000000000000000       0x42 ./build/CH56x_sys.o
+ .text.WWDG_ResetCfg
+                0x0000000000000000       0x42 ./build/CH56x_sys.o
+ .text.WWDG_ClearFlag
+                0x0000000000000000       0x26 ./build/CH56x_sys.o
+ .text          0x0000000000000000        0x0 ./build/CH56x_timer.o
+ .data          0x0000000000000000        0x0 ./build/CH56x_timer.o
+ .bss           0x0000000000000000        0x0 ./build/CH56x_timer.o
+ .text.TMR1_TimerInit
+                0x0000000000000000       0x16 ./build/CH56x_timer.o
+ .text.TMR2_TimerInit
+                0x0000000000000000       0x16 ./build/CH56x_timer.o
+ .text.TMR0_EXTSignalCounterInit
+                0x0000000000000000       0x14 ./build/CH56x_timer.o
+ .text.TMR1_EXTSignalCounterInit
+                0x0000000000000000       0x16 ./build/CH56x_timer.o
+ .text.TMR2_EXTSignalCounterInit
+                0x0000000000000000       0x16 ./build/CH56x_timer.o
+ .text.TMR0_PWMInit
+                0x0000000000000000       0x1e ./build/CH56x_timer.o
+ .text.TMR1_PWMInit
+                0x0000000000000000       0x1e ./build/CH56x_timer.o
+ .text.TMR2_PWMInit
+                0x0000000000000000       0x1e ./build/CH56x_timer.o
+ .text.TMR0_CapInit
+                0x0000000000000000       0x1a ./build/CH56x_timer.o
+ .text.TMR1_CapInit
+                0x0000000000000000       0x1a ./build/CH56x_timer.o
+ .text.TMR2_CapInit
+                0x0000000000000000       0x1a ./build/CH56x_timer.o
+ .text.TMR1_DMACfg
+                0x0000000000000000       0x36 ./build/CH56x_timer.o
+ .text.TMR2_DMACfg
+                0x0000000000000000       0x36 ./build/CH56x_timer.o
+ .text          0x0000000000000000        0x0 ./build/CH56x_usb30.o
+ .data          0x0000000000000000        0x0 ./build/CH56x_usb30.o
+ .bss           0x0000000000000000        0x0 ./build/CH56x_usb30.o
+ .text.USB30_BUS_RESET
+                0x0000000000000000       0x56 ./build/CH56x_usb30.o
+ .sdata.GetStatus
+                0x0000000000000000        0x2 ./build/CH56x_usb30.o
+ .rodata.CompactId
+                0x0000000000000000       0x28 ./build/CH56x_usb30.o
+ .rodata.MSOS20DescriptorSet
+                0x0000000000000000       0x48 ./build/CH56x_usb30.o
+ .text          0x0000000000000000        0x0 ./build/CH56x_usb20.o
+ .data          0x0000000000000000        0x0 ./build/CH56x_usb20.o
+ .bss           0x0000000000000000        0x0 ./build/CH56x_usb20.o
+ .text.USB20_Device_Setaddress
+                0x0000000000000000        0xe ./build/CH56x_usb20.o
+ .text.U20_NonStandard_Request_Deal
+                0x0000000000000000        0x4 ./build/CH56x_usb20.o
+ .text.U20_Endp0_IN_Callback
+                0x0000000000000000       0xa0 ./build/CH56x_usb20.o
+ .DMADATA       0x0000000000000000       0x10 ./build/CH56x_usb20.o
+ .sbss.seq_num  0x0000000000000000        0x4 ./build/CH56x_usb20.o
+ .text          0x0000000000000000        0x0 ./build/CH56x_clk.o
+ .data          0x0000000000000000        0x0 ./build/CH56x_clk.o
+ .bss           0x0000000000000000        0x0 ./build/CH56x_clk.o
+ .text.GetSysClock
+                0x0000000000000000       0x4e ./build/CH56x_clk.o
+ .text          0x0000000000000000        0x0 ./build/startup_CH56x.o
+ .data          0x0000000000000000        0x0 ./build/startup_CH56x.o
+ .bss           0x0000000000000000        0x0 ./build/startup_CH56x.o
+ .bss           0x0000000000000000        0x0 ./User/libCH56x_usb30.a(usb30_int.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .text.__swbuf  0x0000000000000000       0x14 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .text.fflush   0x0000000000000000       0x2c /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text.__fp_lock
+                0x0000000000000000       0x2a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text.__fp_unlock
+                0x0000000000000000       0x2a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text._cleanup
+                0x0000000000000000       0x10 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text.__fp_lock_all
+                0x0000000000000000       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text.__fp_unlock_all
+                0x0000000000000000       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .text._fwalk   0x0000000000000000       0x62 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x0000000000000000        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x0000000000000000        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x0000000000000000        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x0000000000000000        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x0000000000000000        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x0000000000000000        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x0000000000000000        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .sbss.__lock___arc4random_mutex
+                0x0000000000000000        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .sbss.__lock___dd_hash_mutex
+                0x0000000000000000        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .sbss.__lock___tz_mutex
+                0x0000000000000000        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .sbss.__lock___env_recursive_mutex
+                0x0000000000000000        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .sbss.__lock___at_quick_exit_mutex
+                0x0000000000000000        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .sbss.__lock___atexit_recursive_mutex
+                0x0000000000000000        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .text.__seofread
+                0x0000000000000000        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x2c /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000      0x10c /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+ .text          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+ .data          0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+ .bss           0x0000000000000000        0x0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000070000 xr
+RAM              0x0000000020000000 0x0000000000004000 xrw
+RAMX             0x0000000020020000 0x0000000000018000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD User/libCH56x_usb30.a
+LOAD ./build/Main.o
+LOAD ./build/CH56x_sys.o
+LOAD ./build/CH56x_timer.o
+LOAD ./build/CH56x_usb30.o
+LOAD ./build/CH56x_usb20.o
+LOAD ./build/CH56x_clk.o
+LOAD ./build/startup_CH56x.o
+LOAD ./User/libCH56x_usb30.a
+LOAD /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a
+LOAD /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a
+LOAD /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a
+START GROUP
+LOAD /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a
+LOAD /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a
+LOAD /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a
+END GROUP
+                0x0000000000000800                __stack_size = 0x800
+                [!provide]                        PROVIDE (_stack_size = __stack_size)
+
+.init           0x0000000000000000        0x4
+                0x0000000000000000                _sinit = .
+                0x0000000000000000                . = ALIGN (0x4)
+ *(SORT_NONE(.init))
+ .init          0x0000000000000000        0x4 ./build/startup_CH56x.o
+                0x0000000000000000                _start
+                0x0000000000000004                . = ALIGN (0x4)
+                0x0000000000000004                _einit = .
+
+.vector         0x0000000000000004       0xbc
+ *(.vector)
+ .vector        0x0000000000000004       0x94 ./build/startup_CH56x.o
+                0x00000000000000c0                . = ALIGN (0x40)
+ *fill*         0x0000000000000098       0x28 
+
+.text           0x00000000000000c0     0x3210
+                0x00000000000000c0                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000000000c0      0x420 ./User/libCH56x_usb30.a(usb30_int.o)
+                0x00000000000000c0                USB30_Device_Init
+                0x0000000000000156                USB30_Lib_Getversion
+                0x000000000000015a                USB30_ISO_Setendp
+                0x0000000000000194                USB30_ISO_Setdelay
+                0x000000000000019c                USB30_ITP_Enable
+                0x00000000000001be                USB30_OUT_Status
+                0x00000000000001e4                USB30_OUT_Set
+                0x00000000000001fe                USB30_OUT_ClearIT
+                0x0000000000000216                USB30_OUT_ClearPendingIT
+                0x000000000000022c                USB30_OUT_ITflag
+                0x0000000000000242                USB30_IN_Set
+                0x0000000000000266                USB30_IN_ClearPendingIT
+                0x000000000000027c                USB30_IN_ClearIT
+                0x0000000000000294                USB30_IN_ITflag
+                0x00000000000002aa                USB30_IN_Nump
+                0x00000000000002be                USB30_Send_ERDY
+                0x00000000000002e8                USB30_Device_Setaddress
+                0x00000000000002fe                USB30_Switch_Powermode
+                0x0000000000000316                USB30_getDevAddress
+                0x0000000000000320                USB30_Setup_OutData
+                0x000000000000032c                USB30_IRQHandler
+ .text          0x00000000000004e0       0x16 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+                0x00000000000004e0                memcpy
+ .text          0x00000000000004f6       0x10 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+                0x00000000000004f6                memset
+ *(.text.*)
+ .text.startup.main
+                0x0000000000000506       0x8e ./build/Main.o
+                0x0000000000000506                main
+ .text.Delay_Init
+                0x0000000000000594       0x22 ./build/CH56x_sys.o
+                0x0000000000000594                Delay_Init
+ .text.mDelayuS
+                0x00000000000005b6       0x2e ./build/CH56x_sys.o
+                0x00000000000005b6                mDelayuS
+ .text.mDelaymS
+                0x00000000000005e4       0x2e ./build/CH56x_sys.o
+                0x00000000000005e4                mDelaymS
+ .text.TMR0_TimerInit
+                0x0000000000000612       0x14 ./build/CH56x_timer.o
+                0x0000000000000612                TMR0_TimerInit
+ .text.USB30D_init.part.0
+                0x0000000000000626       0xd2 ./build/CH56x_usb30.o
+ .text.USB30D_init
+                0x00000000000006f8       0x3c ./build/CH56x_usb30.o
+                0x00000000000006f8                USB30D_init
+ .text.USB30_NonStandardReq
+                0x0000000000000734       0x9a ./build/CH56x_usb30.o
+                0x0000000000000734                USB30_NonStandardReq
+ .text.USB30_StandardReq
+                0x00000000000007ce      0x1c6 ./build/CH56x_usb30.o
+                0x00000000000007ce                USB30_StandardReq
+ .text.EP0_IN_Callback
+                0x0000000000000994       0x64 ./build/CH56x_usb30.o
+                0x0000000000000994                EP0_IN_Callback
+ .text.EP0_OUT_Callback
+                0x00000000000009f8        0x4 ./build/CH56x_usb30.o
+                0x00000000000009f8                EP0_OUT_Callback
+ .text.USB30_Setup_Status
+                0x00000000000009fc       0x14 ./build/CH56x_usb30.o
+                0x00000000000009fc                USB30_Setup_Status
+ .text.USBSS_IRQHandler
+                0x0000000000000a10        0x2 ./build/CH56x_usb30.o
+                0x0000000000000a10                USBSS_IRQHandler
+ .text.TMR0_IRQHandler
+                0x0000000000000a12       0xf8 ./build/CH56x_usb30.o
+                0x0000000000000a12                TMR0_IRQHandler
+ .text.LINK_IRQHandler
+                0x0000000000000b0a      0x386 ./build/CH56x_usb30.o
+                0x0000000000000b0a                LINK_IRQHandler
+ .text.EP1_IN_Callback
+                0x0000000000000e90       0xb0 ./build/CH56x_usb30.o
+                0x0000000000000e90                EP1_IN_Callback
+ .text.EP2_IN_Callback
+                0x0000000000000f40       0xb8 ./build/CH56x_usb30.o
+                0x0000000000000f40                EP2_IN_Callback
+ .text.EP3_IN_Callback
+                0x0000000000000ff8       0xb0 ./build/CH56x_usb30.o
+                0x0000000000000ff8                EP3_IN_Callback
+ .text.EP4_IN_Callback
+                0x00000000000010a8       0xb2 ./build/CH56x_usb30.o
+                0x00000000000010a8                EP4_IN_Callback
+ .text.EP5_IN_Callback
+                0x000000000000115a       0xb2 ./build/CH56x_usb30.o
+                0x000000000000115a                EP5_IN_Callback
+ .text.EP6_IN_Callback
+                0x000000000000120c       0xb2 ./build/CH56x_usb30.o
+                0x000000000000120c                EP6_IN_Callback
+ .text.EP7_IN_Callback
+                0x00000000000012be       0xb2 ./build/CH56x_usb30.o
+                0x00000000000012be                EP7_IN_Callback
+ .text.EP1_OUT_Callback
+                0x0000000000001370       0xbe ./build/CH56x_usb30.o
+                0x0000000000001370                EP1_OUT_Callback
+ .text.EP2_OUT_Callback
+                0x000000000000142e       0xb6 ./build/CH56x_usb30.o
+                0x000000000000142e                EP2_OUT_Callback
+ .text.EP3_OUT_Callback
+                0x00000000000014e4       0xbe ./build/CH56x_usb30.o
+                0x00000000000014e4                EP3_OUT_Callback
+ .text.EP4_OUT_Callback
+                0x00000000000015a2       0xbe ./build/CH56x_usb30.o
+                0x00000000000015a2                EP4_OUT_Callback
+ .text.EP5_OUT_Callback
+                0x0000000000001660       0xbe ./build/CH56x_usb30.o
+                0x0000000000001660                EP5_OUT_Callback
+ .text.EP6_OUT_Callback
+                0x000000000000171e       0xbe ./build/CH56x_usb30.o
+                0x000000000000171e                EP6_OUT_Callback
+ .text.EP7_OUT_Callback
+                0x00000000000017dc       0xbe ./build/CH56x_usb30.o
+                0x00000000000017dc                EP7_OUT_Callback
+ .text.USB30_ITP_Callback
+                0x000000000000189a        0x2 ./build/CH56x_usb30.o
+                0x000000000000189a                USB30_ITP_Callback
+ .text.USB20_Endp_Init
+                0x000000000000189c      0x104 ./build/CH56x_usb20.o
+                0x000000000000189c                USB20_Endp_Init
+ .text.USB20_Device_Init
+                0x00000000000019a0       0x24 ./build/CH56x_usb20.o
+                0x00000000000019a0                USB20_Device_Init
+ .text.U20_Standard_Request_Deal
+                0x00000000000019c4      0x356 ./build/CH56x_usb20.o
+                0x00000000000019c4                U20_Standard_Request_Deal
+ .text.USBHS_IRQHandler
+                0x0000000000001d1a      0x32a ./build/CH56x_usb20.o
+                0x0000000000001d1a                USBHS_IRQHandler
+ .text.SystemInit
+                0x0000000000002044      0x154 ./build/CH56x_clk.o
+                0x0000000000002044                SystemInit
+ .text.vector_handler
+                0x0000000000002198       0x32 ./build/startup_CH56x.o
+                0x0000000000002198                NMI_Handler
+                0x000000000000219a                HardFault_Handler
+                0x000000000000219c                SysTick_Handler
+                0x000000000000219e                SW_Handler
+                0x00000000000021a0                WDOG_IRQHandler
+                0x00000000000021a4                GPIO_IRQHandler
+                0x00000000000021a6                SPI0_IRQHandler
+                0x00000000000021ac                TMR1_IRQHandler
+                0x00000000000021ae                TMR2_IRQHandler
+                0x00000000000021b0                UART0_IRQHandler
+                0x00000000000021b4                EMMC_IRQHandler
+                0x00000000000021b6                DVP_IRQHandler
+                0x00000000000021b8                HSPI_IRQHandler
+                0x00000000000021ba                SPI1_IRQHandler
+                0x00000000000021bc                UART1_IRQHandler
+                0x00000000000021be                UART2_IRQHandler
+                0x00000000000021c0                UART3_IRQHandler
+                0x00000000000021c2                SERDES_IRQHandler
+                0x00000000000021c4                ETH_IRQHandler
+                0x00000000000021c6                PMT_IRQHandler
+                0x00000000000021c8                ECDC_IRQHandler
+ .text.handle_reset
+                0x00000000000021ca       0x8e ./build/startup_CH56x.o
+                0x00000000000021ca                handle_reset
+ .text._puts_r  0x0000000000002258      0x10e /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+                0x0000000000002258                _puts_r
+ .text.puts     0x0000000000002366        0xc /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+                0x0000000000002366                puts
+ .text.__swbuf_r
+                0x0000000000002372       0xc0 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+                0x0000000000002372                __swbuf_r
+ .text.__swsetup_r
+                0x0000000000002432       0xfe /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+                0x0000000000002432                __swsetup_r
+ .text.__sflush_r
+                0x0000000000002530      0x138 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+                0x0000000000002530                __sflush_r
+ .text._fflush_r
+                0x0000000000002668       0x88 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+                0x0000000000002668                _fflush_r
+ .text.std      0x00000000000026f0       0x6a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text._cleanup_r
+                0x000000000000275a        0xa /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x000000000000275a                _cleanup_r
+ .text.__sfmoreglue
+                0x0000000000002764       0x46 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002764                __sfmoreglue
+ .text.__sfp_lock_acquire
+                0x00000000000027aa        0x6 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000027aa                __sfp_lock_acquire
+ .text.__sfp_lock_release
+                0x00000000000027b0        0x6 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000027b0                __sfp_lock_release
+ .text.__sinit_lock_acquire
+                0x00000000000027b6        0x6 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000027b6                __sinit_lock_acquire
+ .text.__sinit_lock_release
+                0x00000000000027bc        0x6 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000027bc                __sinit_lock_release
+ .text.__sinit  0x00000000000027c2       0x68 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000027c2                __sinit
+ .text.__sfp    0x000000000000282a       0xa6 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x000000000000282a                __sfp
+ .text._fwalk_reent
+                0x00000000000028d0       0x6a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+                0x00000000000028d0                _fwalk_reent
+ .text.__retarget_lock_init_recursive
+                0x000000000000293a        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x000000000000293a                __retarget_lock_init_recursive
+ .text.__retarget_lock_acquire_recursive
+                0x000000000000293c        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x000000000000293c                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x000000000000293e        0x2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x000000000000293e                __retarget_lock_release_recursive
+ .text.__swhatbuf_r
+                0x0000000000002940       0x5a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+                0x0000000000002940                __swhatbuf_r
+ .text.__smakebuf_r
+                0x000000000000299a       0xa2 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+                0x000000000000299a                __smakebuf_r
+ .text._free_r  0x0000000000002a3c       0x9e /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000002a3c                _free_r
+ .text.sbrk_aligned
+                0x0000000000002ada       0x54 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .text._malloc_r
+                0x0000000000002b2e      0x108 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000002b2e                _malloc_r
+ .text._sbrk_r  0x0000000000002c36       0x26 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000002c36                _sbrk_r
+ .text.__sread  0x0000000000002c5c       0x30 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000002c5c                __sread
+ .text.__swrite
+                0x0000000000002c8c       0x4e /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000002c8c                __swrite
+ .text.__sseek  0x0000000000002cda       0x36 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000002cda                __sseek
+ .text.__sclose
+                0x0000000000002d10        0x6 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000002d10                __sclose
+ .text._write_r
+                0x0000000000002d16       0x2a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+                0x0000000000002d16                _write_r
+ .text._close_r
+                0x0000000000002d40       0x26 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+                0x0000000000002d40                _close_r
+ .text._fstat_r
+                0x0000000000002d66       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+                0x0000000000002d66                _fstat_r
+ .text._isatty_r
+                0x0000000000002d8e       0x26 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+                0x0000000000002d8e                _isatty_r
+ .text._lseek_r
+                0x0000000000002db4       0x2a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+                0x0000000000002db4                _lseek_r
+ .text.__malloc_lock
+                0x0000000000002dde        0x8 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                0x0000000000002dde                __malloc_lock
+ .text.__malloc_unlock
+                0x0000000000002de6        0x8 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                0x0000000000002de6                __malloc_unlock
+ .text._read_r  0x0000000000002dee       0x2a /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+                0x0000000000002dee                _read_r
+ .text._close   0x0000000000002e18       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+                0x0000000000002e18                _close
+ .text._fstat   0x0000000000002e40       0x36 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+                0x0000000000002e40                _fstat
+ .text._isatty  0x0000000000002e76       0x1e /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+                0x0000000000002e76                _isatty
+ .text._lseek   0x0000000000002e94       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+                0x0000000000002e94                _lseek
+ .text._read    0x0000000000002ebc       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+                0x0000000000002ebc                _read
+ .text._sbrk    0x0000000000002ee4       0x46 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+                0x0000000000002ee4                _sbrk
+ .text._write   0x0000000000002f2a       0x28 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+                0x0000000000002f2a                _write
+ .text._conv_stat
+                0x0000000000002f52       0x4e /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+                0x0000000000002f52                _conv_stat
+ .text.__errno  0x0000000000002fa0        0xa /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+                0x0000000000002fa0                __errno
+ *(.rodata)
+ *(.rodata*)
+ *fill*         0x0000000000002faa        0x2 
+ .rodata.USB30_BUS_RESET.str1.4
+                0x0000000000002fac        0x9 ./build/CH56x_usb30.o
+ *fill*         0x0000000000002fb5        0x3 
+ .rodata.PropertyHeader
+                0x0000000000002fb8       0x8e ./build/CH56x_usb30.o
+                0x0000000000002fb8                PropertyHeader
+ *fill*         0x0000000000003046        0x2 
+ .rodata.BOSDescriptor
+                0x0000000000003048       0x16 ./build/CH56x_usb30.o
+                0x0000000000003048                BOSDescriptor
+ *fill*         0x000000000000305e        0x2 
+ .rodata.OSStringDescriptor
+                0x0000000000003060       0x12 ./build/CH56x_usb30.o
+                0x0000000000003060                OSStringDescriptor
+ *fill*         0x0000000000003072        0x2 
+ .rodata.StringProduct
+                0x0000000000003074       0x26 ./build/CH56x_usb30.o
+                0x0000000000003074                StringProduct
+ *fill*         0x000000000000309a        0x2 
+ .rodata.SS_ConfigDescriptor
+                0x000000000000309c       0xc8 ./build/CH56x_usb30.o
+                0x000000000000309c                SS_ConfigDescriptor
+ .rodata.SS_DeviceDescriptor
+                0x0000000000003164       0x12 ./build/CH56x_usb30.o
+                0x0000000000003164                SS_DeviceDescriptor
+ *fill*         0x0000000000003176        0x2 
+ .rodata.U20_Standard_Request_Deal
+                0x0000000000003178       0x30 ./build/CH56x_usb20.o
+ .rodata.hs_bos_descriptor
+                0x00000000000031a8       0x16 ./build/CH56x_usb20.o
+                0x00000000000031a8                hs_bos_descriptor
+ *fill*         0x00000000000031be        0x2 
+ .rodata.hs_string_descriptor2
+                0x00000000000031c0       0x26 ./build/CH56x_usb20.o
+                0x00000000000031c0                hs_string_descriptor2
+ *fill*         0x00000000000031e6        0x2 
+ .rodata.hs_config_descriptor
+                0x00000000000031e8       0x74 ./build/CH56x_usb20.o
+                0x00000000000031e8                hs_config_descriptor
+ .rodata.hs_device_descriptor
+                0x000000000000325c       0x12 ./build/CH56x_usb20.o
+                0x000000000000325c                hs_device_descriptor
+ *fill*         0x000000000000326e        0x2 
+ .rodata.__sf_fake_stderr
+                0x0000000000003270       0x20 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000003270                __sf_fake_stderr
+ .rodata.__sf_fake_stdout
+                0x0000000000003290       0x20 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000003290                __sf_fake_stdout
+ .rodata.__sf_fake_stdin
+                0x00000000000032b0       0x20 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000032b0                __sf_fake_stdin
+ *(.glue_7)
+ *(.glue_7t)
+ *(.gnu.linkonce.t.*)
+                0x00000000000032d0                . = ALIGN (0x4)
+
+.rela.dyn       0x00000000000032d0        0x0
+ .rela.init     0x00000000000032d0        0x0 ./build/Main.o
+ .rela.vector   0x00000000000032d0        0x0 ./build/Main.o
+ .rela.text.handle_reset
+                0x00000000000032d0        0x0 ./build/Main.o
+
+.fini           0x00000000000032d0        0x0
+ *(SORT_NONE(.fini))
+                0x00000000000032d0                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (_eitcm = .)
+
+.preinit_array  0x00000000000032d0        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00000000000032d0        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00000000000032d0        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.dalign         0x0000000020000000        0x0 load address 0x00000000000032d0
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_data_vma = .)
+
+.dlalign        0x00000000000032d0        0x0
+                0x00000000000032d0                . = ALIGN (0x4)
+                0x00000000000032d0                PROVIDE (_data_lma = .)
+
+.data           0x0000000020000000       0xd4 load address 0x00000000000032d0
+ *(.gnu.linkonce.r.*)
+ *(.data .data.*)
+ .data.StringSerial
+                0x0000000020000000       0x16 ./build/CH56x_usb30.o
+                0x0000000020000000                StringSerial
+ *fill*         0x0000000020000016        0x2 
+ .data          0x0000000020000018       0x38 ./User/libCH56x_usb30.a(usb30_int.o)
+                0x0000000020000018                pEpInt_IN
+                0x0000000020000034                pEpInt_OUT
+ .data.impure_data
+                0x0000000020000050       0x60 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ *(.gnu.linkonce.d.*)
+                0x00000000200000b0                . = ALIGN (0x8)
+                0x00000000200008b0                PROVIDE (__global_pointer$ = (. + 0x800))
+ *(.sdata .sdata.*)
+ .sdata.U20_EndpnMaxSize
+                0x00000000200000b0        0x2 ./build/CH56x_usb20.o
+                0x00000000200000b0                U20_EndpnMaxSize
+ *fill*         0x00000000200000b2        0x2 
+ .sdata._impure_ptr
+                0x00000000200000b4        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+                0x00000000200000b4                _impure_ptr
+ *(.sdata2.*)
+ *(.gnu.linkonce.s.*)
+                0x00000000200000b8                . = ALIGN (0x8)
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+ .srodata.StringVendor
+                0x00000000200000b8        0x8 ./build/CH56x_usb30.o
+                0x00000000200000b8                StringVendor
+ .srodata.StringLangID
+                0x00000000200000c0        0x4 ./build/CH56x_usb30.o
+                0x00000000200000c0                StringLangID
+ .srodata.hs_string_descriptor1
+                0x00000000200000c4        0x8 ./build/CH56x_usb20.o
+                0x00000000200000c4                hs_string_descriptor1
+ .srodata.hs_string_descriptor0
+                0x00000000200000cc        0x4 ./build/CH56x_usb20.o
+                0x00000000200000cc                hs_string_descriptor0
+ .srodata._global_impure_ptr
+                0x00000000200000d0        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+                0x00000000200000d0                _global_impure_ptr
+                0x00000000200000d4                . = ALIGN (0x4)
+                0x00000000200000d4                PROVIDE (_edata = .)
+
+.bss            0x00000000200000d4       0x48 load address 0x00000000000033a4
+                0x00000000200000d4                . = ALIGN (0x4)
+                0x00000000200000d4                PROVIDE (_sbss = .)
+ *(.sbss*)
+ .sbss.p_ms     0x00000000200000d4        0x2 ./build/CH56x_sys.o
+ .sbss.p_us     0x00000000200000d6        0x1 ./build/CH56x_sys.o
+ *fill*         0x00000000200000d7        0x1 
+ .sbss.pDescr   0x00000000200000d8        0x4 ./build/CH56x_usb30.o
+ .sbss.SetupReqCode
+                0x00000000200000dc        0x1 ./build/CH56x_usb30.o
+ *fill*         0x00000000200000dd        0x3 
+ .sbss.SetupLen
+                0x00000000200000e0        0x4 ./build/CH56x_usb30.o
+ .sbss.link_sta
+                0x00000000200000e4        0x1 ./build/CH56x_usb30.o
+                0x00000000200000e4                link_sta
+ .sbss.tx_lmp_port
+                0x00000000200000e5        0x1 ./build/CH56x_usb30.o
+                0x00000000200000e5                tx_lmp_port
+ *fill*         0x00000000200000e6        0x2 
+ .sbss.pDescr   0x00000000200000e8        0x4 ./build/CH56x_usb20.o
+ .sbss.SetupReq
+                0x00000000200000ec        0x1 ./build/CH56x_usb20.o
+ .sbss.SetupReqType
+                0x00000000200000ed        0x1 ./build/CH56x_usb20.o
+ *fill*         0x00000000200000ee        0x2 
+ .sbss.g_devInfo
+                0x00000000200000f0        0x5 ./build/CH56x_usb20.o
+                0x00000000200000f0                g_devInfo
+ *fill*         0x00000000200000f5        0x1 
+ .sbss.SetupLen
+                0x00000000200000f6        0x2 ./build/CH56x_usb20.o
+                0x00000000200000f6                SetupLen
+ .sbss.SetupReqLen
+                0x00000000200000f8        0x2 ./build/CH56x_usb20.o
+                0x00000000200000f8                SetupReqLen
+ *fill*         0x00000000200000fa        0x2 
+ .sbss          0x00000000200000fc        0x4 ./User/libCH56x_usb30.a(usb30_int.o)
+ .sbss.__lock___malloc_recursive_mutex
+                0x0000000020000100        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000020000100                __lock___malloc_recursive_mutex
+ *fill*         0x0000000020000101        0x3 
+ .sbss.__lock___sfp_recursive_mutex
+                0x0000000020000104        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000020000104                __lock___sfp_recursive_mutex
+ *fill*         0x0000000020000105        0x3 
+ .sbss.__lock___sinit_recursive_mutex
+                0x0000000020000108        0x1 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000020000108                __lock___sinit_recursive_mutex
+ *fill*         0x0000000020000109        0x3 
+ .sbss.__malloc_sbrk_start
+                0x000000002000010c        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x000000002000010c                __malloc_sbrk_start
+ .sbss.__malloc_free_list
+                0x0000000020000110        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000110                __malloc_free_list
+ .sbss.errno    0x0000000020000114        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+                0x0000000020000114                errno
+ .sbss.heap_end.0
+                0x0000000020000118        0x4 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ *(.gnu.linkonce.sb.*)
+ *(.bss*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON*)
+                0x000000002000011c                . = ALIGN (0x4)
+                0x000000002000011c                PROVIDE (_ebss = .)
+                [!provide]                        PROVIDE (_end = _ebss)
+                [!provide]                        PROVIDE (end = .)
+
+.DMADATA        0x0000000020020000     0x7200 load address 0x00000000000033a4
+                0x0000000020020000                . = ALIGN (0x10)
+                0x0000000020020000                PROVIDE (_dmadata_start = .)
+ *(.dmadata*)
+ *(.dmadata.*)
+                0x0000000020020000                . = ALIGN (0x10)
+                0x0000000020020000                PROVIDE (_dmadata_end = .)
+ .DMADATA       0x0000000020020000     0x7200 ./build/CH56x_usb30.o
+                0x0000000020020000                endp7RTbuff
+                0x0000000020021000                endp6RTbuff
+                0x0000000020022000                endp5RTbuff
+                0x0000000020023000                endp4RTbuff
+                0x0000000020024000                endp3RTbuff
+                0x0000000020025000                endp2RTbuff
+                0x0000000020026000                endp1RTbuff
+                0x0000000020027000                endp0RTbuff
+
+.stack          0x0000000020003800      0x800
+                0x0000000020003800                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_susrstack = .)
+                0x0000000020004000                . = (. + __stack_size)
+ *fill*         0x0000000020003800      0x800 
+                0x0000000020004000                PROVIDE (_eusrstack = .)
+OUTPUT(./build/HydraUSB3_USB.elf elf32-littleriscv)
+
+.comment        0x0000000000000000       0x67
+ .comment       0x0000000000000000       0x34 ./build/Main.o
+                                         0x35 (size before relaxing)
+ .comment       0x0000000000000034       0x35 ./build/CH56x_sys.o
+ .comment       0x0000000000000034       0x35 ./build/CH56x_timer.o
+ .comment       0x0000000000000034       0x35 ./build/CH56x_usb30.o
+ .comment       0x0000000000000034       0x35 ./build/CH56x_usb20.o
+ .comment       0x0000000000000034       0x35 ./build/CH56x_clk.o
+ .comment       0x0000000000000034       0x33 ./User/libCH56x_usb30.a(usb30_int.o)
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+ .comment       0x0000000000000067       0x35 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+
+.riscv.attributes
+                0x0000000000000000       0x38
+ .riscv.attributes
+                0x0000000000000000       0x34 ./build/Main.o
+ .riscv.attributes
+                0x0000000000000034       0x34 ./build/CH56x_sys.o
+ .riscv.attributes
+                0x0000000000000068       0x34 ./build/CH56x_timer.o
+ .riscv.attributes
+                0x000000000000009c       0x34 ./build/CH56x_usb30.o
+ .riscv.attributes
+                0x00000000000000d0       0x34 ./build/CH56x_usb20.o
+ .riscv.attributes
+                0x0000000000000104       0x34 ./build/CH56x_clk.o
+ .riscv.attributes
+                0x0000000000000138       0x36 ./build/startup_CH56x.o
+ .riscv.attributes
+                0x000000000000016e       0x29 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+ .riscv.attributes
+                0x0000000000000197       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .riscv.attributes
+                0x00000000000001c2       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .riscv.attributes
+                0x00000000000001ed       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .riscv.attributes
+                0x0000000000000218       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .riscv.attributes
+                0x0000000000000243       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .riscv.attributes
+                0x000000000000026e       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .riscv.attributes
+                0x0000000000000299       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .riscv.attributes
+                0x00000000000002c4       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .riscv.attributes
+                0x00000000000002ef       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .riscv.attributes
+                0x000000000000031a       0x29 /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+ .riscv.attributes
+                0x0000000000000343       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .riscv.attributes
+                0x000000000000036e       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .riscv.attributes
+                0x0000000000000399       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .riscv.attributes
+                0x00000000000003c4       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .riscv.attributes
+                0x00000000000003ef       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .riscv.attributes
+                0x000000000000041a       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .riscv.attributes
+                0x0000000000000445       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .riscv.attributes
+                0x0000000000000470       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .riscv.attributes
+                0x000000000000049b       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .riscv.attributes
+                0x00000000000004c6       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .riscv.attributes
+                0x00000000000004f1       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .riscv.attributes
+                0x000000000000051c       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .riscv.attributes
+                0x0000000000000547       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .riscv.attributes
+                0x0000000000000572       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .riscv.attributes
+                0x000000000000059d       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .riscv.attributes
+                0x00000000000005c8       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .riscv.attributes
+                0x00000000000005f3       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .riscv.attributes
+                0x000000000000061e       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .riscv.attributes
+                0x0000000000000649       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_write.o)
+ .riscv.attributes
+                0x0000000000000674       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+ .riscv.attributes
+                0x000000000000069f       0x2b /home/maddocks/.local/xPacks/@xpack-dev-tools/riscv-none-elf-gcc/12.2.0-3.1/.content/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+
+.debug_info     0x0000000000000000     0x1376
+ .debug_info    0x0000000000000000     0x1376 ./User/libCH56x_usb30.a(usb30_int.o)
+
+.debug_abbrev   0x0000000000000000      0x32d
+ .debug_abbrev  0x0000000000000000      0x32d ./User/libCH56x_usb30.a(usb30_int.o)
+
+.debug_loc      0x0000000000000000      0x4b3
+ .debug_loc     0x0000000000000000      0x4b3 ./User/libCH56x_usb30.a(usb30_int.o)
+
+.debug_aranges  0x0000000000000000       0x20
+ .debug_aranges
+                0x0000000000000000       0x20 ./User/libCH56x_usb30.a(usb30_int.o)
+
+.debug_line     0x0000000000000000      0xfc1
+ .debug_line    0x0000000000000000      0xfc1 ./User/libCH56x_usb30.a(usb30_int.o)
+
+.debug_str      0x0000000000000000      0xa8e
+ .debug_str     0x0000000000000000      0xa8e ./User/libCH56x_usb30.a(usb30_int.o)
+                                        0xb0c (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x188
+ .debug_frame   0x0000000000000000      0x188 ./User/libCH56x_usb30.a(usb30_int.o)
