@@ -178,7 +178,7 @@ SECTIONS
         PROVIDE(_susrstack = . );
         . = . + __stack_size;
         PROVIDE( _eusrstack = .);
-    } >STACK
+    } >RAM
 }
 
 
