@@ -15,7 +15,7 @@ MEMORY
 {
 	FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 448K
 	RAM (xrw) : ORIGIN = 0x20000000, LENGTH = 16K - _stack_size
-	STACK (xrw) : ORIGIN = 0x20000000 - _stack_size, LENGTH = _stack_size
+	STACK (xrw) : ORIGIN = 0x20004000 - _stack_size, LENGTH = _stack_size
 	RAMX (xrw) : ORIGIN = 0x20020000, LENGTH = 32K
 }
 
