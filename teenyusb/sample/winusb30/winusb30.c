@@ -37,6 +37,7 @@
 #include "teeny_usb_util.h"
 #include "string.h"
 #include "CH56x_common.h"
+#include "../boards/ch565w_evk/board_config.h"
 
 #define  TX_EP   1
 #define  RX_EP   1
@@ -82,7 +83,7 @@ int main(void)
   board_init();
   TUSB_LOGD("Custom bulk device begin\n");
   SetDescriptor(&g_dev, &BULK30_descriptors);
-  tusb_open_device(&g_dev, (const tusb_hardware_param_t*)&BULK20_descriptors);
+  tusb_open_device(&g_dev, (const tusb_hardware_param_t*)&BULK30_descriptors);
   while(!g_dev.config){
   }
   TUSB_LOGD("Work in %c Speed mode\n", "HFLS"[tusb_get_device_speed(&g_dev)]);

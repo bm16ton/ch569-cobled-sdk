@@ -43,7 +43,7 @@ void USB20_Device_Init(FunctionalState sta);  // USB2 device initial
 uint16_t U20_NonStandard_Request();
 uint16_t U20_Standard_Request();
 uint16_t U20_Endp0_IN_Callback(void);
-
+void USB20_Device_Setaddress(uint32_t address);
 /* Switch to USB2 even if USB3 is available */
 void USB2_force(void);
 

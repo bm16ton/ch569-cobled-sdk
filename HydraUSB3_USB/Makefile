@@ -34,6 +34,22 @@ DRV_DIR   = ../wch-ch56x-bsp/drv
 DRV_SRCS  = $(wildcard $(DRV_DIR)/*.c)
 OBJS     += $(patsubst $(DRV_DIR)/%.c,$(BUILD_DIR)/%.o,$(DRV_SRCS))
 
+CLASS_DIR   = ../class
+CLASS_SRCS  = $(wildcard $(CLASS_DIR)/*.c)
+OBJS     += $(patsubst $(CLASS_DIR)/%.c,$(BUILD_DIR)/%.o,$(CLASS_SRCS))
+
+CORE_DIR   = ../core
+CORE_SRCS  = $(wildcard $(CORE_DIR)/*.c)
+OBJS     += $(patsubst $(CORE_DIR)/%.c,$(BUILD_DIR)/%.o,$(CORE_SRCS))
+
+CDC_DIR   = ../class/cdc
+CDC_SRCS  = $(wildcard $(CDC_DIR)/tusbd_cdc.c)
+OBJS     += $(patsubst $(CDC_DIR)/%.c,$(BUILD_DIR)/%.o,$(CDC_SRCS))
+
+DRIVER_DIR   = ../driver_ch56x
+DRIVER_SRCS  = $(wildcard $(DRIVER_DIR)/*.c)
+OBJS     += $(patsubst $(DRIVER_DIR)/%.c,$(BUILD_DIR)/%.o,$(DRIVER_SRCS))
+
 BOARD_DIR   = ../wch-ch56x-bsp/board
 BOARD_SRCS  = ../wch-ch56x-bsp/board/hydrausb3_v1.c
 OBJS     += $(patsubst $(BOARD_DIR)/%.c,$(BUILD_DIR)/%.o,$(BOARD_SRCS))
@@ -61,6 +77,10 @@ INCLUDES = \
   -I"$(DRV_DIR)" \
   -I"$(BOARD_DIR)" \
   -I"$(USB_DIR)" \
+  -I"$(CDC_DIR)" \
+  -I"$(CLASS_DIR)" \
+  -I"$(CORE_DIR)" \
+  -I"$(DRIVER_DIR)" \
   -I"$(USER_DIR)"
 
 # Add inputs and outputs from these tool invocations to the build variables
@@ -102,6 +122,26 @@ $(BUILD_DIR)/%.o: ../wch-ch56x-bsp/rvmsis/%.c | $$(@D)/.
 	@echo ' '
 
 $(BUILD_DIR)/%.o: ../wch-ch56x-bsp/drv/%.c | $$(@D)/.
+	@echo 'Building file: $<'
+	$(COMPILER_PREFIX)-gcc $(C_OPTS) -c -o "$@" "$<"
+	@echo ' '
+
+$(BUILD_DIR)/%.o: ../class/%.c | $$(@D)/.
+	@echo 'Building file: $<'
+	$(COMPILER_PREFIX)-gcc $(C_OPTS) -c -o "$@" "$<"
+	@echo ' '
+
+$(BUILD_DIR)/%.o: ../core/%.c | $$(@D)/.
+	@echo 'Building file: $<'
+	$(COMPILER_PREFIX)-gcc $(C_OPTS) -c -o "$@" "$<"
+	@echo ' '
+
+$(BUILD_DIR)/%.o: ../class/cdc/%.c | $$(@D)/.
+	@echo 'Building file: $<'
+	$(COMPILER_PREFIX)-gcc $(C_OPTS) -c -o "$@" "$<"
+	@echo ' '
+
+$(BUILD_DIR)/%.o: ../driver_ch56x/%.c | $$(@D)/.
 	@echo 'Building file: $<'
 	$(COMPILER_PREFIX)-gcc $(C_OPTS) -c -o "$@" "$<"
 	@echo ' '

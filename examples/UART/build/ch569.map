@@ -727,7 +727,7 @@ Memory Configuration
 Name             Origin             Length             Attributes
 FLASH            0x0000000000000000 0x0000000000070000 xr
 RAM              0x0000000020000000 0x0000000000003800 xrw
-STACK            0x000000001ffff800 0x0000000000000800 xrw
+STACK            0x0000000020003800 0x0000000000000800 xrw
 RAMX             0x0000000020020000 0x0000000000008000 xrw
 *default*        0x0000000000000000 0xffffffffffffffff
 
@@ -784,7 +784,7 @@ END GROUP
                 0x00000000000000c0                . = ALIGN (0x40)
  *fill*         0x0000000000000098       0x28 
 
-.text           0x00000000000000c0     0x3480
+.text           0x00000000000000c0     0x3450
                 0x00000000000000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000000000c0       0x16 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
@@ -891,149 +891,149 @@ END GROUP
                 0x0000000000002358      0x100 ./build/CH56x_usb_devbulk_desc_cmd.o
                 0x0000000000002358                usb_descriptor_set_string_serial_number
  .text.startup.main
-                0x0000000000002458       0xfe ./build/Main.o
+                0x0000000000002458       0xc6 ./build/Main.o
                 0x0000000000002458                main
  .text.UART2_IRQHandler
-                0x0000000000002556       0xf6 ./build/Main.o
-                0x0000000000002556                UART2_IRQHandler
+                0x000000000000251e       0xfe ./build/Main.o
+                0x000000000000251e                UART2_IRQHandler
  .text.usb_cmd_rx
-                0x000000000000264c       0xc6 ./build/usb_cmd.o
-                0x000000000000264c                usb_cmd_rx
+                0x000000000000261c       0xc6 ./build/usb_cmd.o
+                0x000000000000261c                usb_cmd_rx
  .text.vector_handler
-                0x0000000000002712       0x32 ./build/startup_CH56x.o
-                0x0000000000002712                NMI_Handler
-                0x0000000000002714                HardFault_Handler
-                0x0000000000002716                SysTick_Handler
-                0x0000000000002718                SW_Handler
-                0x000000000000271a                WDOG_IRQHandler
-                0x000000000000271e                GPIO_IRQHandler
-                0x0000000000002720                SPI0_IRQHandler
-                0x0000000000002726                TMR1_IRQHandler
-                0x0000000000002728                TMR2_IRQHandler
-                0x000000000000272a                UART0_IRQHandler
-                0x000000000000272e                EMMC_IRQHandler
-                0x0000000000002730                DVP_IRQHandler
-                0x0000000000002732                HSPI_IRQHandler
-                0x0000000000002734                SPI1_IRQHandler
-                0x0000000000002736                UART1_IRQHandler
-                0x000000000000273a                UART3_IRQHandler
-                0x000000000000273c                SERDES_IRQHandler
-                0x000000000000273e                ETH_IRQHandler
-                0x0000000000002740                PMT_IRQHandler
-                0x0000000000002742                ECDC_IRQHandler
+                0x00000000000026e2       0x32 ./build/startup_CH56x.o
+                0x00000000000026e2                NMI_Handler
+                0x00000000000026e4                HardFault_Handler
+                0x00000000000026e6                SysTick_Handler
+                0x00000000000026e8                SW_Handler
+                0x00000000000026ea                WDOG_IRQHandler
+                0x00000000000026ee                GPIO_IRQHandler
+                0x00000000000026f0                SPI0_IRQHandler
+                0x00000000000026f6                TMR1_IRQHandler
+                0x00000000000026f8                TMR2_IRQHandler
+                0x00000000000026fa                UART0_IRQHandler
+                0x00000000000026fe                EMMC_IRQHandler
+                0x0000000000002700                DVP_IRQHandler
+                0x0000000000002702                HSPI_IRQHandler
+                0x0000000000002704                SPI1_IRQHandler
+                0x0000000000002706                UART1_IRQHandler
+                0x000000000000270a                UART3_IRQHandler
+                0x000000000000270c                SERDES_IRQHandler
+                0x000000000000270e                ETH_IRQHandler
+                0x0000000000002710                PMT_IRQHandler
+                0x0000000000002712                ECDC_IRQHandler
  .text.handle_reset
-                0x0000000000002744       0x92 ./build/startup_CH56x.o
-                0x0000000000002744                handle_reset
+                0x0000000000002714       0x92 ./build/startup_CH56x.o
+                0x0000000000002714                handle_reset
  .text.snprintf
-                0x00000000000027d6       0x6e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-snprintf.o)
-                0x00000000000027d6                snprintf
-                0x00000000000027d6                sniprintf
+                0x00000000000027a6       0x6e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-snprintf.o)
+                0x00000000000027a6                snprintf
+                0x00000000000027a6                sniprintf
  .text.__ssputs_r
-                0x0000000000002844       0xea /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000000002844                __ssputs_r
+                0x0000000000002814       0xea /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000000002814                __ssputs_r
  .text._svfprintf_r
-                0x000000000000292e      0x26c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x000000000000292e                _svfprintf_r
-                0x000000000000292e                _svfiprintf_r
+                0x00000000000028fe      0x26c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000000028fe                _svfprintf_r
+                0x00000000000028fe                _svfiprintf_r
  .text._printf_common
-                0x0000000000002b9a      0x110 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000000002b9a                _printf_common
+                0x0000000000002b6a      0x110 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000002b6a                _printf_common
  .text._printf_i
-                0x0000000000002caa      0x282 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000000002caa                _printf_i
- .text.memchr   0x0000000000002f2c       0x1a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
-                0x0000000000002f2c                memchr
- .text._free_r  0x0000000000002f46       0x9e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000000002f46                _free_r
+                0x0000000000002c7a      0x282 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000002c7a                _printf_i
+ .text.memchr   0x0000000000002efc       0x1a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
+                0x0000000000002efc                memchr
+ .text._free_r  0x0000000000002f16       0x9e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000002f16                _free_r
  .text.sbrk_aligned
-                0x0000000000002fe4       0x54 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000002fb4       0x54 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
  .text._malloc_r
-                0x0000000000003038      0x108 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000000003038                _malloc_r
+                0x0000000000003008      0x108 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000003008                _malloc_r
  .text._realloc_r
-                0x0000000000003140       0x74 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000000000003140                _realloc_r
- .text._sbrk_r  0x00000000000031b4       0x26 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
-                0x00000000000031b4                _sbrk_r
+                0x0000000000003110       0x74 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000000003110                _realloc_r
+ .text._sbrk_r  0x0000000000003184       0x26 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000003184                _sbrk_r
  .text.__malloc_lock
-                0x00000000000031da        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
-                0x00000000000031da                __malloc_lock
+                0x00000000000031aa        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                0x00000000000031aa                __malloc_lock
  .text.__malloc_unlock
-                0x00000000000031e0        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
-                0x00000000000031e0                __malloc_unlock
+                0x00000000000031b0        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                0x00000000000031b0                __malloc_unlock
  .text._malloc_usable_size_r
-                0x00000000000031e6       0x14 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-msizer.o)
-                0x00000000000031e6                _malloc_usable_size_r
+                0x00000000000031b6       0x14 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-msizer.o)
+                0x00000000000031b6                _malloc_usable_size_r
  .text.__retarget_lock_acquire_recursive
-                0x00000000000031fa        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
-                0x00000000000031fa                __retarget_lock_acquire_recursive
+                0x00000000000031ca        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x00000000000031ca                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x00000000000031fc        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
-                0x00000000000031fc                __retarget_lock_release_recursive
- .text._sbrk    0x00000000000031fe       0x46 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
-                0x00000000000031fe                _sbrk
- .text.__errno  0x0000000000003244        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
-                0x0000000000003244                __errno
+                0x00000000000031cc        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x00000000000031cc                __retarget_lock_release_recursive
+ .text._sbrk    0x00000000000031ce       0x46 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+                0x00000000000031ce                _sbrk
+ .text.__errno  0x0000000000003214        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+                0x0000000000003214                __errno
  *(.rodata)
  *(.rodata*)
- *fill*         0x000000000000324a        0x2 
+ *fill*         0x000000000000321a        0x2 
  .rodata.GPIOA_ModeCfg
-                0x000000000000324c       0x2c ./build/CH56x_gpio.o
+                0x000000000000321c       0x2c ./build/CH56x_gpio.o
  .rodata.GPIOB_ModeCfg
-                0x0000000000003278       0x2c ./build/CH56x_gpio.o
+                0x0000000000003248       0x2c ./build/CH56x_gpio.o
  .rodata.USB30_NonStandardReq
-                0x00000000000032a4       0x14 ./build/CH56x_usb30_devbulk.o
+                0x0000000000003274       0x14 ./build/CH56x_usb30_devbulk.o
  .rodata.USB30_StandardReq
-                0x00000000000032b8       0xc8 ./build/CH56x_usb30_devbulk.o
+                0x0000000000003288       0xc8 ./build/CH56x_usb30_devbulk.o
  .rodata.U20_NonStandard_Request
-                0x0000000000003380       0x14 ./build/CH56x_usb20_devbulk.o
+                0x0000000000003350       0x14 ./build/CH56x_usb20_devbulk.o
  .rodata.U20_Standard_Request
-                0x0000000000003394       0x30 ./build/CH56x_usb20_devbulk.o
- .rodata.htoa   0x00000000000033c4       0x10 ./build/CH56x_usb_devbulk_desc_cmd.o
+                0x0000000000003364       0x30 ./build/CH56x_usb20_devbulk.o
+ .rodata.htoa   0x0000000000003394       0x10 ./build/CH56x_usb_devbulk_desc_cmd.o
  .rodata.usb_cmd_rx.str1.4
-                0x00000000000033d4       0xd7 ./build/usb_cmd.o
- *fill*         0x00000000000034ab        0x1 
+                0x00000000000033a4       0xd7 ./build/usb_cmd.o
+ *fill*         0x000000000000347b        0x1 
  .rodata._svfprintf_r.str1.4
-                0x00000000000034ac       0x13 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-svfprintf.o)
- *fill*         0x00000000000034bf        0x1 
+                0x000000000000347c       0x13 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-svfprintf.o)
+ *fill*         0x000000000000348f        0x1 
  .rodata._printf_i.str1.4
-                0x00000000000034c0       0x25 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- *fill*         0x00000000000034e5        0x3 
+                0x0000000000003490       0x25 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x00000000000034b5        0x3 
  .rodata._printf_i
-                0x00000000000034e8       0x58 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000000034b8       0x58 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(.glue_7)
  *(.glue_7t)
  *(.gnu.linkonce.t.*)
-                0x0000000000003540                . = ALIGN (0x4)
+                0x0000000000003510                . = ALIGN (0x4)
 
-.rela.dyn       0x0000000000003540        0x0
- .rela.init     0x0000000000003540        0x0 ./build/CH56x_gpio.o
- .rela.vector   0x0000000000003540        0x0 ./build/CH56x_gpio.o
+.rela.dyn       0x0000000000003510        0x0
+ .rela.init     0x0000000000003510        0x0 ./build/CH56x_gpio.o
+ .rela.vector   0x0000000000003510        0x0 ./build/CH56x_gpio.o
  .rela.text.handle_reset
-                0x0000000000003540        0x0 ./build/CH56x_gpio.o
+                0x0000000000003510        0x0 ./build/CH56x_gpio.o
  .rela.data.impure_data
-                0x0000000000003540        0x0 ./build/CH56x_gpio.o
+                0x0000000000003510        0x0 ./build/CH56x_gpio.o
  .rela.text._svfprintf_r
-                0x0000000000003540        0x0 ./build/CH56x_gpio.o
+                0x0000000000003510        0x0 ./build/CH56x_gpio.o
 
-.fini           0x0000000000003540        0x0
+.fini           0x0000000000003510        0x0
  *(SORT_NONE(.fini))
-                0x0000000000003540                . = ALIGN (0x4)
+                0x0000000000003510                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x0000000000003540        0x0
+.preinit_array  0x0000000000003510        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000000003540        0x0
+.init_array     0x0000000000003510        0x0
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000000003540        0x0
+.fini_array     0x0000000000003510        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -1053,15 +1053,15 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000000003540
+.dalign         0x0000000020000000        0x0 load address 0x0000000000003510
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x0000000000003540        0x0
-                0x0000000000003540                . = ALIGN (0x4)
-                0x0000000000003540                PROVIDE (_data_lma = .)
+.dlalign        0x0000000000003510        0x0
+                0x0000000000003510                . = ALIGN (0x4)
+                0x0000000000003510                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000      0x2d0 load address 0x0000000000003540
+.data           0x0000000020000000      0x2d0 load address 0x0000000000003510
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
  .data.USB_PropertyHeader
@@ -1141,7 +1141,7 @@ END GROUP
                 0x00000000200002d0                . = ALIGN (0x4)
                 0x00000000200002d0                PROVIDE (_edata = .)
 
-.bss            0x00000000200002d0     0x10d0 load address 0x0000000000003810
+.bss            0x00000000200002d0     0x146c load address 0x00000000000037e0
                 0x00000000200002d0                . = ALIGN (0x4)
                 0x00000000200002d0                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -1221,19 +1221,19 @@ END GROUP
                 0x0000000020000338        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
  *(.gnu.linkonce.sb.*)
  *(.bss*)
- .bss.RxBuff    0x000000002000033c       0x64 ./build/Main.o
+ .bss.RxBuff    0x000000002000033c      0x400 ./build/Main.o
                 0x000000002000033c                RxBuff
  .bss.cmd_usb_info_buf
-                0x00000000200003a0     0x1000 ./build/usb_cmd.o
-                0x00000000200003a0                cmd_usb_info_buf
+                0x000000002000073c     0x1000 ./build/usb_cmd.o
+                0x000000002000073c                cmd_usb_info_buf
  *(.gnu.linkonce.b.*)
  *(COMMON*)
-                0x00000000200013a0                . = ALIGN (0x4)
-                0x00000000200013a0                PROVIDE (_ebss = .)
+                0x000000002000173c                . = ALIGN (0x4)
+                0x000000002000173c                PROVIDE (_ebss = .)
                 [!provide]                        PROVIDE (_end = _ebss)
                 [!provide]                        PROVIDE (end = .)
 
-.DMADATA        0x0000000020020000     0x3200 load address 0x0000000000003810
+.DMADATA        0x0000000020020000     0x3200 load address 0x00000000000037e0
                 0x0000000020020000                . = ALIGN (0x10)
                 0x0000000020020000                PROVIDE (_dmadata_start = .)
  *(.dmadata*)
@@ -1247,12 +1247,12 @@ END GROUP
                 0x0000000020023200                . = ALIGN (0x10)
                 0x0000000020023200                PROVIDE (_dmadata_end = .)
 
-.stack          0x000000001ffff800      0x800
-                0x000000001ffff800                . = ALIGN (0x4)
+.stack          0x000000002000173c      0x800
+                0x000000002000173c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_susrstack = .)
-                0x0000000020000000                . = (. + __stack_size)
- *fill*         0x000000001ffff800      0x800 
-                0x0000000020000000                PROVIDE (_eusrstack = .)
+                0x0000000020001f3c                . = (. + __stack_size)
+ *fill*         0x000000002000173c      0x800 
+                0x0000000020001f3c                PROVIDE (_eusrstack = .)
 OUTPUT(./build/ch569.elf elf32-littleriscv)
 
 .comment        0x0000000000000000       0x34

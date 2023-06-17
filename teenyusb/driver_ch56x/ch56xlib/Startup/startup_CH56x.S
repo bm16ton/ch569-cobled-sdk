@@ -114,15 +114,15 @@ ECDC_IRQHandler:  1:  j 1b
 	.weak	handle_reset
 	.align	1
 handle_reset:
-.option push 
-.option	norelax 
+.option push
+.option	norelax
 	la gp, __global_pointer$
-.option	pop 
+.option	pop
 1:
-	la sp, _eusrstack 
+	la sp, _eusrstack
 
 /* Load data section from flash to RAM */
-2:	
+2:
 	la a0, _data_lma
 	la a1, _data_vma
 	la a2, _edata
@@ -154,6 +154,7 @@ handle_reset:
     addi a0, a0, 4
     bltu a0, a1, 1b
 /**/
+.option arch, +zicsr
 2:
 	/* enable all interrupt */
     li t0, 0x88
@@ -164,7 +165,7 @@ handle_reset:
 	la t0, main
 	csrw mepc, t0
 
-	
+
 	mret
 
 

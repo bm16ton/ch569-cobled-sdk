@@ -1,28 +1,28 @@
-/*       
- *         _______                    _    _  _____ ____  
- *        |__   __|                  | |  | |/ ____|  _ \ 
+/*
+ *         _______                    _    _  _____ ____
+ *        |__   __|                  | |  | |/ ____|  _ \
  *           | | ___  ___ _ __  _   _| |  | | (___ | |_) |
- *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ < 
+ *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ <
  *           | |  __/  __/ | | | |_| | |__| |____) | |_) |
- *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/ 
- *                               __/ |                    
- *                              |___/                     
+ *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/
+ *                               __/ |
+ *                              |___/
  *
  * TeenyUSB - light weight usb stack for micro controllers
- * 
+ *
  * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
  *                         www.tusb.org
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -36,8 +36,8 @@
 #include "teeny_usb_desc.h"
 #include "teeny_usb_util.h"
 #include "string.h"
-#include "tusb_platform_stm32.h"
-#include "board_config.h"
+//#include "tusb_platform_stm32.h"
+#include "../boards/ch565w_evk/board_config.h"
 
 #include "tusbd_user.h"
 #include "tusbd_hid.h"
@@ -104,7 +104,7 @@ tusb_cdc_device_t cdc_dev = {
   .rx_size = sizeof(cdc_buf),
 };
 
-
+/*
 int msc_get_cap(tusb_msc_device_t* msc, uint8_t lun, uint32_t *block_num, uint32_t *block_size);
 int msc_block_read(tusb_msc_device_t* msc, uint8_t lun, uint8_t *buf, uint32_t block_addr, uint16_t block_len);
 int msc_block_write(tusb_msc_device_t* msc, uint8_t lun, const uint8_t *buf, uint32_t block_addr, uint16_t block_len);
@@ -118,13 +118,13 @@ tusb_msc_device_t msc_dev = {
   .block_read = msc_block_read,
   .block_write = msc_block_write,
 };
-
+*/
 // make sure the interface order is same in "composite_desc.lua"
 static tusb_device_interface_t* device_interfaces[] = {
   (tusb_device_interface_t*)&hid_dev,
   (tusb_device_interface_t*)&cdc_dev, 0,   // CDC need two interfaces
   (tusb_device_interface_t*)&user_dev,
-  (tusb_device_interface_t*)&msc_dev,
+//  (tusb_device_interface_t*)&msc_dev,
 };
 
 tusb_device_config_t device_config = {
@@ -196,7 +196,7 @@ int main(void)
   TUSB_LOGD("Composite device begin\n");
   SetDescriptor(&g_dev, &COMP_descriptors);
   tusb_set_device_config(&g_dev, &device_config);
-  tusb_open_device(&g_dev, TUSB_DEFAULT_DEV_PARAM);
+  tusb_open_device(&g_dev, (const tusb_hardware_param_t*)&COMP_descriptors);
   while(!g_dev.config){
       // wait device ready
   }
@@ -226,14 +226,14 @@ int main(void)
       cdc_len = 0;
     }
 
-    tusb_msc_device_loop(&msc_dev);
+//    tusb_msc_device_loop(&msc_dev);
   }
 }
 
-#if  defined(STM32F723xx) || defined(STM32F767xx) || defined(STM32F407xx) || defined(STM32H743xx)
+#if  defined(STM32F767xx) || defined(STM32F407xx) || defined(STM32H743xx)
 #define BLOCK_SIZE   512
 // the stack is start at RAM end in GCC linker script, reserve the last 2 blocks
-#if defined(STM32F723xx)
+#if defined(ch565w_evk)
 #define BLOCK_COUNT  ((256-64-2)*2)
 #elif defined(STM32F767xx)
 #define BLOCK_COUNT  ((512-64-2)*2)

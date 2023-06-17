@@ -14,7 +14,11 @@ build/Main.o: User/Main.c ../wch-ch56x-bsp/drv/CH56x_common.h \
  ../wch-ch56x-bsp/usb/usb_devbulk/CH56x_usb20_devbulk.h \
  ../wch-ch56x-bsp/usb/usb_devbulk/CH56x_usb30_devbulk_LIB.h \
  ../wch-ch56x-bsp/usb/usb_devbulk/CH56x_usb_devbulk_desc_cmd.h \
- User/hydrausb3_usb_devbulk_vid_pid.h
+ User/hydrausb3_usb_devbulk_vid_pid.h ../class/cdc/tusbd_cdc.h \
+ ../class/tusbd.h ../core/teeny_usb.h ../core/teeny_usb_device.h \
+ User/teeny_usb_config.h ../core/teeny_usb_def.h \
+ ../core/teeny_usb_device_driver.h ../core/teeny_usb_host.h \
+ ../core/teeny_usb_host_driver.h ../class/cdc/tusb_cdc.h
 ../wch-ch56x-bsp/drv/CH56x_common.h:
 ../wch-ch56x-bsp/rvmsis/core_riscv.h:
 ../wch-ch56x-bsp/drv/CH56xSFR.h:
@@ -41,3 +45,13 @@ build/Main.o: User/Main.c ../wch-ch56x-bsp/drv/CH56x_common.h \
 ../wch-ch56x-bsp/usb/usb_devbulk/CH56x_usb30_devbulk_LIB.h:
 ../wch-ch56x-bsp/usb/usb_devbulk/CH56x_usb_devbulk_desc_cmd.h:
 User/hydrausb3_usb_devbulk_vid_pid.h:
+../class/cdc/tusbd_cdc.h:
+../class/tusbd.h:
+../core/teeny_usb.h:
+../core/teeny_usb_device.h:
+User/teeny_usb_config.h:
+../core/teeny_usb_def.h:
+../core/teeny_usb_device_driver.h:
+../core/teeny_usb_host.h:
+../core/teeny_usb_host_driver.h:
+../class/cdc/tusb_cdc.h:

@@ -86,87 +86,11 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./obj/winusb30/winusb30.o
  .data          0x0000000000000000        0x0 ./obj/winusb30/winusb30.o
  .bss           0x0000000000000000        0x0 ./obj/winusb30/winusb30.o
- .text.tusb_open_device
-                0x0000000000000000       0x32 ./obj/winusb30/winusb30.o
- .text.tusb_get_device_speed
-                0x0000000000000000       0x28 ./obj/winusb30/winusb30.o
- .text.tusb_send_data
-                0x0000000000000000       0x4c ./obj/winusb30/winusb30.o
- .text.tusb_set_recv_buffer
-                0x0000000000000000       0x44 ./obj/winusb30/winusb30.o
- .text.tusb_set_rx_valid
-                0x0000000000000000       0x32 ./obj/winusb30/winusb30.o
- .DMADATA       0x0000000000000000     0x2000 ./obj/winusb30/winusb30.o
- .sbss.data_cnt
-                0x0000000000000000        0x4 ./obj/winusb30/winusb30.o
- .text.tusb_on_tx_done
-                0x0000000000000000       0x3c ./obj/winusb30/winusb30.o
- .text.tusb_on_rx_done
-                0x0000000000000000       0x3e ./obj/winusb30/winusb30.o
- .text.tusb_reconfig
-                0x0000000000000000       0x3c ./obj/winusb30/winusb30.o
  .text.tusb_delay_ms
                 0x0000000000000000       0x22 ./obj/winusb30/winusb30.o
- .bss.g_dev     0x0000000000000000      0x12c ./obj/winusb30/winusb30.o
- .rodata        0x0000000000000000       0x55 ./obj/winusb30/winusb30.o
- .text.main     0x0000000000000000      0x130 ./obj/winusb30/winusb30.o
- .comment       0x0000000000000000       0x35 ./obj/winusb30/winusb30.o
- .riscv.attributes
-                0x0000000000000000       0x34 ./obj/winusb30/winusb30.o
  .text          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_desc.o
  .data          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_desc.o
  .bss           0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_DeviceDescriptor
-                0x0000000000000000       0x12 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_ConfigDescriptor1
-                0x0000000000000000       0x2c ./obj/winusb30/teeny_usb_desc.o
- .srodata.BULK30_ConfigDescriptors
-                0x0000000000000000        0x4 ./obj/winusb30/teeny_usb_desc.o
- .srodata.BULK30_StringDescriptor0
-                0x0000000000000000        0x4 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_StringDescriptor1
-                0x0000000000000000       0x12 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_StringDescriptor2
-                0x0000000000000000       0x24 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_StringDescriptor3
-                0x0000000000000000       0x16 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_StringDescriptors
-                0x0000000000000000       0x10 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_WCIDDescriptorSet
-                0x0000000000000000       0xa2 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_WCIDBOS
-                0x0000000000000000       0x32 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_extra_descriptor
-                0x0000000000000000       0x10 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK30_descriptors
-                0x0000000000000000       0x18 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_DeviceDescriptor
-                0x0000000000000000       0x12 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_ConfigDescriptor1
-                0x0000000000000000       0x20 ./obj/winusb30/teeny_usb_desc.o
- .srodata.BULK20_ConfigDescriptors
-                0x0000000000000000        0x4 ./obj/winusb30/teeny_usb_desc.o
- .srodata.BULK20_StringDescriptor0
-                0x0000000000000000        0x4 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_StringDescriptor1
-                0x0000000000000000       0x12 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_StringDescriptor2
-                0x0000000000000000       0x24 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_StringDescriptor3
-                0x0000000000000000       0x16 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_StringDescriptors
-                0x0000000000000000       0x10 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_WCIDDescriptorSet
-                0x0000000000000000       0xa2 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_WCIDBOS
-                0x0000000000000000       0x21 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_extra_descriptor
-                0x0000000000000000       0x10 ./obj/winusb30/teeny_usb_desc.o
- .rodata.BULK20_descriptors
-                0x0000000000000000       0x18 ./obj/winusb30/teeny_usb_desc.o
- .comment       0x0000000000000000       0x35 ./obj/winusb30/teeny_usb_desc.o
- .riscv.attributes
-                0x0000000000000000       0x34 ./obj/winusb30/teeny_usb_desc.o
  .text          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_retarget.o
  .data          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_retarget.o
  .bss           0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_retarget.o
@@ -182,11 +106,7 @@ Discarded input sections
                 0x0000000000000000       0x48 ./obj/winusb30/teeny_usb_retarget.o
  .text.stdin_getchar
                 0x0000000000000000       0x5c ./obj/winusb30/teeny_usb_retarget.o
- .text._write   0x0000000000000000       0x9a ./obj/winusb30/teeny_usb_retarget.o
  .text.getchar  0x0000000000000000       0x4a ./obj/winusb30/teeny_usb_retarget.o
- .comment       0x0000000000000000       0x35 ./obj/winusb30/teeny_usb_retarget.o
- .riscv.attributes
-                0x0000000000000000       0x34 ./obj/winusb30/teeny_usb_retarget.o
  .text          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_host.o
  .data          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_host.o
  .bss           0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_host.o
@@ -242,165 +162,78 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_device.o
  .data          0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_device.o
  .bss           0x0000000000000000        0x0 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_send_data
-                0x0000000000000000       0x4c ./obj/winusb30/teeny_usb_device.o
- .text.tusb_send_status
-                0x0000000000000000       0x2c ./obj/winusb30/teeny_usb_device.o
- .text.tusb_control_send
-                0x0000000000000000       0x52 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_set_stall
-                0x0000000000000000       0x32 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_clear_stall
-                0x0000000000000000       0x32 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_set_recv_buffer
-                0x0000000000000000       0x44 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_set_rx_valid
-                0x0000000000000000       0x32 ./obj/winusb30/teeny_usb_device.o
- .rodata        0x0000000000000000      0x957 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_device_ep_xfer_done
-                0x0000000000000000      0x194 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_device_reset
-                0x0000000000000000      0x168 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_class_request
-                0x0000000000000000       0x18 ./obj/winusb30/teeny_usb_device.o
  .text.tusb_reconfig
                 0x0000000000000000       0x26 ./obj/winusb30/teeny_usb_device.o
- .rodata.tusb_wcid_msos_string_descriptor
-                0x0000000000000000       0x12 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_get_descriptor
-                0x0000000000000000      0x406 ./obj/winusb30/teeny_usb_device.o
- .rodata.tusb_get_descriptor
-                0x0000000000000000       0x40 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_vendor_request
-                0x0000000000000000      0x2c0 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_set_addr_after_status
-                0x0000000000000000       0x3a ./obj/winusb30/teeny_usb_device.o
- .text.tusb_init_endpoint_by_config
-                0x0000000000000000      0x4da ./obj/winusb30/teeny_usb_device.o
- .text.tusb_std_device_request
-                0x0000000000000000      0x2d0 ./obj/winusb30/teeny_usb_device.o
- .rodata.tusb_std_device_request
-                0x0000000000000000       0x28 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_std_interface_request
-                0x0000000000000000      0x1de ./obj/winusb30/teeny_usb_device.o
- .text.tusb_std_endpoint_request
-                0x0000000000000000      0x158 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_standard_request
-                0x0000000000000000       0x94 ./obj/winusb30/teeny_usb_device.o
- .text.tusb_setup_handler
-                0x0000000000000000       0x8c ./obj/winusb30/teeny_usb_device.o
  .text.tusb_on_tx_done
                 0x0000000000000000       0x20 ./obj/winusb30/teeny_usb_device.o
  .text.tusb_on_rx_done
                 0x0000000000000000       0x22 ./obj/winusb30/teeny_usb_device.o
- .comment       0x0000000000000000       0x35 ./obj/winusb30/teeny_usb_device.o
- .riscv.attributes
-                0x0000000000000000       0x34 ./obj/winusb30/teeny_usb_device.o
+ .text          0x0000000000000000        0x0 ./obj/winusb30/board.o
+ .data          0x0000000000000000        0x0 ./obj/winusb30/board.o
+ .bss           0x0000000000000000        0x0 ./obj/winusb30/board.o
+ .text          0x0000000000000000        0x0 ./obj/winusb30/CH56x_clk.o
+ .data          0x0000000000000000        0x0 ./obj/winusb30/CH56x_clk.o
+ .bss           0x0000000000000000        0x0 ./obj/winusb30/CH56x_clk.o
+ .text.GetSysClock
+                0x0000000000000000       0x8e ./obj/winusb30/CH56x_clk.o
+ .text          0x0000000000000000        0x0 ./obj/winusb30/CH56x_sys.o
+ .data          0x0000000000000000        0x0 ./obj/winusb30/CH56x_sys.o
+ .bss           0x0000000000000000        0x0 ./obj/winusb30/CH56x_sys.o
+ .text.SYS_GetInfoSta
+                0x0000000000000000       0x3e ./obj/winusb30/CH56x_sys.o
+ .text.SYS_ResetExecute
+                0x0000000000000000       0x4e ./obj/winusb30/CH56x_sys.o
+ .text.WWDG_ITCfg
+                0x0000000000000000       0x8e ./obj/winusb30/CH56x_sys.o
+ .text.WWDG_ResetCfg
+                0x0000000000000000       0x8e ./obj/winusb30/CH56x_sys.o
+ .text.WWDG_ClearFlag
+                0x0000000000000000       0x4e ./obj/winusb30/CH56x_sys.o
+ .text          0x0000000000000000        0x0 ./obj/winusb30/CH56x_timer.o
+ .data          0x0000000000000000        0x0 ./obj/winusb30/CH56x_timer.o
+ .bss           0x0000000000000000        0x0 ./obj/winusb30/CH56x_timer.o
+ .text.TMR1_TimerInit
+                0x0000000000000000       0x3c ./obj/winusb30/CH56x_timer.o
+ .text.TMR2_TimerInit
+                0x0000000000000000       0x3c ./obj/winusb30/CH56x_timer.o
+ .text.TMR0_EXTSignalCounterInit
+                0x0000000000000000       0x32 ./obj/winusb30/CH56x_timer.o
+ .text.TMR1_EXTSignalCounterInit
+                0x0000000000000000       0x3c ./obj/winusb30/CH56x_timer.o
+ .text.TMR2_EXTSignalCounterInit
+                0x0000000000000000       0x3c ./obj/winusb30/CH56x_timer.o
+ .text.TMR0_PWMInit
+                0x0000000000000000       0x52 ./obj/winusb30/CH56x_timer.o
+ .text.TMR1_PWMInit
+                0x0000000000000000       0x5a ./obj/winusb30/CH56x_timer.o
+ .text.TMR2_PWMInit
+                0x0000000000000000       0x5a ./obj/winusb30/CH56x_timer.o
+ .text.TMR0_CapInit
+                0x0000000000000000       0x3a ./obj/winusb30/CH56x_timer.o
+ .text.TMR1_CapInit
+                0x0000000000000000       0x42 ./obj/winusb30/CH56x_timer.o
+ .text.TMR2_CapInit
+                0x0000000000000000       0x42 ./obj/winusb30/CH56x_timer.o
+ .text.TMR1_DMACfg
+                0x0000000000000000       0x7a ./obj/winusb30/CH56x_timer.o
+ .text.TMR2_DMACfg
+                0x0000000000000000       0x7a ./obj/winusb30/CH56x_timer.o
+ .text          0x0000000000000000        0x0 ./obj/winusb30/startup_CH56x.o
+ .data          0x0000000000000000        0x0 ./obj/winusb30/startup_CH56x.o
+ .bss           0x0000000000000000        0x0 ./obj/winusb30/startup_CH56x.o
  .text          0x0000000000000000        0x0 ./obj/winusb30/tusb_dev_drv_ch56x.o
  .data          0x0000000000000000        0x0 ./obj/winusb30/tusb_dev_drv_ch56x.o
  .bss           0x0000000000000000        0x0 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.PFIC_EnableIRQ
-                0x0000000000000000       0x76 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.PFIC_DisableIRQ
-                0x0000000000000000      0x130 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_Device_Open
-                0x0000000000000000       0xd8 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_Switch_Powermode
-                0x0000000000000000       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_Device_Close
-                0x0000000000000000       0x40 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_BUS_RESET
-                0x0000000000000000       0x2c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_OUT_Set
-                0x0000000000000000       0x5c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_Device_Setaddress
-                0x0000000000000000       0x3c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_IN_Nump
-                0x0000000000000000       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_EP0_IN_set
-                0x0000000000000000       0x5a ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_IN_Set
-                0x0000000000000000       0x74 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_OUT_ClearIT
-                0x0000000000000000       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_Send_ERDY
-                0x0000000000000000       0x60 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_IN_ClearIT
-                0x0000000000000000       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_OUT_Status
-                0x0000000000000000       0x88 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB20_Device_Setaddress
-                0x0000000000000000       0x3c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .DMADATA       0x0000000000000000      0x200 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .bss.ch56x_dev_drv
-                0x0000000000000000      0x120 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_open
-                0x0000000000000000       0xd8 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_get_context
-                0x0000000000000000       0x18 ./obj/winusb30/tusb_dev_drv_ch56x.o
  .text.tusb_dev_drv_close
                 0x0000000000000000       0x5c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .rodata        0x0000000000000000      0x211 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_setup_endpoint
-                0x0000000000000000      0x296 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_get_speed
-                0x0000000000000000       0x2a ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_set_address
-                0x0000000000000000       0x5c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb30_do_tx
-                0x0000000000000000      0x2b4 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_send_data
-                0x0000000000000000      0x126 ./obj/winusb30/tusb_dev_drv_ch56x.o
  .text.tusb_dev_drv_cancel_send
                 0x0000000000000000       0x2e ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_set_recv_buffer
-                0x0000000000000000       0xb4 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_set_rx_valid
-                0x0000000000000000      0x1c4 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.usb30_xfer_ready
-                0x0000000000000000      0x258 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb20_do_tx
-                0x0000000000000000      0x1de ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.usb20_xfer_ready
-                0x0000000000000000      0x22c ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_set_stall
-                0x0000000000000000      0x100 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.tusb_dev_drv_clear_stall
-                0x0000000000000000      0x114 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.TMR0_IRQHandler
-                0x0000000000000000      0x100 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.LINK_IRQHandler
-                0x0000000000000000      0x3a2 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB30_ITP_Callback
-                0x0000000000000000       0x12 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USBSS_IRQHandler
-                0x0000000000000000      0x146 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USBHS_IRQHandler
-                0x0000000000000000      0x1c8 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .text.USB20_Device_Init
-                0x0000000000000000       0xd2 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .comment       0x0000000000000000       0x35 ./obj/winusb30/tusb_dev_drv_ch56x.o
- .riscv.attributes
-                0x0000000000000000       0x38 ./obj/winusb30/tusb_dev_drv_ch56x.o
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
- .text.__errno  0x0000000000000000        0xa /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
- .srodata._global_impure_ptr
-                0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
- .sdata._impure_ptr
-                0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
- .data.impure_data
-                0x0000000000000000       0x60 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-malloc.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-malloc.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-malloc.o)
@@ -409,141 +242,59 @@ Discarded input sections
  .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-malloc.o)
  .riscv.attributes
                 0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-malloc.o)
- .text          0x0000000000000000       0x16 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
- .riscv.attributes
-                0x0000000000000000       0x29 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
- .text          0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
- .riscv.attributes
-                0x0000000000000000       0x29 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
- .text._free_r  0x0000000000000000       0xae /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
- .text.sbrk_aligned
-                0x0000000000000000       0x6a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
- .text._malloc_r
-                0x0000000000000000      0x130 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
- .sbss.__malloc_sbrk_start
-                0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
- .sbss.__malloc_free_list
-                0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
  .text._printf_r
                 0x0000000000000000       0x42 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
- .text.printf   0x0000000000000000       0x48 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
- .text._puts_r  0x0000000000000000      0x138 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
- .text.puts     0x0000000000000000       0x12 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
- .text._sbrk_r  0x0000000000000000       0x34 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
- .text.__swbuf_r
-                0x0000000000000000       0xd8 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
  .text.__swbuf  0x0000000000000000       0x14 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
- .text.__swsetup_r
-                0x0000000000000000      0x110 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
- .text.__sflush_r
-                0x0000000000000000      0x13e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
- .text._fflush_r
-                0x0000000000000000       0xa0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
  .text.fflush   0x0000000000000000       0x2c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.std      0x0000000000000000       0x6e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text._cleanup_r
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .text.__fp_lock
                 0x0000000000000000       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .text.__fp_unlock
                 0x0000000000000000       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sfmoreglue
-                0x0000000000000000       0x50 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .text._cleanup
                 0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sfp_lock_acquire
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sfp_lock_release
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sinit_lock_acquire
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sinit_lock_release
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sinit  0x0000000000000000       0x9c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .text.__sfp    0x0000000000000000       0xd2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .text.__fp_lock_all
                 0x0000000000000000       0x28 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .text.__fp_unlock_all
                 0x0000000000000000       0x28 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .rodata.__sf_fake_stderr
-                0x0000000000000000       0x20 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .rodata.__sf_fake_stdout
-                0x0000000000000000       0x20 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .rodata.__sf_fake_stdin
-                0x0000000000000000       0x20 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
  .text._fwalk   0x0000000000000000       0x62 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
- .text._fwalk_reent
-                0x0000000000000000       0x6a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text.__retarget_lock_init
-                0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .text.__retarget_lock_init_recursive
                 0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text.__retarget_lock_close
                 0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
@@ -551,15 +302,11 @@ Discarded input sections
                 0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text.__retarget_lock_acquire
                 0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .text.__retarget_lock_acquire_recursive
-                0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text.__retarget_lock_try_acquire
                 0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text.__retarget_lock_try_acquire_recursive
                 0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text.__retarget_lock_release
-                0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .text.__retarget_lock_release_recursive
                 0x0000000000000000        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .sbss.__lock___arc4random_mutex
                 0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
@@ -569,57 +316,23 @@ Discarded input sections
                 0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .sbss.__lock___env_recursive_mutex
                 0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .sbss.__lock___malloc_recursive_mutex
-                0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .sbss.__lock___at_quick_exit_mutex
                 0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .sbss.__lock___atexit_recursive_mutex
                 0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .sbss.__lock___sfp_recursive_mutex
-                0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .sbss.__lock___sinit_recursive_mutex
-                0x0000000000000000        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
- .text.__swhatbuf_r
-                0x0000000000000000       0x60 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
- .text.__smakebuf_r
-                0x0000000000000000       0xb4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
- .text.__malloc_lock
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
- .text.__malloc_unlock
-                0x0000000000000000       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
- .text.__sfputc_r
-                0x0000000000000000       0x2e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
- .text.__sfputs_r
-                0x0000000000000000       0x48 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sprint_r
                 0x0000000000000000       0x28 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
- .rodata._vfprintf_r.str1.4
-                0x0000000000000000       0x13 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
- .text._vfprintf_r
-                0x0000000000000000      0x30e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
  .text.vfprintf
                 0x0000000000000000       0x16 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
@@ -627,48 +340,20 @@ Discarded input sections
                 0x0000000000000000       0x2c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
  .text._reclaim_reent
                 0x0000000000000000      0x10c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
- .sbss.errno    0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
- .text.__sread  0x0000000000000000       0x36 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
  .text.__seofread
                 0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
- .text.__swrite
-                0x0000000000000000       0x5a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
- .text.__sseek  0x0000000000000000       0x3c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
- .text.__sclose
-                0x0000000000000000        0xc /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
- .text._write_r
-                0x0000000000000000       0x38 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
- .text._close_r
-                0x0000000000000000       0x34 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
- .text._fstat_r
-                0x0000000000000000       0x36 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fvwrite.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fvwrite.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fvwrite.o)
@@ -680,26 +365,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
- .text._isatty_r
-                0x0000000000000000       0x34 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
- .text._lseek_r
-                0x0000000000000000       0x38 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
- .text.memchr   0x0000000000000000       0x1a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
  .text          0x0000000000000000       0x26 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memmove.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memmove.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memmove.o)
@@ -716,24 +387,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .text._printf_common
-                0x0000000000000000      0x110 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .rodata._printf_i.str1.4
-                0x0000000000000000       0x25 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .text._printf_i
-                0x0000000000000000      0x28e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .rodata._printf_i
-                0x0000000000000000       0x58 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
- .text._read_r  0x0000000000000000       0x38 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-msizer.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-msizer.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-msizer.o)
@@ -745,62 +401,31 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
- .text._close   0x0000000000000000       0x2e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
- .text._fstat   0x0000000000000000       0x42 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
- .text._isatty  0x0000000000000000       0x24 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
- .text._lseek   0x0000000000000000       0x2e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
- .text._read    0x0000000000000000       0x2e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
- .text._sbrk    0x0000000000000000       0x50 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
- .sbss.heap_end.0
-                0x0000000000000000        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
  .text          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
  .data          0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
  .bss           0x0000000000000000        0x0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
- .text._conv_stat
-                0x0000000000000000       0x4e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
- .comment       0x0000000000000000       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
- .riscv.attributes
-                0x0000000000000000       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
 FLASH            0x0000000000000000 0x0000000000070000 xr
 RAM              0x0000000020000000 0x0000000000004000 xrw
-RAMX             0x0000000020020000 0x0000000000018000 xrw
+RAMX             0x0000000020020000 0x0000000000008000 xrw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -808,46 +433,470 @@ Linker script and memory map
                 0x0000000000000800                __stack_size = 0x800
                 [!provide]                        PROVIDE (_stack_size = __stack_size)
 
-.init           0x0000000000000000        0x0
+.init           0x0000000000000000        0x4
                 0x0000000000000000                _sinit = .
                 0x0000000000000000                . = ALIGN (0x4)
  *(SORT_NONE(.init))
-                0x0000000000000000                . = ALIGN (0x4)
-                0x0000000000000000                _einit = .
+ .init          0x0000000000000000        0x4 ./obj/winusb30/startup_CH56x.o
+                0x0000000000000000                _start
+                0x0000000000000004                . = ALIGN (0x4)
+                0x0000000000000004                _einit = .
 
-.vector         0x0000000000000000        0x0
+.vector         0x0000000000000004       0xbc
  *(.vector)
-                0x0000000000000000                . = ALIGN (0x40)
+ .vector        0x0000000000000004       0x94 ./obj/winusb30/startup_CH56x.o
+                0x00000000000000c0                . = ALIGN (0x40)
+ *fill*         0x0000000000000098       0x28 
 
-.text           0x0000000000000000        0x0
-                0x0000000000000000                . = ALIGN (0x4)
+.text           0x00000000000000c0     0x6354
+                0x00000000000000c0                . = ALIGN (0x4)
  *(.text)
+ .text          0x00000000000000c0       0x16 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+                0x00000000000000c0                memcpy
+ .text          0x00000000000000d6       0x10 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+                0x00000000000000d6                memset
  *(.text.*)
+ .text.tusb_open_device
+                0x00000000000000e6       0x2e ./obj/winusb30/winusb30.o
+ .text.tusb_get_device_speed
+                0x0000000000000114       0x24 ./obj/winusb30/winusb30.o
+ .text.tusb_send_data
+                0x0000000000000138       0x48 ./obj/winusb30/winusb30.o
+ .text.tusb_set_recv_buffer
+                0x0000000000000180       0x40 ./obj/winusb30/winusb30.o
+ .text.tusb_set_rx_valid
+                0x00000000000001c0       0x2e ./obj/winusb30/winusb30.o
+ .text.tusb_on_tx_done
+                0x00000000000001ee       0x36 ./obj/winusb30/winusb30.o
+                0x00000000000001ee                tusb_on_tx_done
+ .text.tusb_on_rx_done
+                0x0000000000000224       0x3a ./obj/winusb30/winusb30.o
+                0x0000000000000224                tusb_on_rx_done
+ .text.tusb_reconfig
+                0x000000000000025e       0x30 ./obj/winusb30/winusb30.o
+                0x000000000000025e                tusb_reconfig
+ .text.main     0x000000000000028e       0xee ./obj/winusb30/winusb30.o
+                0x000000000000028e                main
+ .text._write   0x000000000000037c       0x8e ./obj/winusb30/teeny_usb_retarget.o
+                0x000000000000037c                _write
+ .text.tusb_send_data
+                0x000000000000040a       0x48 ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_send_status
+                0x0000000000000452       0x26 ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_control_send
+                0x0000000000000478       0x4c ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_set_stall
+                0x00000000000004c4       0x2e ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_clear_stall
+                0x00000000000004f2       0x2e ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_set_recv_buffer
+                0x0000000000000520       0x40 ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_set_rx_valid
+                0x0000000000000560       0x2e ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_device_ep_xfer_done
+                0x000000000000058e      0x162 ./obj/winusb30/teeny_usb_device.o
+                0x000000000000058e                tusb_device_ep_xfer_done
+ .text.tusb_device_reset
+                0x00000000000006f0      0x148 ./obj/winusb30/teeny_usb_device.o
+                0x00000000000006f0                tusb_device_reset
+ .text.tusb_class_request
+                0x0000000000000838       0x18 ./obj/winusb30/teeny_usb_device.o
+                0x0000000000000838                tusb_class_request
+ .text.tusb_get_descriptor
+                0x0000000000000850      0x3aa ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_vendor_request
+                0x0000000000000bfa      0x27e ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_set_addr_after_status
+                0x0000000000000e78       0x36 ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_init_endpoint_by_config
+                0x0000000000000eae      0x49a ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_std_device_request
+                0x0000000000001348      0x25c ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_std_interface_request
+                0x00000000000015a4      0x1a8 ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_std_endpoint_request
+                0x000000000000174c      0x124 ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_standard_request
+                0x0000000000001870       0x7e ./obj/winusb30/teeny_usb_device.o
+ .text.tusb_setup_handler
+                0x00000000000018ee       0x7a ./obj/winusb30/teeny_usb_device.o
+ .text.stdio_init
+                0x0000000000001968       0xc6 ./obj/winusb30/board.o
+                0x0000000000001968                stdio_init
+ .text.stdout_sendchar
+                0x0000000000001a2e       0x3e ./obj/winusb30/board.o
+                0x0000000000001a2e                stdout_sendchar
+ .text.board_init
+                0x0000000000001a6c       0x28 ./obj/winusb30/board.o
+                0x0000000000001a6c                board_init
+ .text.SystemInit
+                0x0000000000001a94      0x1c6 ./obj/winusb30/CH56x_clk.o
+                0x0000000000001a94                SystemInit
+ .text.Delay_Init
+                0x0000000000001c5a       0x42 ./obj/winusb30/CH56x_sys.o
+                0x0000000000001c5a                Delay_Init
+ .text.mDelayuS
+                0x0000000000001c9c      0x1da ./obj/winusb30/CH56x_sys.o
+                0x0000000000001c9c                mDelayuS
+ .text.mDelaymS
+                0x0000000000001e76      0x1da ./obj/winusb30/CH56x_sys.o
+                0x0000000000001e76                mDelaymS
+ .text.TMR0_TimerInit
+                0x0000000000002050       0x32 ./obj/winusb30/CH56x_timer.o
+                0x0000000000002050                TMR0_TimerInit
+ .text.vector_handler
+                0x0000000000002082       0x32 ./obj/winusb30/startup_CH56x.o
+                0x0000000000002082                NMI_Handler
+                0x0000000000002084                HardFault_Handler
+                0x0000000000002086                SysTick_Handler
+                0x0000000000002088                SWI_Handler
+                0x000000000000208a                WDOG_IRQHandler
+                0x000000000000208e                GPIO_IRQHandler
+                0x0000000000002090                SPI0_IRQHandler
+                0x0000000000002096                TMR1_IRQHandler
+                0x0000000000002098                TMR2_IRQHandler
+                0x000000000000209a                UART0_IRQHandler
+                0x000000000000209e                EMMC_IRQHandler
+                0x00000000000020a0                DVP_IRQHandler
+                0x00000000000020a2                HSPI_IRQHandler
+                0x00000000000020a4                SPI1_IRQHandler
+                0x00000000000020a6                UART1_IRQHandler
+                0x00000000000020a8                UART2_IRQHandler
+                0x00000000000020aa                UART3_IRQHandler
+                0x00000000000020ac                SERDES_IRQHandler
+                0x00000000000020ae                ETH_IRQHandler
+                0x00000000000020b0                PMT_IRQHandler
+                0x00000000000020b2                ECDC_IRQHandler
+ .text.handle_reset
+                0x00000000000020b4       0x94 ./obj/winusb30/startup_CH56x.o
+                0x00000000000020b4                handle_reset
+ .text.PFIC_EnableIRQ
+                0x0000000000002148       0x76 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.PFIC_DisableIRQ
+                0x00000000000021be      0x130 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_Device_Open
+                0x00000000000022ee       0xd8 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_Switch_Powermode
+                0x00000000000023c6       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_Device_Close
+                0x0000000000002408       0x3a ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_BUS_RESET
+                0x0000000000002442       0x1c ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_OUT_Set
+                0x000000000000245e       0x5c ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_Device_Setaddress
+                0x00000000000024ba       0x3c ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_IN_Nump
+                0x00000000000024f6       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_EP0_IN_set
+                0x0000000000002538       0x5a ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_IN_Set
+                0x0000000000002592       0x74 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_OUT_ClearIT
+                0x0000000000002606       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_Send_ERDY
+                0x0000000000002648       0x60 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_IN_ClearIT
+                0x00000000000026a8       0x42 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB30_OUT_Status
+                0x00000000000026ea       0x88 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.USB20_Device_Setaddress
+                0x0000000000002772       0x3c ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.tusb_dev_drv_open
+                0x00000000000027ae       0xb0 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x00000000000027ae                tusb_dev_drv_open
+ .text.tusb_dev_drv_get_context
+                0x000000000000285e       0x18 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x000000000000285e                tusb_dev_drv_get_context
+ .text.tusb_dev_drv_setup_endpoint
+                0x0000000000002876      0x290 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000002876                tusb_dev_drv_setup_endpoint
+ .text.tusb_dev_drv_get_speed
+                0x0000000000002b06       0x2a ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000002b06                tusb_dev_drv_get_speed
+ .text.tusb_dev_drv_set_address
+                0x0000000000002b30       0x52 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000002b30                tusb_dev_drv_set_address
+ .text.tusb30_do_tx
+                0x0000000000002b82      0x29c ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.tusb_dev_drv_send_data
+                0x0000000000002e1e      0x10e ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000002e1e                tusb_dev_drv_send_data
+ .text.tusb_dev_drv_set_recv_buffer
+                0x0000000000002f2c       0xa8 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000002f2c                tusb_dev_drv_set_recv_buffer
+ .text.tusb_dev_drv_set_rx_valid
+                0x0000000000002fd4      0x1bc ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000002fd4                tusb_dev_drv_set_rx_valid
+ .text.usb30_xfer_ready
+                0x0000000000003190      0x22c ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.tusb20_do_tx
+                0x00000000000033bc      0x1da ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.usb20_xfer_ready
+                0x0000000000003596      0x212 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .text.tusb_dev_drv_set_stall
+                0x00000000000037a8       0xf0 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x00000000000037a8                tusb_dev_drv_set_stall
+ .text.tusb_dev_drv_clear_stall
+                0x0000000000003898      0x104 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000003898                tusb_dev_drv_clear_stall
+ .text.TMR0_IRQHandler
+                0x000000000000399c       0xc0 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x000000000000399c                TMR0_IRQHandler
+ .text.LINK_IRQHandler
+                0x0000000000003a5c      0x312 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000003a5c                LINK_IRQHandler
+ .text.USB30_ITP_Callback
+                0x0000000000003d6e       0x12 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000003d6e                USB30_ITP_Callback
+ .text.USBSS_IRQHandler
+                0x0000000000003d80      0x124 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000003d80                USBSS_IRQHandler
+ .text.USBHS_IRQHandler
+                0x0000000000003ea4      0x168 ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x0000000000003ea4                USBHS_IRQHandler
+ .text.USB20_Device_Init
+                0x000000000000400c       0xba ./obj/winusb30/tusb_dev_drv_ch56x.o
+                0x000000000000400c                USB20_Device_Init
+ .text.__errno  0x00000000000040c6        0xa /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+                0x00000000000040c6                __errno
+ .text._free_r  0x00000000000040d0       0xa2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+                0x00000000000040d0                _free_r
+ .text.sbrk_aligned
+                0x0000000000004172       0x54 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .text._malloc_r
+                0x00000000000041c6      0x10e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000000041c6                _malloc_r
+ .text.printf   0x00000000000042d4       0x3e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
+                0x00000000000042d4                printf
+                0x00000000000042d4                iprintf
+ .text._puts_r  0x0000000000004312      0x10e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+                0x0000000000004312                _puts_r
+ .text.puts     0x0000000000004420        0xc /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+                0x0000000000004420                puts
+ .text._sbrk_r  0x000000000000442c       0x28 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+                0x000000000000442c                _sbrk_r
+ .text.__swbuf_r
+                0x0000000000004454       0xc0 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+                0x0000000000004454                __swbuf_r
+ .text.__swsetup_r
+                0x0000000000004514      0x100 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+                0x0000000000004514                __swsetup_r
+ .text.__sflush_r
+                0x0000000000004614      0x13a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+                0x0000000000004614                __sflush_r
+ .text._fflush_r
+                0x000000000000474e       0x88 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+                0x000000000000474e                _fflush_r
+ .text.std      0x00000000000047d6       0x6a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .text._cleanup_r
+                0x0000000000004840        0xa /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000004840                _cleanup_r
+ .text.__sfmoreglue
+                0x000000000000484a       0x48 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x000000000000484a                __sfmoreglue
+ .text.__sfp_lock_acquire
+                0x0000000000004892        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000004892                __sfp_lock_acquire
+ .text.__sfp_lock_release
+                0x0000000000004898        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000004898                __sfp_lock_release
+ .text.__sinit_lock_acquire
+                0x000000000000489e        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x000000000000489e                __sinit_lock_acquire
+ .text.__sinit_lock_release
+                0x00000000000048a4        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000048a4                __sinit_lock_release
+ .text.__sinit  0x00000000000048aa       0x68 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x00000000000048aa                __sinit
+ .text.__sfp    0x0000000000004912       0xa6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000004912                __sfp
+ .text._fwalk_reent
+                0x00000000000049b8       0x6a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+                0x00000000000049b8                _fwalk_reent
+ .text.__retarget_lock_init_recursive
+                0x0000000000004a22        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000000004a22                __retarget_lock_init_recursive
+ .text.__retarget_lock_acquire_recursive
+                0x0000000000004a24        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000000004a24                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0000000000004a26        0x2 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000000004a26                __retarget_lock_release_recursive
+ .text.__swhatbuf_r
+                0x0000000000004a28       0x5a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+                0x0000000000004a28                __swhatbuf_r
+ .text.__smakebuf_r
+                0x0000000000004a82       0xa4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+                0x0000000000004a82                __smakebuf_r
+ .text.__malloc_lock
+                0x0000000000004b26        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                0x0000000000004b26                __malloc_lock
+ .text.__malloc_unlock
+                0x0000000000004b2c        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+                0x0000000000004b2c                __malloc_unlock
+ .text.__sfputc_r
+                0x0000000000004b32       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
+ .text.__sfputs_r
+                0x0000000000004b5c       0x42 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000004b5c                __sfputs_r
+ .text._vfprintf_r
+                0x0000000000004b9e      0x2da /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000004b9e                _vfiprintf_r
+                0x0000000000004b9e                _vfprintf_r
+ .text.__sread  0x0000000000004e78       0x30 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000004e78                __sread
+ .text.__swrite
+                0x0000000000004ea8       0x4e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000004ea8                __swrite
+ .text.__sseek  0x0000000000004ef6       0x36 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000004ef6                __sseek
+ .text.__sclose
+                0x0000000000004f2c        0x6 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+                0x0000000000004f2c                __sclose
+ .text._write_r
+                0x0000000000004f32       0x2c /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+                0x0000000000004f32                _write_r
+ .text._close_r
+                0x0000000000004f5e       0x26 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+                0x0000000000004f5e                _close_r
+ .text._fstat_r
+                0x0000000000004f84       0x28 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+                0x0000000000004f84                _fstat_r
+ .text._isatty_r
+                0x0000000000004fac       0x26 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+                0x0000000000004fac                _isatty_r
+ .text._lseek_r
+                0x0000000000004fd2       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+                0x0000000000004fd2                _lseek_r
+ .text.memchr   0x0000000000004ffc       0x1a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
+                0x0000000000004ffc                memchr
+ .text._printf_common
+                0x0000000000005016      0x110 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000005016                _printf_common
+ .text._printf_i
+                0x0000000000005126      0x286 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000005126                _printf_i
+ .text._read_r  0x00000000000053ac       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+                0x00000000000053ac                _read_r
+ .text._close   0x00000000000053d6       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+                0x00000000000053d6                _close
+ .text._fstat   0x0000000000005400       0x38 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+                0x0000000000005400                _fstat
+ .text._isatty  0x0000000000005438       0x1e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+                0x0000000000005438                _isatty
+ .text._lseek   0x0000000000005456       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+                0x0000000000005456                _lseek
+ .text._read    0x0000000000005480       0x2a /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+                0x0000000000005480                _read
+ .text._sbrk    0x00000000000054aa       0x48 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+                0x00000000000054aa                _sbrk
+ .text._conv_stat
+                0x00000000000054f2       0x4e /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+                0x00000000000054f2                _conv_stat
  *(.rodata)
+ *fill*         0x0000000000005540        0x0 
+ .rodata        0x0000000000005540       0x55 ./obj/winusb30/winusb30.o
+ *fill*         0x0000000000005595        0x3 
+ .rodata        0x0000000000005598      0x957 ./obj/winusb30/teeny_usb_device.o
+ *fill*         0x0000000000005eef        0x1 
+ .rodata        0x0000000000005ef0      0x211 ./obj/winusb30/tusb_dev_drv_ch56x.o
  *(.rodata*)
+ *fill*         0x0000000000006101        0x3 
+ .rodata.BULK30_DeviceDescriptor
+                0x0000000000006104       0x12 ./obj/winusb30/teeny_usb_desc.o
+                0x0000000000006104                BULK30_DeviceDescriptor
+ *fill*         0x0000000000006116        0x2 
+ .rodata.BULK30_ConfigDescriptor1
+                0x0000000000006118       0x2c ./obj/winusb30/teeny_usb_desc.o
+                0x0000000000006118                BULK30_ConfigDescriptor1
+ .rodata.BULK30_StringDescriptor1
+                0x0000000000006144       0x12 ./obj/winusb30/teeny_usb_desc.o
+                0x0000000000006144                BULK30_StringDescriptor1
+ *fill*         0x0000000000006156        0x2 
+ .rodata.BULK30_StringDescriptor2
+                0x0000000000006158       0x24 ./obj/winusb30/teeny_usb_desc.o
+                0x0000000000006158                BULK30_StringDescriptor2
+ .rodata.BULK30_StringDescriptor3
+                0x000000000000617c       0x16 ./obj/winusb30/teeny_usb_desc.o
+                0x000000000000617c                BULK30_StringDescriptor3
+ *fill*         0x0000000000006192        0x2 
+ .rodata.BULK30_StringDescriptors
+                0x0000000000006194       0x10 ./obj/winusb30/teeny_usb_desc.o
+                0x0000000000006194                BULK30_StringDescriptors
+ .rodata.BULK30_WCIDDescriptorSet
+                0x00000000000061a4       0xa2 ./obj/winusb30/teeny_usb_desc.o
+                0x00000000000061a4                BULK30_WCIDDescriptorSet
+ *fill*         0x0000000000006246        0x2 
+ .rodata.BULK30_WCIDBOS
+                0x0000000000006248       0x32 ./obj/winusb30/teeny_usb_desc.o
+                0x0000000000006248                BULK30_WCIDBOS
+ *fill*         0x000000000000627a        0x2 
+ .rodata.BULK30_extra_descriptor
+                0x000000000000627c       0x10 ./obj/winusb30/teeny_usb_desc.o
+                0x000000000000627c                BULK30_extra_descriptor
+ .rodata.BULK30_descriptors
+                0x000000000000628c       0x18 ./obj/winusb30/teeny_usb_desc.o
+                0x000000000000628c                BULK30_descriptors
+ .rodata.tusb_wcid_msos_string_descriptor
+                0x00000000000062a4       0x12 ./obj/winusb30/teeny_usb_device.o
+ *fill*         0x00000000000062b6        0x2 
+ .rodata.tusb_get_descriptor
+                0x00000000000062b8       0x40 ./obj/winusb30/teeny_usb_device.o
+ .rodata.tusb_std_device_request
+                0x00000000000062f8       0x28 ./obj/winusb30/teeny_usb_device.o
+ .rodata.__sf_fake_stderr
+                0x0000000000006320       0x20 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000006320                __sf_fake_stderr
+ .rodata.__sf_fake_stdout
+                0x0000000000006340       0x20 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000006340                __sf_fake_stdout
+ .rodata.__sf_fake_stdin
+                0x0000000000006360       0x20 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+                0x0000000000006360                __sf_fake_stdin
+ .rodata._vfprintf_r.str1.4
+                0x0000000000006380       0x13 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
+ *fill*         0x0000000000006393        0x1 
+ .rodata._printf_i.str1.4
+                0x0000000000006394       0x25 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x00000000000063b9        0x3 
+ .rodata._printf_i
+                0x00000000000063bc       0x58 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(.glue_7)
  *(.glue_7t)
  *(.gnu.linkonce.t.*)
-                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000006414                . = ALIGN (0x4)
 
-.fini           0x0000000000000000        0x0
+.rela.dyn       0x0000000000006414        0x0
+ .rela.rodata.BULK30_StringDescriptors
+                0x0000000000006414        0x0 ./obj/winusb30/winusb30.o
+ .rela.rodata.BULK30_extra_descriptor
+                0x0000000000006414        0x0 ./obj/winusb30/winusb30.o
+ .rela.init     0x0000000000006414        0x0 ./obj/winusb30/winusb30.o
+ .rela.vector   0x0000000000006414        0x0 ./obj/winusb30/winusb30.o
+ .rela.text.handle_reset
+                0x0000000000006414        0x0 ./obj/winusb30/winusb30.o
+ .rela.text._vfprintf_r
+                0x0000000000006414        0x0 ./obj/winusb30/winusb30.o
+
+.fini           0x0000000000006414        0x0
  *(SORT_NONE(.fini))
-                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000006414                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x0000000000000000        0x0
+.preinit_array  0x0000000000006414        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000000000000        0x0
+.init_array     0x0000000000006414        0x0
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000000000000        0x0
+.fini_array     0x0000000000006414        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -867,65 +916,120 @@ Linker script and memory map
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000000000000
+.dalign         0x0000000020000000        0x0 load address 0x0000000000006414
                 0x0000000020000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_data_vma = .)
+                0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x0000000000000000        0x0
-                0x0000000000000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_data_lma = .)
+.dlalign        0x0000000000006414        0x0
+                0x0000000000006414                . = ALIGN (0x4)
+                0x0000000000006414                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000        0x0 load address 0x0000000000000000
+.data           0x0000000020000000       0x74 load address 0x0000000000006414
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
+ .data.impure_data
+                0x0000000020000000       0x60 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
  *(.gnu.linkonce.d.*)
-                0x0000000020000000                . = ALIGN (0x8)
-                [!provide]                        PROVIDE (__global_pointer$ = (. + 0x800))
+                0x0000000020000060                . = ALIGN (0x8)
+                0x0000000020000860                PROVIDE (__global_pointer$ = (. + 0x800))
  *(.sdata .sdata.*)
+ .sdata._impure_ptr
+                0x0000000020000060        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+                0x0000000020000060                _impure_ptr
  *(.sdata2.*)
  *(.gnu.linkonce.s.*)
-                0x0000000020000000                . = ALIGN (0x8)
+                0x0000000020000068                . = ALIGN (0x8)
+ *fill*         0x0000000020000064        0x4 
  *(.srodata.cst16)
  *(.srodata.cst8)
  *(.srodata.cst4)
  *(.srodata.cst2)
  *(.srodata .srodata.*)
-                0x0000000020000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_edata = .)
+ .srodata.BULK30_ConfigDescriptors
+                0x0000000020000068        0x4 ./obj/winusb30/teeny_usb_desc.o
+                0x0000000020000068                BULK30_ConfigDescriptors
+ .srodata.BULK30_StringDescriptor0
+                0x000000002000006c        0x4 ./obj/winusb30/teeny_usb_desc.o
+                0x000000002000006c                BULK30_StringDescriptor0
+ .srodata._global_impure_ptr
+                0x0000000020000070        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+                0x0000000020000070                _global_impure_ptr
+                0x0000000020000074                . = ALIGN (0x4)
+                0x0000000020000074                PROVIDE (_edata = .)
 
-.bss            0x0000000020000000        0x0 load address 0x0000000000000000
-                0x0000000020000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_sbss = .)
+.bss            0x0000000020000074      0x270 load address 0x0000000000006488
+                0x0000000020000074                . = ALIGN (0x4)
+                0x0000000020000074                PROVIDE (_sbss = .)
  *(.sbss*)
+ .sbss.data_cnt
+                0x0000000020000074        0x4 ./obj/winusb30/winusb30.o
+                0x0000000020000074                data_cnt
+ .sbss.p_us     0x0000000020000078        0x1 ./obj/winusb30/CH56x_sys.o
+ *fill*         0x0000000020000079        0x1 
+ .sbss.p_ms     0x000000002000007a        0x2 ./obj/winusb30/CH56x_sys.o
+ .sbss.__malloc_sbrk_start
+                0x000000002000007c        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x000000002000007c                __malloc_sbrk_start
+ .sbss.__malloc_free_list
+                0x0000000020000080        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000080                __malloc_free_list
+ .sbss.__lock___malloc_recursive_mutex
+                0x0000000020000084        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000020000084                __lock___malloc_recursive_mutex
+ *fill*         0x0000000020000085        0x3 
+ .sbss.__lock___sfp_recursive_mutex
+                0x0000000020000088        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x0000000020000088                __lock___sfp_recursive_mutex
+ *fill*         0x0000000020000089        0x3 
+ .sbss.__lock___sinit_recursive_mutex
+                0x000000002000008c        0x1 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+                0x000000002000008c                __lock___sinit_recursive_mutex
+ *fill*         0x000000002000008d        0x3 
+ .sbss.errno    0x0000000020000090        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+                0x0000000020000090                errno
+ .sbss.heap_end.0
+                0x0000000020000094        0x4 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
  *(.gnu.linkonce.sb.*)
  *(.bss*)
+ .bss.g_dev     0x0000000020000098      0x12c ./obj/winusb30/winusb30.o
+ .bss.ch56x_dev_drv
+                0x00000000200001c4      0x120 ./obj/winusb30/tusb_dev_drv_ch56x.o
  *(.gnu.linkonce.b.*)
  *(COMMON*)
-                0x0000000020000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_ebss = .)
+                0x00000000200002e4                . = ALIGN (0x4)
+                0x00000000200002e4                PROVIDE (_ebss = .)
                 [!provide]                        PROVIDE (_end = _ebss)
                 [!provide]                        PROVIDE (end = .)
 
-.DMADATA        0x0000000020020000        0x0 load address 0x0000000000000000
+.DMADATA        0x0000000020020000     0x2200 load address 0x0000000000006488
                 0x0000000020020000                . = ALIGN (0x10)
-                [!provide]                        PROVIDE (_dmadata_start = .)
+                0x0000000020020000                PROVIDE (_dmadata_start = .)
  *(.dmadata*)
  *(.dmadata.*)
                 0x0000000020020000                . = ALIGN (0x10)
-                [!provide]                        PROVIDE (_dmadata_end = .)
+                0x0000000020020000                PROVIDE (_dmadata_end = .)
+ .DMADATA       0x0000000020020000     0x2000 ./obj/winusb30/winusb30.o
+                0x0000000020020000                test_buf
+                0x0000000020021000                test_buf_tx
+ .DMADATA       0x0000000020022000      0x200 ./obj/winusb30/tusb_dev_drv_ch56x.o
 
 .stack          0x0000000020003800      0x800
                 0x0000000020003800                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_susrstack = .)
                 0x0000000020004000                . = (. + __stack_size)
  *fill*         0x0000000020003800      0x800 
-                [!provide]                        PROVIDE (_eusrstack = .)
+                0x0000000020004000                PROVIDE (_eusrstack = .)
 LOAD ./obj/winusb30/winusb30.o
 LOAD ./obj/winusb30/teeny_usb_desc.o
 LOAD ./obj/winusb30/teeny_usb_retarget.o
 LOAD ./obj/winusb30/teeny_usb_host.o
 LOAD ./obj/winusb30/teeny_usb_no_os.o
 LOAD ./obj/winusb30/teeny_usb_device.o
+LOAD ./obj/winusb30/board.o
+LOAD ./obj/winusb30/CH56x_clk.o
+LOAD ./obj/winusb30/CH56x_sys.o
+LOAD ./obj/winusb30/CH56x_timer.o
+LOAD ./obj/winusb30/startup_CH56x.o
 LOAD ./obj/winusb30/tusb_dev_drv_ch56x.o
 LOAD /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc-nano/lib/gcc/riscv-none-elf/12.2.0/libgcc.a
 LOAD /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a
@@ -935,119 +1039,142 @@ LOAD /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none
 LOAD /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a
 LOAD /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a
 END GROUP
-                0x0000000000000800                __stack_size = 0x800
-                [!provide]                        PROVIDE (_stack_size = __stack_size)
-
-.init           0x0000000000000000        0x0
-                0x0000000000000000                _sinit = .
-                0x0000000000000000                . = ALIGN (0x4)
- *(SORT_NONE(.init))
-                0x0000000000000000                . = ALIGN (0x4)
-                0x0000000000000000                _einit = .
-
-.vector         0x0000000000000000        0x0
- *(.vector)
-                0x0000000000000000                . = ALIGN (0x40)
-
-.text           0x0000000000000000        0x0
-                0x0000000000000000                . = ALIGN (0x4)
- *(.text)
- *(.text.*)
- *(.rodata)
- *(.rodata*)
- *(.glue_7)
- *(.glue_7t)
- *(.gnu.linkonce.t.*)
-                0x0000000000000000                . = ALIGN (0x4)
-
-.fini           0x0000000000000000        0x0
- *(SORT_NONE(.fini))
-                0x0000000000000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_etext = .)
-                [!provide]                        PROVIDE (_eitcm = .)
-
-.preinit_array  0x0000000000000000        0x0
-                [!provide]                        PROVIDE (__preinit_array_start = .)
- *(.preinit_array)
-                [!provide]                        PROVIDE (__preinit_array_end = .)
-
-.init_array     0x0000000000000000        0x0
-                [!provide]                        PROVIDE (__init_array_start = .)
- *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
- *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
-                [!provide]                        PROVIDE (__init_array_end = .)
-
-.fini_array     0x0000000000000000        0x0
-                [!provide]                        PROVIDE (__fini_array_start = .)
- *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
- *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
-                [!provide]                        PROVIDE (__fini_array_end = .)
-
-.ctors
- *crtbegin.o(.ctors)
- *crtbegin?.o(.ctors)
- *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
- *(SORT_BY_NAME(.ctors.*))
- *(.ctors)
-
-.dtors
- *crtbegin.o(.dtors)
- *crtbegin?.o(.dtors)
- *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
- *(SORT_BY_NAME(.dtors.*))
- *(.dtors)
-
-.dalign         0x0000000020004000        0x0 load address 0x0000000000000000
-                0x0000000020004000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_data_vma = .)
-
-.dlalign        0x0000000000000000        0x0
-                0x0000000000000000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_data_lma = .)
-
-.data           0x0000000020004000        0x0 load address 0x0000000000000000
- *(.gnu.linkonce.r.*)
- *(.data .data.*)
- *(.gnu.linkonce.d.*)
-                0x0000000020004000                . = ALIGN (0x8)
-                [!provide]                        PROVIDE (__global_pointer$ = (. + 0x800))
- *(.sdata .sdata.*)
- *(.sdata2.*)
- *(.gnu.linkonce.s.*)
-                0x0000000020004000                . = ALIGN (0x8)
- *(.srodata.cst16)
- *(.srodata.cst8)
- *(.srodata.cst4)
- *(.srodata.cst2)
- *(.srodata .srodata.*)
-                0x0000000020004000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_edata = .)
-
-.bss            0x0000000020004000        0x0 load address 0x0000000000000000
-                0x0000000020004000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_sbss = .)
- *(.sbss*)
- *(.gnu.linkonce.sb.*)
- *(.bss*)
- *(.gnu.linkonce.b.*)
- *(COMMON*)
-                0x0000000020004000                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_ebss = .)
-                [!provide]                        PROVIDE (_end = _ebss)
-                [!provide]                        PROVIDE (end = .)
-
-.DMADATA        0x0000000020020000        0x0 load address 0x0000000000000000
-                0x0000000020020000                . = ALIGN (0x10)
-                [!provide]                        PROVIDE (_dmadata_start = .)
- *(.dmadata*)
- *(.dmadata.*)
-                0x0000000020020000                . = ALIGN (0x10)
-                [!provide]                        PROVIDE (_dmadata_end = .)
-
-.stack          0x0000000020003800      0x800
-                0x0000000020003800                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (_susrstack = .)
-                0x0000000020004000                . = (. + __stack_size)
- *fill*         0x0000000020003800      0x800 
-                [!provide]                        PROVIDE (_eusrstack = .)
 OUTPUT(output/winusb30.elf elf32-littleriscv)
+
+.comment        0x0000000000000000       0x34
+ .comment       0x0000000000000000       0x34 ./obj/winusb30/winusb30.o
+                                         0x35 (size before relaxing)
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/teeny_usb_desc.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/teeny_usb_retarget.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/teeny_usb_device.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/board.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/CH56x_clk.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/CH56x_sys.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/CH56x_timer.o
+ .comment       0x0000000000000034       0x35 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .comment       0x0000000000000034       0x35 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)
+
+.riscv.attributes
+                0x0000000000000000       0x38
+ .riscv.attributes
+                0x0000000000000000       0x34 ./obj/winusb30/winusb30.o
+ .riscv.attributes
+                0x0000000000000034       0x34 ./obj/winusb30/teeny_usb_desc.o
+ .riscv.attributes
+                0x0000000000000068       0x34 ./obj/winusb30/teeny_usb_retarget.o
+ .riscv.attributes
+                0x000000000000009c       0x34 ./obj/winusb30/teeny_usb_device.o
+ .riscv.attributes
+                0x00000000000000d0       0x34 ./obj/winusb30/board.o
+ .riscv.attributes
+                0x0000000000000104       0x34 ./obj/winusb30/CH56x_clk.o
+ .riscv.attributes
+                0x0000000000000138       0x34 ./obj/winusb30/CH56x_sys.o
+ .riscv.attributes
+                0x000000000000016c       0x34 ./obj/winusb30/CH56x_timer.o
+ .riscv.attributes
+                0x00000000000001a0       0x36 ./obj/winusb30/startup_CH56x.o
+ .riscv.attributes
+                0x00000000000001d6       0x38 ./obj/winusb30/tusb_dev_drv_ch56x.o
+ .riscv.attributes
+                0x000000000000020e       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-errno.o)
+ .riscv.attributes
+                0x0000000000000239       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-impure.o)
+ .riscv.attributes
+                0x0000000000000264       0x29 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memcpy-asm.o)
+ .riscv.attributes
+                0x000000000000028d       0x29 /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memset.o)
+ .riscv.attributes
+                0x00000000000002b6       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-freer.o)
+ .riscv.attributes
+                0x00000000000002e1       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-mallocr.o)
+ .riscv.attributes
+                0x000000000000030c       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-printf.o)
+ .riscv.attributes
+                0x0000000000000337       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-puts.o)
+ .riscv.attributes
+                0x0000000000000362       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-sbrkr.o)
+ .riscv.attributes
+                0x000000000000038d       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wbuf.o)
+ .riscv.attributes
+                0x00000000000003b8       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-wsetup.o)
+ .riscv.attributes
+                0x00000000000003e3       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fflush.o)
+ .riscv.attributes
+                0x000000000000040e       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-findfp.o)
+ .riscv.attributes
+                0x0000000000000439       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fwalk.o)
+ .riscv.attributes
+                0x0000000000000464       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lock.o)
+ .riscv.attributes
+                0x000000000000048f       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-makebuf.o)
+ .riscv.attributes
+                0x00000000000004ba       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-mlock.o)
+ .riscv.attributes
+                0x00000000000004e5       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf.o)
+ .riscv.attributes
+                0x0000000000000510       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-reent.o)
+ .riscv.attributes
+                0x000000000000053b       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-stdio.o)
+ .riscv.attributes
+                0x0000000000000566       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-writer.o)
+ .riscv.attributes
+                0x0000000000000591       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-closer.o)
+ .riscv.attributes
+                0x00000000000005bc       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-fstatr.o)
+ .riscv.attributes
+                0x00000000000005e7       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-isattyr.o)
+ .riscv.attributes
+                0x0000000000000612       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-lseekr.o)
+ .riscv.attributes
+                0x000000000000063d       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-memchr.o)
+ .riscv.attributes
+                0x0000000000000668       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .riscv.attributes
+                0x0000000000000693       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libc_nano.a(lib_a-readr.o)
+ .riscv.attributes
+                0x00000000000006be       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_close.o)
+ .riscv.attributes
+                0x00000000000006e9       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_fstat.o)
+ .riscv.attributes
+                0x0000000000000714       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_isatty.o)
+ .riscv.attributes
+                0x000000000000073f       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_lseek.o)
+ .riscv.attributes
+                0x000000000000076a       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_read.o)
+ .riscv.attributes
+                0x0000000000000795       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_sbrk.o)
+ .riscv.attributes
+                0x00000000000007c0       0x2b /media/maddocks/0e5c8f59-b86e-4423-a28c-b3830408c50a5/ch569/Work/riscv-none-elf-gcc-12.2.0-1/linux-arm64/install/riscv-none-elf-gcc/riscv-none-elf/lib/libgloss_nano.a(sys_conv_stat.o)

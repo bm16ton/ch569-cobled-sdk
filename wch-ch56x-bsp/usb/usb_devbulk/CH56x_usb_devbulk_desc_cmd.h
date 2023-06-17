@@ -101,7 +101,7 @@ extern uint8_t USB_SS_DeviceDescriptor[LEN_USB_SS_DeviceDescriptor];
 #define LEN_USB_HS_ConfigDescriptor (75)
 extern uint8_t USB_HS_ConfigDescriptor[LEN_USB_HS_ConfigDescriptor];
 /* USB3.0 SuperSpeed configuration descriptor */
-#define LEN_USB_SS_ConfigDescriptor (70)
+#define LEN_USB_SS_ConfigDescriptor (93)
 extern uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor];
 
 /********************************/

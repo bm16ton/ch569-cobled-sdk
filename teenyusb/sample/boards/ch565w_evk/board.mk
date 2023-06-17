@@ -1,4 +1,4 @@
-CPU = rv32imac_zicsr
+CPU = zicsr
 
 DEV_TYPE = ilp32
 BOARD_INC = $(BOARD_PATH)  $(TUSB_PATH)/../driver_ch56x/ch56xlib/Peripheral/inc/

@@ -18,7 +18,10 @@
 #include "CH56x_usb_devbulk_desc_cmd.h"
 
 #include "hydrausb3_usb_devbulk_vid_pid.h"
+#include "tusbd_cdc.h"
 
+
+#define CDC_RX_EP_SIZE    512
 #undef FREQ_SYS
 /* System clock / MCU frequency in Hz */
 #define FREQ_SYS (120000000)
@@ -43,6 +46,25 @@ int blink_ms = BLINK_USB2;
 
 debug_log_buf_t log_buf;
 
+__ALIGN_BEGIN uint8_t cdc_buf[CDC_RX_EP_SIZE] __ALIGN_END;
+
+int cdc_recv_data(tusb_cdc_device_t* cdc, const void* data, uint16_t len);
+int cdc_send_done(tusb_cdc_device_t* cdc, const void* data, uint16_t len);
+void cdc_line_coding_change(tusb_cdc_device_t* cdc);
+
+tusb_cdc_device_t cdc_dev = {
+  .backend = &cdc_device_backend,
+  .ep_in = 1,
+  .ep_out = 1,
+  .ep_int = 8,
+  .on_recv_data = cdc_recv_data,
+  .on_send_done = cdc_send_done,
+  .on_line_coding_change = cdc_line_coding_change,
+  .rx_buf = cdc_buf,
+  .rx_size = sizeof(cdc_buf),
+};
+
+
 /* FLASH_ROMA Read Unique ID (8bytes/64bits) */
 #define FLASH_ROMA_UID_ADDR (0x77fe4)
 usb_descriptor_serial_number_t unique_id;
@@ -57,6 +79,30 @@ usb_descriptor_usb_vid_pid_t vid_pid =
 uint8_t TxBuff[]="This is a Tx exam\r\n";
 uint8_t RxBuff[100];
 uint8_t trigB;
+
+
+static int cdc_len = 0;
+int cdc_recv_data(tusb_cdc_device_t* cdc, const void* data, uint16_t len)
+{
+  cdc_len = (int)len;
+  return 1; // return 1 means the recv buffer is busy
+}
+
+int cdc_send_done(tusb_cdc_device_t* cdc, const void* data, uint16_t len)
+{
+  tusb_set_rx_valid(cdc->dev, cdc->ep_out);
+  return 0;
+}
+
+void cdc_line_coding_change(tusb_cdc_device_t* cdc)
+{
+    //cdc->line_coding.bitrate
+    //cdc->line_coding.parity
+    //cdc->line_coding.databits
+    //cdc->line_coding.stopbits
+ //   TUSB_LOGD("App Todo: set real line coding\n");
+}
+
 /*********************************************************************
  * @fn      main
  *
@@ -138,6 +184,13 @@ int main()
 			bsp_wait_ms_delay(blink_ms);
 			bsp_uled_off();
 			bsp_wait_ms_delay(blink_ms);
+			if(cdc_len){
+      		for(int i=0;i<cdc_len;i++){
+        	cdc_buf[i]+=3;
+      		}
+      		tusb_cdc_device_send(&cdc_dev, cdc_buf, cdc_len);
+      		cdc_len = 0;
+    }
 		}
 		else
 		{
@@ -152,6 +205,13 @@ int main()
 							old_DeviceUsbType = g_DeviceUsbType;
 							log_printf("USB2\n");
 						}
+						 if(cdc_len){
+      					for(int i=0;i<cdc_len;i++){
+        				cdc_buf[i]+=3;
+      					}
+      					tusb_cdc_device_send(&cdc_dev, cdc_buf, cdc_len);
+      					cdc_len = 0;
+    					}
 						blink_ms = BLINK_USB2;
 						bsp_uled_on();
 						bsp_wait_ms_delay(blink_ms);
@@ -172,6 +232,13 @@ int main()
 						bsp_wait_ms_delay(blink_ms);
 						bsp_uled_off();
 						bsp_wait_ms_delay(blink_ms);
+						 if(cdc_len){
+      					for(int i=0;i<cdc_len;i++){
+        				cdc_buf[i]+=3;
+      					}
+      					tusb_cdc_device_send(&cdc_dev, cdc_buf, cdc_len);
+      					cdc_len = 0;
+    					}
 					}
 					break;
 

@@ -21,10 +21,20 @@ DEFINES  += $(BOARD_DEF)
 # Teeny USB source
 TUSB_PATH = ../../core
 SOURCES  += $(wildcard $(TUSB_PATH)/*.c)
+SOURCES  += $(wildcard ../boards/ch565w_evk/*.c)
+SOURCES  += ../../driver_ch56x/ch56xlib/Peripheral/src/CH56x_clk.c
+SOURCES  += ../../driver_ch56x/ch56xlib/Peripheral/src/CH56x_sys.c
+SOURCES  += ../../driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c
+INCLUDES += $(TUSB_PATH)/../class
+INCLUDES += $(TUSB_PATH)/../class/user
+SOURCES  += ../../driver_ch56x/ch56xlib/Startup/startup_CH56x.S
 INCLUDES += $(TUSB_PATH)../driver_ch56x/ch56xlib/Peripheral/inc/
 INCLUDES += $(TUSB_PATH)/../driver_ch56x
+INCLUDES += ../boards/ch565w_evk
 INCLUDES += $(TUSB_PATH)/
+INCLUDES += ./
 INCLUDES += $(TUSB_PATH)/../driver_ch56x/ch56xlib/RVMSIS
+INCLUDES += ../../driver_ch56x/ch56xlib/Peripheral/inc
 
 # MCU driver source
 SOURCES += $(wildcard $(TUSB_PATH)/../driver_ch56x/*.c)
@@ -40,14 +50,14 @@ RM           = rm -rf
 CP           = cp
 MKDIR        = mkdir -p
 
-CPU ?=
+CPU ?=		rv32imac_zicsr
 CCFLAGS     += -march=rv32imac_zicsr -mabi=ilp32 -msmall-data-limit=8 $(OPTIM_OPTS) -fmessage-length=0 -fsigned-char
 CCFLAGS     += $(addprefix -D, $(DEFINES))
 CCFLAGS     += $(addprefix -I, $(INCLUDES))
 CCFLAGS     += -ffunction-sections -fdata-sections
 LDFLAGS     += $(CCFLAGS)
-LDFLAGS     += -Wl,--script='$(LDSCRIPT)' -Wl,-Map=$(OUTDIR)/$(TARGET).map
-LDFLAGS     += -Wl,--gc-sections -T ".ld" -nostartfiles -Xlinker --gc-sections -Xlinker --print-memory-usage -Wl,-Map,"$(PROJECT).map" --specs=nano.specs
+LDFLAGS     += -Wl,--script='$(LDSCRIPT)' -Wl,-Map=$(OUTDIR)/$(TARGET).map  -std=gnu99 -MMD -MP -MT"$(@)"
+LDFLAGS     += -Wl,--gc-sections  -nostartfiles -Xlinker --gc-sections -Xlinker --print-memory-usage -Wl,-Map,"$(PROJECT).map" --specs=nano.specs
 
 
 OUTDIR = ./output
@@ -94,15 +104,8 @@ $(OUTDIR)/$(TARGET).elf: $(OBJDIR) $(OBJECTS)
 	@$(LD) $(LDFLAGS) $(OBJECTS) -o $@
 	@$(SIZE) $@
 
-USBMEM ?= 512
+USBMEM ?= 1024
 USBEP  ?= 7
-
-PWD = $(shell pwd)
-teeny_usb_desc.c teeny_usb_desc.h:$(TEENYDT)
-	@echo generate USB descriptor
-	cd $(PWD)/../../TeenyDT && \
-	lua gen_descriptor.lua $(PWD)/$< -maxmem=$(USBMEM) -maxep=$(USBEP) && \
-	cd $(PWD)
 
 clean:
 	$(RM) $(OUTDIR)/* $(OBJDIR)/*

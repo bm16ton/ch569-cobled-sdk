@@ -1,28 +1,28 @@
 -- gen_descriptor.lua
---  _______                    _____ _______ 
+--  _______                    _____ _______
 -- |__   __|                  |  __ \__   __|
---    | | ___  ___ _ __  _   _| |  | | | |   
---    | |/ _ \/ _ \ '_ \| | | | |  | | | |   
---    | |  __/  __/ | | | |_| | |__| | | |   
---    |_|\___|\___|_| |_|\__, |_____/  |_|   
---                        __/ |              
---                       |___/               
+--    | | ___  ___ _ __  _   _| |  | | | |
+--    | |/ _ \/ _ \ '_ \| | | | |  | | | |
+--    | |  __/  __/ | | | |_| | |__| | | |
+--    |_|\___|\___|_| |_|\__, |_____/  |_|
+--                        __/ |
+--                       |___/
 --
 -- TeenyDT - GUI and command line tool to generate USB descriptors and drivers
--- 
+--
 -- Copyright (c) 2019 XToolBox  - admin@xtoolbox.org
 --                         www.tusb.org
--- 
+--
 -- Permission is hereby granted, free of charge, to any person obtaining a copy
 -- of this software and associated documentation files (the "Software"), to deal
 -- in the Software without restriction, including without limitation the rights
 -- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 -- copies of the Software, and to permit persons to whom the Software is
 -- furnished to do so, subject to the following conditions:
--- 
+--
 -- The above copyright notice and this permission notice shall be included in all
 -- copies or substantial portions of the Software.
--- 
+--
 -- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 -- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 -- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -73,7 +73,7 @@ function MakeHeader(outFile, inFile, body)
 
 /*
   Input source name:  $(INNAME)
-  
+
   Content type is lua script:
   ------------- lua script begin ------------
 $(BODY)
@@ -83,10 +83,6 @@ $(BODY)
 ]])
 end
 
-if not arg or #arg < 1 then
-    usage()
-    return
-end
 
 local MAX_EP = 7
 local MAX_MEM = 1024

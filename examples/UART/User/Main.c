@@ -33,7 +33,7 @@ usb_descriptor_usb_vid_pid_t vid_pid =
 
 
 uint8_t TxBuff[]="This is a Tx exam\r\n";
-uint8_t RxBuff[100];
+uint8_t RxBuff[1024];
 uint8_t trigB;
 
 void UART2_IRQHandler (void) __attribute__((interrupt()));
@@ -80,30 +80,6 @@ int main()
 	bsp_init(FREQ_SYS);
 
 	memset(&unique_id, 0, 8);
-
-	DebugInit(115200);
-	PRINT("Start @ChipID=%02X\r\n", R8_CHIP_ID );
-	FLASH_ROMA_READ(FLASH_ROMA_UID_ADDR, (uint32_t*)&unique_id, 8);
-
-	// USB2 & USB3 Init
-	// USB2 & USB3 are managed in LINK_IRQHandler()/TMR0_IRQHandler()/USBHS_IRQHandler()/USBSS_IRQHandler()
-	R32_USB_CONTROL = 0;
-	PFIC_EnableIRQ(USBSS_IRQn);
-	PFIC_EnableIRQ(LINK_IRQn);
-
-	PFIC_EnableIRQ(TMR0_IRQn);
-	R8_TMR0_INTER_EN = RB_TMR_IE_CYC_END;
-	TMR0_TimerInit(67000000); // USB3.0 connection failure timeout about 0.56 seconds
-
-	/* USB Descriptor set String Serial Number with CH569 Unique ID */
-	usb_descriptor_set_string_serial_number(&unique_id);
-
-	/* USB Descriptor set USB VID/PID */
-	usb_descriptor_set_usb_vid_pid(&vid_pid);
-
-	/* USB3.0 initialization, make sure that the two USB3.0 interrupts are enabled before initialization */
-	USB30D_init(ENABLE);
-//USB2_force();
 	uint8_t len;
 
 
@@ -130,10 +106,34 @@ int main()
 #endif
 
 #if 1
-	UART2_ByteTrigCfg( UART_1BYTE_TRIG );
-	trigB = 1;
+	UART2_ByteTrigCfg( UART_7BYTE_TRIG );
+	trigB = 7;
 	UART2_INTCfg( ENABLE, RB_IER_RECV_RDY|RB_IER_LINE_STAT );
 	PFIC_EnableIRQ( UART2_IRQn );
+//	DebugInit(115200);
+	PRINT("Start @ChipID=%02X\r\n", R8_CHIP_ID );
+	FLASH_ROMA_READ(FLASH_ROMA_UID_ADDR, (uint32_t*)&unique_id, 8);
+
+	// USB2 & USB3 Init
+	// USB2 & USB3 are managed in LINK_IRQHandler()/TMR0_IRQHandler()/USBHS_IRQHandler()/USBSS_IRQHandler()
+	R32_USB_CONTROL = 0;
+	PFIC_EnableIRQ(USBSS_IRQn);
+	PFIC_EnableIRQ(LINK_IRQn);
+
+	PFIC_EnableIRQ(TMR0_IRQn);
+	R8_TMR0_INTER_EN = RB_TMR_IE_CYC_END;
+	TMR0_TimerInit(67000000); // USB3.0 connection failure timeout about 0.56 seconds
+
+	/* USB Descriptor set String Serial Number with CH569 Unique ID */
+	usb_descriptor_set_string_serial_number(&unique_id);
+
+	/* USB Descriptor set USB VID/PID */
+	usb_descriptor_set_usb_vid_pid(&vid_pid);
+
+	/* USB3.0 initialization, make sure that the two USB3.0 interrupts are enabled before initialization */
+	USB30D_init(ENABLE);
+//USB2_force();
+
 #endif
 
 	while(1)
