@@ -48,6 +48,7 @@ void log_init(debug_log_buf_t *buf)
 {
 	debug_log_buf = buf;
 	debug_log_buf->idx = 0;
+	memset(debug_log_buf, 0, sizeof(debug_log_buf));
 	startCNT64 = bsp_get_SysTickCNT();
 #ifdef CH56x_DEBUG_LOG_LIBDIVIDE_SYSLCLK
 	fast_u64_divSysClock = libdivide_u64_gen(CH56x_DEBUG_LOG_LIBDIVIDE_SYSLCLK);

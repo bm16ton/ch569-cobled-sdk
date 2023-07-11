@@ -1,28 +1,28 @@
-/*       
- *         _______                    _    _  _____ ____  
- *        |__   __|                  | |  | |/ ____|  _ \ 
+/*
+ *         _______                    _    _  _____ ____
+ *        |__   __|                  | |  | |/ ____|  _ \
  *           | | ___  ___ _ __  _   _| |  | | (___ | |_) |
- *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ < 
+ *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ <
  *           | |  __/  __/ | | | |_| | |__| |____) | |_) |
- *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/ 
- *                               __/ |                    
- *                              |___/                     
+ *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/
+ *                               __/ |
+ *                              |___/
  *
  * TeenyUSB - light weight usb stack for micro controllers
- * 
+ *
  * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
  *                         www.tusb.org
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -34,7 +34,7 @@
 
 #include "tusbd_cdc.h"
 #include "teeny_usb_util.h"
-
+#include "teeny_usb_device.h"
 int tusb_cdc_send_state(tusb_cdc_device_t* cdc)
 {
   if(cdc->ep_int_busy) return -1;
@@ -66,7 +66,7 @@ static int tusb_cdc_device_init(tusb_cdc_device_t* cdc)
 }
 
 static const char* stop_name[] = {"1", "1.5", "2"};
-static uint16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, uint8_t* buf)
+int16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, uint8_t* buf)
 {
   switch (setup_req->bRequest)
   {
@@ -101,6 +101,7 @@ static uint16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, 
         cdc->line_coding.databits,
         cdc->line_coding.stopbits [stop_name]
     );
+    return 1;
     break;
 
   case CDC_GET_LINE_CODING:
@@ -117,6 +118,7 @@ static uint16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, 
         cdc->line_coding.databits,
         cdc->line_coding.stopbits [stop_name]
     );
+    return 1;
     break;
 
   case CDC_SET_CONTROL_LINE_STATE:
@@ -124,6 +126,7 @@ static uint16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, 
       cdc->on_line_state_change(cdc, setup_req->wValue);
     }
     TUSB_LOGD("CDC Set Linestate DTR=%d, RTS=%d\n", setup_req->wValue&TUSB_CDC_DTR, (setup_req->wValue&TUSB_CDC_RTS)>>1);
+    return 1;
     break;
 
   case CDC_SEND_BREAK:
@@ -131,8 +134,9 @@ static uint16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, 
       cdc->on_set_break(cdc, setup_req->wValue);
     }
     TUSB_LOGD("CDC Send break %d ms\n", setup_req->wValue);
+    return 1;
     break;
-    
+
   default:
     break;
   }
@@ -154,12 +158,12 @@ static void cdc_dataout_request(tusb_device_t* dev, const void* data, int len)
   tusb_send_status(dev);
 }
 
-static int tusb_cdc_device_request(tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req)
+int tusb_cdc_device_request(tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req)
 {
   tusb_device_t* dev = cdc->dev;
   tusb_device_config_t* dev_config = (tusb_device_config_t*)dev->user_data;
   if( (setup_req->bmRequestType & USB_REQ_TYPE_MASK) == USB_REQ_TYPE_CLASS){
-    if(setup_req->wLength > 0){ 
+    if(setup_req->wLength > 0){
       if (setup_req->bmRequestType & 0x80){
         cdc_ctrl(cdc, setup_req, dev_config->cmd_buffer);
         tusb_control_send(dev, dev_config->cmd_buffer, setup_req->wLength);

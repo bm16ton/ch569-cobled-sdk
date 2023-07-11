@@ -10,8 +10,8 @@
  *
  * TeenyUSB - light weight usb stack for micro controllers
  *
- * Copyright (c) 2021 XToolBox - admin@xtoolbox.org
- * www.tusb.org
+ * Copyright (c) 2021 XToolBox  - admin@xtoolbox.org
+ *                         www.tusb.org
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,10 +32,25 @@
  * SOFTWARE.
  */
 
-#ifndef __TUSB_DEV_DRV_CH56x_H__
-#define __TUSB_DEV_DRV_CH56x_H__
+#ifndef __TEENY_USB_CONFIG_H__
+#define __TEENY_USB_CONFIG_H__
 
-#define  CH56x_MAX_EP_COUNT 8
-extern __attribute__ ((aligned(16))) uint8_t  ep0_buff[512]  __attribute__((section(".DMADATA")));
+/** max interface count in teeny usb stack */
+#define TUSB_MAX_INTERFACE_COUNT 8
+
+/** max endpoint pair count in teeny usb stack */
+#define TUSB_MAX_EP_PAIR_COUNT 8
+
+/** descriptor buffer, some device require data in RAM */
+#define DESCRIPTOR_BUFFER_SIZE 256
+
+/** debug info level, one of TUSB_DBG_LEVEL_NONE, TUSB_DBG_LEVEL_DEBUG, TUSB_DBG_LEVEL_WARNING, TUSB_DBG_LEVEL_ERROR */
+#define TUSB_DBG_LEVEL TUSB_DBG_LEVEL_NONE
+
+/** support WCID related request */
+#define TUSB_SUPPORT_WCID 1
+
+/** support USB 3.0 */
+#define TUSB_SUPPORT_USB3
 
 #endif

@@ -18,6 +18,7 @@ extern "C" {
 
 #include "CH56xSFR.h"
 #include "CH56x_gpio.h"
+#include <stdint.h>
 
 extern uint64_t bsp_us_nbcycles;
 extern uint64_t bsp_ms_nbcycles;
@@ -365,4 +366,4 @@ void bsp_uled_off(void);
 }
 #endif
 
-#endif  // __CH56x_BSP_H__	
+#endif  // __CH56x_BSP_H__

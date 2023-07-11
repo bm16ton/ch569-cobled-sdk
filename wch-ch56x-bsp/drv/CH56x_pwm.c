@@ -20,6 +20,9 @@
  *
  * @return None
  */
+
+ typedef volatile unsigned char *vpuint8_t;
+
 void PWMX_CycleCfg(PWMX_CycleTypeDef cyc)
 {
 	switch( cyc )

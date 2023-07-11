@@ -15,6 +15,8 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
+
 #define GPIO_Pin_0   (0x00000001) /*!< Pin 0 selected */
 #define GPIO_Pin_1   (0x00000002) /*!< Pin 1 selected */
 #define GPIO_Pin_2   (0x00000004) /*!< Pin 2 selected */

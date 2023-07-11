@@ -1,28 +1,28 @@
-/*       
- *         _______                    _    _  _____ ____  
- *        |__   __|                  | |  | |/ ____|  _ \ 
+/*
+ *         _______                    _    _  _____ ____
+ *        |__   __|                  | |  | |/ ____|  _ \
  *           | | ___  ___ _ __  _   _| |  | | (___ | |_) |
- *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ < 
+ *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ <
  *           | |  __/  __/ | | | |_| | |__| |____) | |_) |
- *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/ 
- *                               __/ |                    
- *                              |___/                     
+ *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/
+ *                               __/ |
+ *                              |___/
  *
  * TeenyUSB - light weight usb stack for micro controllers
- * 
+ *
  * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
  *                         www.tusb.org
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -49,12 +49,12 @@
 #define  USB_LEN_IF_ASSOC_DESC                          0x08
 #define  USB_LEN_FUNCTION_DESC                          0x03
 
-#define  USBD_IDX_LANGID_STR                            0x00 
-#define  USBD_IDX_MFC_STR                               0x01 
+#define  USBD_IDX_LANGID_STR                            0x00
+#define  USBD_IDX_MFC_STR                               0x01
 #define  USBD_IDX_PRODUCT_STR                           0x02
-#define  USBD_IDX_SERIAL_STR                            0x03 
-#define  USBD_IDX_CONFIG_STR                            0x04 
-#define  USBD_IDX_INTERFACE_STR                         0x05 
+#define  USBD_IDX_SERIAL_STR                            0x03
+#define  USBD_IDX_CONFIG_STR                            0x04
+#define  USBD_IDX_INTERFACE_STR                         0x05
 
 #define  USB_REQ_TYPE_STANDARD                          0x00
 #define  USB_REQ_TYPE_CLASS                             0x20
@@ -140,7 +140,7 @@
 
 #define USB_HS_MAX_PACKET_SIZE                            512
 #define USB_FS_MAX_PACKET_SIZE                            64
-#define USB_MAX_EP0_SIZE                                  64
+#define USB_MAX_EP0_SIZE                                  512
 
 /*  Device Status */
 #define USBD_STATE_DEFAULT                                1
@@ -149,14 +149,14 @@
 #define USBD_STATE_SUSPENDED                              4
 
 
-/*  EP0 State */    
+/*  EP0 State */
 #define USBD_EP0_IDLE                                     0
 #define USBD_EP0_SETUP                                    1
 #define USBD_EP0_DATA_IN                                  2
 #define USBD_EP0_DATA_OUT                                 3
 #define USBD_EP0_STATUS_IN                                4
 #define USBD_EP0_STATUS_OUT                               5
-#define USBD_EP0_STALL                                    6    
+#define USBD_EP0_STALL                                    6
 
 #define USBD_EP_TYPE_CTRL                                 0
 #define USBD_EP_TYPE_ISOC                                 1
@@ -196,30 +196,30 @@
 #elif defined(__CC_ARM)
 #else
 // unknown compiler
-#define __weak 
+#define __weak
 #endif /* __GNUC__ */
 
 
 #define WEAK     __weak
 
 /* In HS mode and when the DMA is used, all variables and data structures dealing
-   with the DMA during the transaction process should be 4-bytes aligned */    
+   with the DMA during the transaction process should be 4-bytes aligned */
 
 #if defined   (__GNUC__)        /* GNU Compiler */
   #define __ALIGN_END    __attribute__ ((aligned (4)))
-  #define __ALIGN_BEGIN         
-#else                           
+  #define __ALIGN_BEGIN
+#else
   #define __ALIGN_END
   #if defined   (__CC_ARM)      /* ARM Compiler */
-    #define __ALIGN_BEGIN    __align(4)  
+    #define __ALIGN_BEGIN    __align(4)
   #elif defined (__ICCARM__)    /* IAR Compiler */
-    #define __ALIGN_BEGIN 
+    #define __ALIGN_BEGIN
   #elif defined  (__TASKING__)  /* TASKING Compiler */
-    #define __ALIGN_BEGIN    __align(4) 
+    #define __ALIGN_BEGIN    __align(4)
   #else
     #define __ALIGN_BEGIN
-  #endif /* __CC_ARM */  
-#endif /* __GNUC__ */ 
+  #endif /* __CC_ARM */
+#endif /* __GNUC__ */
 
 #define STATIC_ASSERT4(COND,MSG) typedef char static_assertion_##MSG[(!!(COND))*2-1];
 #define STATIC_ASSERT3(X,L) STATIC_ASSERT4(X,_at_line_##L)
@@ -310,7 +310,7 @@ typedef __PACK_BEGIN struct _usb_endpoint_descriptor {
 } __PACK_END usb_endpoint_descriptor_t;
 
 STATIC_ASSERT(sizeof(usb_endpoint_descriptor_t) == USB_LEN_EP_DESC)
-    
+
 // Some device not support un-aligned access
 #define EP_MPS(ep_desc)  (\
     ((uint16_t)(((uint8_t*)(&((ep_desc)->wMaxPacketSize)))[0]) << 0) \

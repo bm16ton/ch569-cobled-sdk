@@ -13,7 +13,8 @@ extern "C" {
 #endif
 
 #include "CH56x_common.h"
-
+#include "CH56xSFR.h"
+#include <stdint.h>
 // link CFG
 #define TERM_EN                 (1<<1)
 #define PIPE_RESET              (1<<3)
@@ -155,7 +156,7 @@ static inline void USB30_BUS_RESET( ){
 
 static inline void USB30_OUT_Set(uint8_t endp,uint8_t status,uint8_t nump)
 {
-    volatile uint32_t* p = &USBSS->UEP0_RX_CTRL;
+    uint32_t volatile* p = &USBSS->UEP0_RX_CTRL;
     p+= endp*4;
     *p = *p | ((nump)<<16) | (status << 26);
 }
@@ -168,7 +169,7 @@ static inline void USB30_Device_Setaddress( uint32_t address )
 
 static inline uint8_t USB30_IN_Nump(uint8_t endp)
 {
-    volatile uint32_t* p = &USBSS->UEP0_TX_CTRL;
+    uint32_t volatile* p = &USBSS->UEP0_TX_CTRL;
     p+= endp*4;
     return ((*p)>>16) & 0x1f;
 }
@@ -177,12 +178,19 @@ static inline void USB30_EP0_IN_set(uint8_t status,uint8_t nump,uint16_t TxLen, 
 {
     USBSS->UEP0_TX_CTRL |= ((nump<<16) | (status<<26) | (TxLen & 0x3ff) | (toggle << 31));
 }
-
+/*
 static inline void USB30_IN_Set(uint8_t endp,FunctionalState lpf,uint8_t status,uint8_t nump,uint16_t TxLen)
 {
-    volatile uint32_t* p = &USBSS->UEP0_TX_CTRL;
+    uint32_t volatile* p = &USBSS->UEP0_TX_CTRL;
     p+= endp*4;
     *p = *p | (nump<<16) | (status<<26) | (TxLen & 0x3ff) | (lpf << 28);
+}
+*/
+static inline void USB30_IN_Set(uint8_t endp,FunctionalState lpf,uint8_t status,uint8_t nump,uint16_t TxLen)
+{
+    uint32_t volatile* p = &USBSS->UEP0_TX_CTRL;
+    p+= endp*4;
+    *p = *p | (nump<<16) | (status<<26) | (TxLen & 0x7ff) | (lpf << 28);
 }
 
 static inline void USB30_Send_ERDY(uint8_t endp,uint8_t nump)
@@ -198,9 +206,10 @@ static inline void USB30_Send_ERDY(uint8_t endp,uint8_t nump)
     }
 }
 
+/*
 static inline void USB30_OUT_ClearIT(uint8_t endp)
 {
-    volatile uint32_t* p = &USBSS->UEP0_RX_CTRL;
+    uint32_t volatile* p = &USBSS->UEP0_RX_CTRL;
     p+= endp*4;
     *p &= 0x03e00000;
     if(endp == 5){
@@ -208,17 +217,24 @@ static inline void USB30_OUT_ClearIT(uint8_t endp)
         *p = t;
     }
 }
+*/
+static inline void USB30_OUT_ClearIT(uint8_t endp)
+{
+    uint32_t volatile* p = &USBSS->UEP0_RX_CTRL;
+    p+= endp*4;
+    *p &= 0x03e00000;
+}
 
 static inline void USB30_IN_ClearIT(uint8_t endp)
 {
-    volatile uint32_t* p = &USBSS->UEP0_TX_CTRL;
+    uint32_t volatile* p = &USBSS->UEP0_TX_CTRL;
     p+= endp*4;
     *p &= 0x03e00000;
 }
 
 static inline void USB30_OUT_Status(uint8_t endp,uint8_t *nump,uint16_t *len,uint8_t *status)
 {
-    volatile uint32_t* p = &USBSS->UEP0_RX_CTRL;
+    uint32_t volatile* p = &USBSS->UEP0_RX_CTRL;
     p+= endp*4;
     uint32_t t = *p;
     *len = t;

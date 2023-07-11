@@ -748,3 +748,68 @@ uint16_t UART3_rx(uint8_t* buf, int buf_len_max)
 	}
 	return (len);
 }
+
+void uart_set_stopbits(uint32_t uart, uint32_t stopbits)
+{
+	R8_UART_LCR(uart) |= stopbits;
+}
+
+void cdc_uart_set_stopbits(uint32_t uart, uint32_t stopbits)
+{
+	uint32_t reg32;
+
+	reg32 = R8_UART_LCR(uart);
+	reg32 = (reg32 & ~UART_STOPBITS_2) | stopbits;
+	R8_UART_LCR(uart) = reg32;
+
+}
+
+uint32_t uart_get_stopbits(uint32_t uart)
+{
+	const uint32_t reg32 = R8_UART_LCR(uart);
+	return reg32 & UART_STOPBITS_2;
+}
+
+void uart_set_parity(uint32_t uart, uint32_t parity)
+{
+	uint32_t reg32;
+
+	R8_UART_LCR(uart) |= UART_PARITY_EN;
+	reg32 = R8_UART_LCR(uart);
+	reg32 = (reg32 & ~UART_PARITY_CLR) | parity;
+	R8_UART_LCR(uart) = reg32;
+}
+
+uint32_t uart_get_parity(uint32_t uart)
+{
+	const uint32_t reg32 = R8_UART_LCR(uart);
+	return reg32 & UART_PARITY_CLR;
+}
+
+void uart_set_wordsize(uint32_t uart, uint32_t wsize)
+{
+		R8_UART_LCR(uart) |= wsize;  /*  data bits */
+}
+
+uint32_t uart_get_databits(uint32_t uart)
+{
+	const uint32_t reg32 = R8_UART_LCR(uart) & UART_WORDSIZE_8;
+	if (reg32 == 0x00)
+		return 5;
+	if (reg32 == 0x01)
+		return 6;
+	if (reg32 == 0x02)
+		return 7;
+	if (reg32 == 0x03)
+		return 8;
+	else
+		return 8;
+}
+
+void uart_set_break(uint32_t uart, bool enable)
+{
+		if (enable == 1)
+			R8_UART_LCR(uart) |= UART_BREAK_EN;  /*enable break */
+		else
+			R8_UART_LCR(uart) &= ~UART_BREAK_EN;
+}

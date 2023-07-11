@@ -18,7 +18,7 @@ extern "C" {
 #define USB_ALL_CLR			(1<<1)
 #define USB_FORCE_RST		(1<<2)
 #define INT_BUSY_EN			(1<<3)
-#define DEV_PU_EN			(1<<4)
+#define DEV_PU_EN			(1<<4)	
 
 #define HOST_MODE			(1<<7)
 
@@ -30,10 +30,10 @@ extern "C" {
 #define HOST_TX_EN			(1<<14)
 #define HOST_RX_EN			(1<<11)
 
-#define SEND_BUS_RESET		(uint32_t)(1<<8)
-#define SEND_BUS_SUSPEND	(uint32_t)(1<<9)
-#define SEND_BUS_RESUME		(uint32_t)(1<<10)
-#define SEND_SOF_EN			(uint32_t)(1<<15)
+#define SEND_BUS_RESET		(UINT32)(1<<8)
+#define SEND_BUS_SUSPEND	(UINT32)(1<<9)
+#define SEND_BUS_RESUME		(UINT32)(1<<10)
+#define SEND_SOF_EN			(UINT32)(1<<15)
 // INT_EN
 #define USB2_DETECT_EN		(1<<16)
 #define USB2_ACT_EN			(1<<17)
@@ -86,7 +86,7 @@ extern "C" {
 
 #define EP_R_AUTO_TOG       (1<<(24+5))
 
-#define TOG_MATCH			(uint32_t)(1<<30)
+#define TOG_MATCH			(UINT32)(1<<30)
 
 #define EP_DB_BUFFER(ep)    (1 << ( ((ep) == 4 ? 0 : (ep))*4))
 #define EP_RX_EN(ep)        (8 << ( ((ep) == 4 ? 0 : (ep))*4))

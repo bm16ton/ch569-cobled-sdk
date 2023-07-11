@@ -34,11 +34,18 @@
 
 #ifndef __TUSB_CDC_H__
 #define __TUSB_CDC_H__
-#include "teeny_usb.h"
+//#include "teeny_usb.h"
 
 #define TUSB_CDC_DTR   0x01
 #define TUSB_CDC_RTS   0x02
 
+typedef struct _tusb_setup_packet{
+    uint8_t  bmRequestType;
+    uint8_t  bRequest;
+    uint16_t wValue;
+    uint16_t wIndex;
+    uint16_t wLength;
+} tusb_setup_packet;
 /** Enums for \ref tusb_cdc_line_coding_t  stopbits field
  *  indicating the CDC stopbits
  */
@@ -59,16 +66,29 @@ typedef enum{
     CDC_SPACE = 4,
 }cdc_parity_t;
 
+
+#if defined   (__GNUC__)
+#define __PACK2_BEGIN
+#define __PACK2_END    __packed
+#elif defined(__CC_ARM)
+#define __PACK2_BEGIN  __packed
+#define __PACK2_END
+#else
+#define __PACK2_BEGIN
+#define __PACK2_END
+#endif
+
+#define TUSB_MAX_INTERFACE_COUNT 8
 /* Type Defines: */
 /** Type define for CDC line coding
  */
-typedef __PACK_BEGIN struct _tusb_cdc_line_coding
+typedef __PACK2_BEGIN struct _tusb_cdc_line_coding
 {
     uint32_t bitrate;        /**< bit rate */
     uint8_t  stopbits;       /**< stop bits, \ref cdc_stopbits_t*/
     uint8_t  parity;         /**< parity, \ref cdc_parity_t */
     uint8_t  databits;       /**< data bits: 5,6,7,8 */
-}__PACK_END tusb_cdc_line_coding_t;
+}__PACK2_END tusb_cdc_line_coding_t;
 
 /* Type Defines: */
 /** Type define for CDC line status
@@ -91,6 +111,27 @@ typedef struct _tusb_cdc_state
     tusb_cdc_line_state_t line_state;
 }tusb_cdc_state_t;
 
+struct _tusb_device{
+//    tusb_device_driver_t*      dev_drv;           /**< device driver                                  */
+    void*                      user_data;         /**<  User data for device                          */
+//    tusb_callback_t            ep0_tx_done;       /**< endpoint 0 transmit done callback              */
+//    tusb_callback_t            ep0_rx_done;       /**< endpoint 0 receive done callback               */
+    tusb_setup_packet          setup;             /**< setup packet buffer                            */
+ //   const tusb_descriptors_t*  descriptors;       /**< device descriptors, can be override at runtime */
+    uint32_t                   addr:8;            /**< device address                                 */
+    volatile uint32_t          config:8;          /**< device current configurtaion ID                */
+    uint32_t                   b_hnp:1;           /**< OTG only, hnp for B device                     */
+    uint32_t                   a_hnp:1;           /**< OTG only, hnp for A device                     */
+    uint32_t                   a_alt_hnp:1;       /**< OTG only, hnp for A device on other port       */
+    uint32_t                   flag_padding:13;   /**< padding the bit flags                          */
+    uint16_t                   temp_buffer;       /**< temp buffer to hold data <= 2 bytes,
+                                                       must align at 32bit boundary                   */
+    uint16_t                   status;            /**< device status                                  */
+    uint8_t    alt_cfg[TUSB_MAX_INTERFACE_COUNT]; /**< device interface alernate configuration        */
+#if defined(DESCRIPTOR_BUFFER_SIZE) && DESCRIPTOR_BUFFER_SIZE > 0
+    uint8_t  desc_buffer[DESCRIPTOR_BUFFER_SIZE]; /**< descriptor buffer, used for qualifier or DMA   */
+#endif
+};
 
 
 // Abstract Control Management Functional Descriptor bmCapabilities fields

@@ -1,3 +1,0 @@
-A very quick and dirty copy and paiste of files from hydrausb and official wch files. The hydrausb fw folder is currently a usb2cdc experiment. All ive done so far is add usb descriptors for it to enumerate as usbcdc device. I also copied sum stuff for the UART from official examples. I didmt have much time and for a start just wanted the log printed over the cdc interface....Which it does but it also prints a ton of gibberish as well. Hopefully will get moe time someday soon to continue.
-
-Added usbss descriptors for cdc...it enumeratws but it aint good. Also my laptops usb will unexpected command completion with usbss interrupt endpoints who's bdelay is greater then 6...not sure if linux stack issue or usb cards driver, shit could be sum sorta spec thing ill hafta dig.

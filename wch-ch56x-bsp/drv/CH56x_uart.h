@@ -15,6 +15,61 @@
 extern "C" {
 #endif
 
+#include "stdint.h"
+#include "CH56xSFR.h"
+
+#if defined (__ASSEMBLER__)
+#define MMIO32(addr)		(addr)
+#else
+#define MMIO32(addr)		(*(volatile uint32_t *)(addr))
+#endif
+/**
+  * @brief	base addresses
+  */
+#define UART0		0x40003000
+#define UART1		0x40003400
+#define UART2		0x40003800
+#define UART3		0x40003C00
+
+/**
+  * @brief	register offsets
+  */
+#define R8_UART_MCR(uart)			MMIO32((uart) + 0x00)	/* MODEM CONTROL */
+#define R8_UART_IER(uart)			MMIO32((uart) + 0x01)	/* INTERRUPT ENABLE */
+#define R8_UART_FCR(uart)			MMIO32((uart) + 0x02)	/* FIFO CONTROL */
+#define R8_UART_LCR(uart)			MMIO32((uart) + 0x03)	/* LINE CONTROL */
+#define R8_UART_IIR(uart)			MMIO32((uart) + 0x04)	/* INTERRUPT IDENT */
+#define R8_UART_LSR(uart)			MMIO32((uart) + 0x05)	/* LINE STATUS REGISTER */
+#define R8_UART_RBR(uart)			MMIO32((uart) + 0x08)	/* RECEIVE BUFFER */
+#define R8_UART_THR(uart)			MMIO32((uart) + 0x08)	/* TX HOLD BUFFER */
+#define R8_UART_RFC(uart)			MMIO32((uart) + 0x0A)	/* RX FIFO COUNT */
+#define R8_UART_TFC(uart)			MMIO32((uart) + 0x0B)	/* TX FIFO COUNT */
+#define R8_UART_DL(uart)			MMIO32((uart) + 0x0C)	/* BAUDRATE DIVISOR LATCH */
+#define R8_UART_DIV(uart)			MMIO32((uart) + 0x0E)	/* PRESCALER DIVISOR */
+
+
+/**
+  * @brief	LINE CONTROL MASKS AND OFFSETS
+  */
+#define UART_WORDSIZE_5		(0x00 << 0)
+#define UART_WORDSIZE_6		(0x01 << 0)
+#define UART_WORDSIZE_7		(0x02 << 0)
+#define UART_WORDSIZE_8		(0x03 << 0)
+
+#define UART_STOPBITS_OFFS		2U
+#define UART_STOPBITS_1		(0x00 << 2)   /* 1 stop bit */
+#define UART_STOPBITS_2		(0x01 << 2)   /* 2 stop bits */
+
+#define UART_PARITY_EN			(0x01 << 3)  /* MUST BE SET BEFORE PARITY LEVEL */
+
+#define UART_PARITY_ODD		(0x00 << 4)
+#define UART_PARITY_EVEN		(0x01 << 4)
+#define UART_PARITY_MARK		(0x02 << 4)
+#define UART_PARITY_CLR		(0x03 << 4)
+
+#define UART_BREAK_EN  		(0x01 << 6)
+
+
 /**
   * @brief	Line Error Status Definition
   */
@@ -26,7 +81,7 @@ extern "C" {
 #define  STA_TXFIFO_EMP  RB_LSR_TX_FIFO_EMP // The current transmit FIFO is empty and can continue to fill the transmit data
 #define  STA_TXALL_EMP   RB_LSR_TX_ALL_EMP  // All data have been sent
 #define  STA_RECV_DATA   RB_LSR_DATA_RDY    // Currently receiving data
-
+typedef unsigned char *puint8_t;
 /**
   * @brief  Serial port byte trigger configuration
   */
@@ -39,6 +94,15 @@ typedef enum
 
 } UARTByteTRIGTypeDef;
 
+
+void uart_set_stopbits(uint32_t uart, uint32_t stopbits);
+uint32_t uart_get_stopbits(uint32_t uart);
+void cdc_uart_set_stopbits(uint32_t uart, uint32_t stopbits);
+void uart_set_parity(uint32_t uart, uint32_t parity);
+uint32_t uart_get_parity(uint32_t uart);
+void uart_set_wordsize(uint32_t uart, uint32_t wsize);
+uint32_t uart_get_databits(uint32_t uart);
+void uart_set_break(uint32_t uart, bool enable);
 /****************** UART0 */
 void UART0_init(uint32_t baudrate, uint32_t systemclck);
 void UART0_DefInit(void); /* Serial Default initialization configuration */
@@ -136,4 +200,4 @@ uint16_t UART3_rx(uint8_t* buf, int buf_len_max);
 }
 #endif
 
-#endif  // __CH56x_UART_H__	
+#endif  // __CH56x_UART_H__

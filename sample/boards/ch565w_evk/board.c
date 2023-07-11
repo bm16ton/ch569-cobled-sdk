@@ -10,8 +10,8 @@
  *
  * TeenyUSB - light weight usb stack for micro controllers
  *
- * Copyright (c) 2021 XToolBox - admin@xtoolbox.org
- * www.tusb.org
+ * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
+ *                         www.tusb.org
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,10 +32,43 @@
  * SOFTWARE.
  */
 
-#ifndef __TUSB_DEV_DRV_CH56x_H__
-#define __TUSB_DEV_DRV_CH56x_H__
 
-#define  CH56x_MAX_EP_COUNT 8
-extern __attribute__ ((aligned(16))) uint8_t  ep0_buff[512]  __attribute__((section(".DMADATA")));
+////////////////////////////////////////////////
+/// TeenyUSB board related API
+////////////////////////////////////////////////
 
+#include "CH56x_common.h"
+#include "../../../driver_ch56x/CH56xSFR.h"
+#define UART_BAUD  115200
+typedef unsigned long           UINT32;
+#ifndef  FREQ_SYS
+#define  FREQ_SYS       120000000
 #endif
+/*
+void stdio_init(void)
+{
+    UINT32 x;
+    UINT32 t = FREQ_SYS;
+    x = 10 * t * 2 / 16 / UART_BAUD;
+    x = ( x + 5 ) / 10;
+    R8_UART1_DIV = 1;
+    R16_UART1_DL = x;
+    R8_UART1_FCR = RB_FCR_FIFO_TRIG | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN;
+    R8_UART1_LCR = RB_LCR_WORD_SZ;
+    R8_UART1_IER = RB_IER_TXD_EN;
+    R32_PA_SMT |= (1<<8) |(1<<7);
+    R32_PA_DIR |= (1<<8);
+}
+
+void stdout_sendchar(int ch)
+{
+    while( R8_UART1_TFC == UART_FIFO_SIZE );
+    R8_UART1_THR = ch;
+}
+*/
+void board_init(void)
+{
+    SystemInit(FREQ_SYS);
+    Delay_Init(FREQ_SYS);
+//    stdio_init();
+}

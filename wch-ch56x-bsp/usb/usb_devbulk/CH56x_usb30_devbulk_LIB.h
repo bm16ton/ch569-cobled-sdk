@@ -181,34 +181,6 @@ typedef struct __PACKED
 // USB30_Device_Init
 //static int USB30_Device_Open(void)
 
-static int USB30_device_init(void)
-{
-	USBSS->LINK_CFG = 0x140;
-	USBSS->LINK_CTRL = 0x12;
-	uint32_t t = 0x4c4b41;
-	while(USBSS->LINK_STATUS&4)
-	{
-		t--;
-		if(t == 0)
-			return -1;
-	}
-	for(int i = 0; i < 8; i++)
-	{
-		SS_TX_CONTRL(i) = 0;
-		SS_RX_CONTRL(i) = 0;
-	}
-	USBSS->USB_STATUS = 0x13;
-
-	USBSS->USB_CONTROL = 0x30021;
-	USBSS->UEP_CFG = 0;
-
-	USBSS->LINK_CFG |= 2;
-
-	USBSS->LINK_INT_CTRL = 0x10bc7d;
-
-	USBSS->LINK_CTRL = 2;
-	return 0;
-}
 
 /*
 static int USB30_device_close(void)

@@ -7,15 +7,15 @@ extern "C" {
 
 #include "CH56x_common.h"
 #include "CH56x_usb20.h"
-
-
+#include "CH56x_usb20_devbulk.h"
+/*
 static inline void USB20_Device_Setaddress( uint32_t address )
 {
     USBHS->USB_CONTROL &= 0x00ffffff;
     USBHS->USB_CONTROL |= (uint32_t)address<<24; // SET ADDRESS
 }
 
-
+*/
 #ifdef __cplusplus
 }
 #endif

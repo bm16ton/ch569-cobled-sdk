@@ -15,7 +15,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+typedef unsigned long *puint32_t;
 /* Encryption and decryption mode */
 #define MODE_SM4_ECB 0
 #define MODE_AES_ECB 1
@@ -58,4 +58,4 @@ void ECDC_RloadCount(uint8_t excutemode, uint8_t endianmode, puint32_t pcount);
 }
 #endif
 
-#endif  // __CH56x_ECDC_H__	
+#endif  // __CH56x_ECDC_H__

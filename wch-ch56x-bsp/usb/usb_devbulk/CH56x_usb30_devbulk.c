@@ -10,18 +10,25 @@
 *******************************************************************************/
 #include "CH56x_common.h"
 #include "CH56x_debug_log.h"
-
+#include "teeny_usb_util.h"
 #include "CH56x_usb20_devbulk.h"
 #include "CH56x_usb30_devbulk.h"
 #include "CH56x_usb30_devbulk_LIB.h"
 #include "CH56x_usb_devbulk_desc_cmd.h"
+#include "teeny_usb_device.h"
+#include "teeny_usb_device_driver.h"
+#include "tusbd_cdc.h"
+#include "tusb_cdc.h"
+#include "winusb30.h"
+#include "tusb_dev_drv_ch56x.h"
 
 //#define DEBUG_USB3_REQ 1 // Debug USB Req (have impact on real-time to correctly enumerate USB 3.0..)
 //#define DEBUG_USB3_EP0 1 // Debug EP0 (have impact on real-time to correctly enumerate USB 3.0..)
 //#define DEBUG_USB3_EPX 1 // Debug EP1 to EP7
-
+//extern void UART2_IRQHandler (void) __attribute__((interrupt()));
 /* Global define */
 /* Global Variable */
+extern __attribute__ ((aligned(16))) uint8_t  ep0_buff[512]  __attribute__((section(".DMADATA")));
 vuint8_t tx_lmp_port = 0;
 vuint8_t link_sta = 0;
 static uint32_t SetupLen = 0;
@@ -30,6 +37,17 @@ static uint8_t *pDescr;
 
 vuint8_t g_DeviceConnectstatus = 0;
 vuint8_t g_DeviceUsbType = 0;
+
+extern tusb_cdc_device_t* cdc_dev;
+tusb_cdc_line_coding_t line_coding = {
+    .bitrate	= 115200,      /**< bit rate */
+    .stopbits	=   1,    /**< stop bits, \ref cdc_stopbits_t*/
+    .parity	    =   3,  /**< parity, \ref cdc_parity_t */
+    .databits	=	8,       /**< data bits: 5,6,7,8 */
+
+};
+
+
 
 __attribute__((aligned(16))) uint8_t endp0RTbuff[512] __attribute__((section(".DMADATA"))); // Endpoint 0 data transceiver buffer
 __attribute__((aligned(16))) uint8_t endp1Rbuff[DEF_ENDP1_MAX_SIZE] __attribute__((section(".DMADATA"))); // Endpoint 1 data Receive buffer
@@ -77,6 +95,36 @@ void USB30_BusReset(void)
 	USB30D_init(ENABLE); //USB3.0 initialization
 }
 
+static int USB30_device_init(void)
+{
+	USBSS->LINK_CFG = 0x140;
+	USBSS->LINK_CTRL = 0x12;
+	uint32_t t = 0x4c4b41;
+	while(USBSS->LINK_STATUS&4)
+	{
+		t--;
+		if(t == 0)
+			return -1;
+	}
+	for(int i = 0; i < 8; i++)
+	{
+		SS_TX_CONTRL(i) = 0;
+		SS_RX_CONTRL(i) = 0;
+	}
+	USBSS->USB_STATUS = 0x13;
+
+	USBSS->USB_CONTROL = 0x30021;
+	USBSS->UEP_CFG = 0;
+
+	USBSS->LINK_CFG |= 2;
+
+	USBSS->LINK_INT_CTRL = 0x10bc7d;
+
+	USBSS->LINK_CTRL = 2;
+	return 0;
+}
+
+
 /*******************************************************************************
  * @fn     USB30D_init
  *
@@ -90,12 +138,12 @@ void USB30D_init(FunctionalState sta)
 	if(sta)
 	{
 		/* Clear EndPoint1 Transmit DMA Buffer */
-		memset((uint8_t*)endp1Tbuff, 0, 4096);
+		memset((uint8_t*)endp1Tbuff, 0, 1024);
 		// Enable USB
 		s = USB30_device_init();
 		if(s)
 		{
-			// cprintf("USB30_device_init err\n");
+			cprintf("USB30_device_init err\n");
 			while(1);
 		}
 		USBSS->UEP_CFG = EP0_R_EN | EP0_T_EN | EP1_R_EN | EP1_T_EN | EP2_R_EN | EP2_T_EN; // set end point rx/tx enable
@@ -131,6 +179,10 @@ void USB30D_init(FunctionalState sta)
  *
  * @return length
  */
+ tusb_device_t g_dev;
+
+
+ static const char* stop_name[] = {"1", "1.5", "2"};
 uint16_t USB30_NonStandardReq()
 {
 	uint8_t endp_dir;
@@ -140,12 +192,141 @@ uint16_t USB30_NonStandardReq()
 	endp_dir = UsbSetupBuf->bRequestType & 0x80;
 	uint16_t len = 0;
 
+
 #if DEBUG_USB3_REQ
-	cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1],
-			endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5],
-			endp0RTbuff[6], endp0RTbuff[7]);
+	cprintf("length %d\n", UsbSetupBuf->wLength);
+/*
+	cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x \n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12], endp0RTbuff[13], endp0RTbuff[14], endp0RTbuff[15], endp0RTbuff[16], endp0RTbuff[17], endp0RTbuff[18], endp0RTbuff[19], endp0RTbuff[20], endp0RTbuff[21], endp0RTbuff[22], endp0RTbuff[23], endp0RTbuff[24], endp0RTbuff[25], endp0RTbuff[26],  endp0RTbuff[27], endp0RTbuff[28], endp0RTbuff[29], endp0RTbuff[30], endp0RTbuff[31], endp0RTbuff[32], endp0RTbuff[33], endp0RTbuff[34],  endp0RTbuff[35], endp0RTbuff[36], endp0RTbuff[37], endp0RTbuff[38], endp0RTbuff[39], endp0RTbuff[40], endp0RTbuff[41], endp0RTbuff[42], endp0RTbuff[43], endp0RTbuff[44], endp0RTbuff[45], endp0RTbuff[46],  endp0RTbuff[47], endp0RTbuff[48], endp0RTbuff[49], endp0RTbuff[50], endp0RTbuff[65], endp0RTbuff[66], endp0RTbuff[67], endp0RTbuff[68], endp0RTbuff[69],  endp0RTbuff[70]);
+
+
+	cprintf("NSU3 old buf :%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x \n", ep0_buff[0], ep0_buff[1], ep0_buff[2], ep0_buff[3], ep0_buff[4], ep0_buff[5], ep0_buff[6], ep0_buff[7], ep0_buff[8], ep0_buff[9], ep0_buff[10], ep0_buff[11], ep0_buff[12], ep0_buff[13], ep0_buff[14], ep0_buff[15], ep0_buff[16], ep0_buff[17], ep0_buff[18], ep0_buff[19], ep0_buff[20], ep0_buff[21], ep0_buff[22], ep0_buff[23], ep0_buff[24], ep0_buff[25], ep0_buff[26],  ep0_buff[27], ep0_buff[28], ep0_buff[29], ep0_buff[30], ep0_buff[31], ep0_buff[32], ep0_buff[33], ep0_buff[34],  ep0_buff[35], ep0_buff[36], ep0_buff[37], ep0_buff[38], ep0_buff[39], ep0_buff[40], ep0_buff[41], ep0_buff[42], ep0_buff[43], ep0_buff[44], ep0_buff[45], ep0_buff[46],  ep0_buff[47], ep0_buff[48], ep0_buff[49], ep0_buff[50], ep0_buff[65], ep0_buff[66], ep0_buff[67], ep0_buff[68], ep0_buff[69],  ep0_buff[70]);
+
+
+
+cprintf("NSU3: %d %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", UsbSetupBuf[7], UsbSetupBuf[7], UsbSetupBuf[8], UsbSetupBuf[9], UsbSetupBuf[10], UsbSetupBuf[11], UsbSetupBuf[12], UsbSetupBuf[13], UsbSetupBuf[14], UsbSetupBuf[15], UsbSetupBuf[16], UsbSetupBuf[17], UsbSetupBuf[18], UsbSetupBuf[19], UsbSetupBuf[20], UsbSetupBuf[21], UsbSetupBuf[22], UsbSetupBuf[23], UsbSetupBuf[24], UsbSetupBuf[25], UsbSetupBuf[26], UsbSetupBuf[27], UsbSetupBuf[28], UsbSetupBuf[29], UsbSetupBuf[30]);
+
+*/
 #endif
-	switch(SetupReqCode)
+if( (UsbSetupBuf->bRequestType & USB_REQ_TYPE_MASK) == USB_REQ_TYPE_CLASS){
+
+  switch(UsbSetupBuf->bRequest)
+  {
+  case CDC_SEND_ENCAPSULATED_COMMAND:
+  cprintf("CDC_SEND_ENCAPSULATED_COMMAND\n");
+
+    break;
+
+  case CDC_GET_ENCAPSULATED_RESPONSE:
+  cprintf("CDC_GET_ENCAPSULATED_RESPONSE\n");
+
+    break;
+
+  case CDC_SET_COMM_FEATURE:
+  cprintf("CDC_SET_COMM_FEATURE\n");
+
+    break;
+
+  case CDC_GET_COMM_FEATURE:
+  cprintf("CDC_GET_COMM_FEATURE\n");
+
+    break;
+
+  case CDC_CLEAR_COMM_FEATURE:
+  cprintf("CDC_CLEAR_COMM_FEATURE\n");
+
+    break;
+
+  case CDC_SET_LINE_CODING:
+/*
+    cdc_dev->line_coding.bitrate = (uint32_t)(endp0RTbuff[0] | (endp0RTbuff[1] << 8) | (endp0RTbuff[2] << 16) | (endp0RTbuff[3] << 24));
+    cprintf("bitrate = %d\n", cdc_dev->line_coding.bitrate);
+    cdc_dev->line_coding.stopbits = (endp0RTbuff[4] << 8);
+//    cdc_uart_set_stopbits(UART1, cdc_dev->line_coding.stopbits);
+    cprintf("stopbits = %d\n", cdc_dev->line_coding.stopbits);
+    cdc_dev->line_coding.parity = endp0RTbuff[5];
+    cprintf("parity = %d\n", cdc_dev->line_coding.parity);
+	if (cdc_dev->line_coding.parity) {
+    cdc_dev->line_coding.databits = (endp0RTbuff[6]  + 1);
+    } else {
+   cdc_dev->line_coding.databits = endp0RTbuff[6];
+    }
+    cprintf("databits = %d\n", cdc_dev->line_coding.databits);
+
+
+    cprintf("endpoint0 4-7 %ld\n", (uint32_t)(endp0RTbuff[4] | (endp0RTbuff[5] << 8) | (endp0RTbuff[6] << 16) | (endp0RTbuff[7] << 24)));
+    cprintf("endpoint0 4-7 %ld\n", (uint32_t)(endp0RTbuff[25] | (endp0RTbuff[26] << 8) | (endp0RTbuff[27] << 16) | (endp0RTbuff[28] << 24)));
+
+    TUSB_LOGD("CDC set line coding <%d %c %d %s>\n",
+        (int)cdc_dev->line_coding.bitrate,
+        cdc_dev->line_coding.parity,
+        cdc_dev->line_coding.databits,
+        cdc_dev->line_coding.stopbits [stop_name]
+    );
+    if(cdc_dev->on_line_coding_change){
+      cdc_dev->on_line_coding_change(cdc_dev);
+    }
+    */
+//    linecode = 1;
+    SetupLen = 7;
+    return 0;
+    break;
+
+  case CDC_GET_LINE_CODING:
+    pDescr[0] = (uint8_t)(cdc_dev->line_coding.bitrate);
+    pDescr[1] = (uint8_t)(cdc_dev->line_coding.bitrate >> 8);
+    pDescr[2] = (uint8_t)(cdc_dev->line_coding.bitrate >> 16);
+    pDescr[3] = (uint8_t)(cdc_dev->line_coding.bitrate >> 24);
+    pDescr[4] = cdc_dev->line_coding.stopbits;
+    pDescr[5] = cdc_dev->line_coding.parity;
+    pDescr[6] = cdc_dev->line_coding.databits;
+    TUSB_LOGD("CDC get line coding <%d %c %d %s>\n",
+        (int)cdc_dev->line_coding.bitrate,
+        cdc_dev->line_coding.parity   ["NOEMS"],
+        cdc_dev->line_coding.databits,
+        cdc_dev->line_coding.stopbits [stop_name]
+    );
+
+    SetupLen = 7;
+    memcpy(endp2RTbuff, pDescr, SetupLen);
+    return SetupLen;
+    break;
+
+  case CDC_SET_CONTROL_LINE_STATE:
+//    if(cdc_dev->on_line_state_change){
+//      cdc_dev->on_line_state_change(cdc_dev, spacket.wValue);
+//    }
+      	char buf[10];
+	struct usb_cdc_notification *notif = (void*)buf;
+	/* We echo signals back to host as notification */
+	notif->bmRequestType = 0xA1;
+	notif->bNotification = 0x20;   //NOTIFY
+	notif->wValue = 0;
+	notif->wIndex = 0;
+	notif->wLength = 2;
+	buf[8] = 2;
+	buf[9] = 0;
+	/* FIXME: Remove magic numbers */
+	memcpy(endp2RTbuff, buf, 10);
+	USB30_IN_clearIT(ENDP_2);
+	USB30_IN_set(ENDP_2, ENABLE, ACK, 1, 1024); // Able to send nump packet
+	USB30_send_ERDY(ENDP_2 | IN, 1);
+ //   TUSB_LOGD("CDC Set Linestate DTR=%d, RTS=%d\n", spacket.wValue&TUSB_CDC_DTR, (spacket.wValue&TUSB_CDC_RTS)>>1);
+
+    return 0;
+    break;
+
+  case CDC_SEND_BREAK:
+//    if(cdc_dev->on_set_break){
+//    cdc_dev->on_set_break(cdc_dev, spacket.wValue);
+//    }
+    TUSB_LOGD("CDC Send break %d ms\n", UsbSetupBuf->wValue);
+    return 0;
+    break;
+	}
+
+  }
+
+  switch(SetupReqCode)
 	{
 		case 0x01: // Microsoft OS 2.0 Descriptors
 			switch(UsbSetupBuf->wIndex.bw.bb1)
@@ -202,6 +383,7 @@ uint16_t USB30_NonStandardReq()
 			return USB_DESCR_UNSUPPORTED;
 			break;
 	}
+
 	len = SetupLen >= ENDP0_MAXPACK ? ENDP0_MAXPACK : SetupLen; // The length of this transmission
 	if(endp_dir)
 	{
@@ -219,8 +401,12 @@ uint16_t USB30_NonStandardReq()
  *
  * @return len (send length)
  */
+
+
+
 uint16_t USB30_StandardReq()
 {
+
 	SetupReqCode = UsbSetupBuf->bRequest;
 	SetupLen = UsbSetupBuf->wLength;
 	uint16_t len = 0;
@@ -229,26 +415,34 @@ uint16_t USB30_StandardReq()
 	cprintf("SU3:%02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1],
 			endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5],
 			endp0RTbuff[6], endp0RTbuff[7]);
+//	cprintf("brequest %d UsbSetupBuf->bRequestType %d\n", spacket.bRequest, spacket.bmRequestType);
+
 #endif
+
 	switch(SetupReqCode)
 	{
 		case USB_GET_DESCRIPTOR:
+
 			switch(UsbSetupBuf->wValue.bw.bb0)
 			{
 				case USB_DESCR_TYP_DEVICE: /* Get device descriptor */
+				cprintf("USB_DESCR_TYP_DEVICE\n");
 					if(SetupLen > sizeof(USB_SS_DeviceDescriptor)) SetupLen = sizeof(USB_SS_DeviceDescriptor);
 					pDescr = (uint8_t*)USB_SS_DeviceDescriptor;
 					break;
 				case USB_DESCR_TYP_CONFIG: /* Get configuration descriptor */
+				cprintf("USB_DESCR_TYP_CONFIG\n");
 					if(SetupLen > sizeof(USB_SS_ConfigDescriptor)) SetupLen = sizeof(USB_SS_ConfigDescriptor);
 					pDescr = (uint8_t*)USB_SS_ConfigDescriptor;
 					break;
 				case USB_DESCR_TYP_BOS: /* Get BOS Descriptor */
+				cprintf("USB_DESCR_TYP_BOS\n");
 					//cprintf(" BOSDescriptor\n");
 					if(SetupLen > sizeof(USB_BOSDescriptor)) SetupLen = sizeof(USB_BOSDescriptor);
 					pDescr = (uint8_t*)USB_BOSDescriptor;
 					break;
 				case USB_DESCR_TYP_STRING: /* Get string descriptor */
+				cprintf("USB_DESCR_TYP_STRING\n");
 					switch(UsbSetupBuf->wValue.bw.bb1)
 					{
 						case USB_DESCR_LANGID_STRING: /* Language string descriptor */
@@ -322,7 +516,10 @@ uint16_t USB30_StandardReq()
 		case 0x31: // Not documented TODO USB30_StandardReq() 0x31 remove or document it
 			SetupLen = UsbSetupBuf->wValue.bw.bb1; // Temporarily store the address of the USB device
 			break;
+
+//		cdc_ctrl(&cdc_dev, &spacket, endp0RTbuff);
 		default:
+			TUSB_LOGD("end of std req\n");
 			len = USB_DESCR_UNSUPPORTED; // return stall, unsupported command
 			SetupReqCode = INVALID_REQ_CODE;
 #if DEBUG_USB3_REQ
@@ -575,6 +772,7 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void LINK_IRQHandler(void)
  *
  * @return None
  */
+extern tusb_device_driver_t ch56x_dev_drv;
 void EP1_IN_Callback(void)
 {
 	int nump;
@@ -587,11 +785,28 @@ void EP1_IN_Callback(void)
 	bsp_wait_ms_delay(10); // Simulate a Delay to retrieve data before to send
 	cprintf("EP1-%d TX After\n", nump);
 #endif
+/*	if (placem > 0) {
+		memcpy(endp1Tbuff, RxBuff, placem);
+		memset(RxBuff, 0x0, 1024);
+		cprintf("placem = %d\n", placem);
+		R16_UEP1_T_LEN = placem;
+		placem = 0;
+										// Flip the synchronization trigger bit to be sent next time bulk transfer data0 data1 flip back and forth
+		USBSS->UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff;
+		USB30_IN_clearIT(ENDP_1);
+		USB30_IN_set(ENDP_1, ENABLE, ACK, DEF_ENDP1_IN_BURST_LEVEL, placem);
+		USB30_send_ERDY(ENDP_1 | IN, DEF_ENDP1_IN_BURST_LEVEL);
+//		USBSS->UEP1_TX_CTRL ^= RB_UEP_T_TOG_1;
+//		USBSS->UEP1_TX_CTRL = (UEP1_TX_CTRL & ~UEP1_TRES_MASK) | UEP_T_RES_ACK;
+		}
+		*/
 	if(nump == 0)
 	{
 		// All sent
+//		usb_cmd_rx(USB_TYPE_USB3, endp1Rbuff, endp1Tbuff);
 		USBSS->UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff; // Burst transfer DMA address offset Need to reset
 		USB30_IN_clearIT(ENDP_1); // Clear endpoint state Keep only packet sequence number
+
 		USB30_IN_set(ENDP_1, ENABLE, ACK, DEF_ENDP1_IN_BURST_LEVEL, 1024); // Set the endpoint to be able to send 4 packets
 		USB30_send_ERDY(ENDP_1 | IN, DEF_ENDP1_IN_BURST_LEVEL); // Notify the host to send 4 packets
 	}
@@ -735,7 +950,8 @@ void EP1_OUT_Callback(void)
 	if(nump == 0)
 	{
 		// All received
-		usb_cmd_rx(USB_TYPE_USB3, endp1Rbuff, endp1Tbuff);
+//		usb_cmd_rx(USB_TYPE_USB3, endp1Rbuff, endp1Tbuff);
+		UART2_SendString( (uint8_t *)endp1Rbuff, rx_len );
 		USB30_OUT_clearIT(ENDP_1); // Clear all state of the endpoint Keep only the packet sequence
 		USBSS->UEP1_RX_DMA = (uint32_t)(uint8_t *)endp1Rbuff; // In burst mode, the address needs to be reset due to automatic address offset.
 		USB30_OUT_set(ENDP_1, ACK, DEF_ENDP1_OUT_BURST_LEVEL); // Able to send DEF_ENDP1_OUT_BURST_LEVEL packets on endpoint 1
@@ -749,6 +965,7 @@ void EP1_OUT_Callback(void)
 		USB30_OUT_clearIT(ENDP_1); // Clear all state of the endpoint Keep only the packet sequence
 		USB30_OUT_set(ENDP_1, ACK, nump); // Able to receive nump packet
 		USB30_send_ERDY(ENDP_1 | OUT, nump); // Notify the host to deliver nump packet
+		UART2_SendString( (uint8_t *)endp1Rbuff, rx_len );
 	}
 }
 
@@ -881,8 +1098,9 @@ void USB30_ITP_Callback(uint32_t ITPCounter)
 __attribute__((interrupt("WCH-Interrupt-fast"))) void USBSS_IRQHandler(void)
 {
 	static uint32_t count = 0;
+uint32_t usb_status = USBSS->USB_STATUS;
 
-	uint32_t usb_status = USBSS->USB_STATUS;
+
 	if((usb_status & 1) == 0)
 	{
 		if((usb_status & 2) != 0)
@@ -904,6 +1122,23 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBSS_IRQHandler(void)
 		USBSS->USB_STATUS = 8;
 		return;
 	}
+		if (placem > 0) {
+		memcpy(endp1Tbuff, RxBuff, placem);
+		memset(RxBuff, 0x0, 1024);
+		cprintf("placem = %d\n", placem);
+		uint16_t tgh = placem;
+//		R16_UEP1_T_LEN = placem;
+placem = 0;
+
+										// Flip the synchronization trigger bit to be sent next time bulk transfer data0 data1 flip back and forth
+		USBSS->UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff;
+		USB30_IN_clearIT(ENDP_1);
+		USB30_IN_set(ENDP_1, ENABLE, ACK, DEF_ENDP1_IN_BURST_LEVEL, tgh);
+		USB30_send_ERDY(ENDP_1 | IN, DEF_ENDP1_IN_BURST_LEVEL);
+
+		USBSS->UEP1_TX_CTRL ^= RB_UEP_T_TOG_1;
+		USBSS->UEP1_TX_CTRL = (R8_UEP1_TX_CTRL & ~RB_UEP_TRES_MASK) | UEP_T_RES_ACK;
+		}
 	// USB3 EP1 to EP7 management
 	uint8_t ep = (usb_status >> 8) & 7;
 	uint32_t ep_in = (usb_status >> 0xc) & 1;
@@ -1000,6 +1235,8 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBSS_IRQHandler(void)
 	}
 	USBSS->UEP0_RX_CTRL = 0;
 	uint8_t data_req = *((uint8_t*)endp0RTbuff);
+	cprintf("callback:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %04x %04x %04x %04x %04x %04x %04x %04x %04x %04x %04x  \n", endp0RTbuff[0], endp0RTbuff[1],
+			endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12], endp0RTbuff[13], endp0RTbuff[14], endp0RTbuff[15], endp0RTbuff[16], endp0RTbuff[17], endp0RTbuff[18], endp0RTbuff[19], endp0RTbuff[20], endp0RTbuff[21], endp0RTbuff[22], endp0RTbuff[23], endp0RTbuff[24], endp0RTbuff[25], endp0RTbuff[64], endp0RTbuff[65], endp0RTbuff[66], endp0RTbuff[67], endp0RTbuff[68], endp0RTbuff[69],  endp0RTbuff[70]);
 	if ((data_req & 0x60) == 0)
 	{
 		req_len = USB30_StandardReq();
@@ -1050,3 +1287,5 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBSS_IRQHandler(void)
 	USBSS->UEP0_RX_CTRL = 0x4010000;
 	return;
 }
+
+

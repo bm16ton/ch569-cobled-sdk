@@ -17,6 +17,19 @@ extern "C" {
 
 #include "CH56x_common.h"
 
+extern uint16_t placem;
+extern uint8_t RxBuff[1024];
+
+struct usb_cdc_notification {
+	uint8_t bmRequestType;
+	uint8_t bNotification;
+	uint16_t wValue;
+	uint16_t wIndex;
+	uint16_t wLength;
+} __attribute__((packed));
+
+
+
 #define CH56X_USB30_DEVBULK_VERSION "1.1"
 #define CH56X_USB30_DEVBULK_VERSION_MAJOR 1
 #define CH56X_USB30_DEVBULK_VERSION_MINOR 1
@@ -24,15 +37,17 @@ extern "C" {
 /* Global define */
 // DEF_ENDP1_OUT_BURST_LEVEL / DEF_ENDP1_IN_BURST_LEVEL maximum burst size 16 defined by the USB3 specification
 // Warning USB3 enpoint bulk with 8 or 16 burst can be problematic on some PC
+//#define DEF_ENDP1_OUT_BURST_LEVEL 4
 #define DEF_ENDP1_OUT_BURST_LEVEL 4
 #define DEF_ENDP1_IN_BURST_LEVEL (DEF_ENDP1_OUT_BURST_LEVEL)
+//#define DEF_ENDP1_MAX_SIZE (1024)
 #define DEF_ENDP1_MAX_SIZE (DEF_ENDP1_OUT_BURST_LEVEL * 1024)
 
 // DEF_ENDP2_OUT_BURST_LEVEL / DEF_ENDP2_IN_BURST_LEVEL maximum burst size 16 defined by the USB3 specification
 // Warning USB3 enpoint bulk with 8 or 16 burst can be problematic on some PC so default is set to 4
 //#define DEF_ENDP2_OUT_BURST_LEVEL 16
 //#define DEF_ENDP2_OUT_BURST_LEVEL 8
-#define DEF_ENDP2_OUT_BURST_LEVEL 4
+#define DEF_ENDP2_OUT_BURST_LEVEL 1
 #define DEF_ENDP2_IN_BURST_LEVEL (DEF_ENDP2_OUT_BURST_LEVEL)
 #define DEF_ENDP2_MAX_SIZE (DEF_ENDP2_OUT_BURST_LEVEL * 1024)
 
@@ -52,11 +67,18 @@ extern vuint8_t g_DeviceConnectstatus;
 #define USB_U20_SPEED         (0x02)
 extern vuint8_t g_DeviceUsbType;
 
+void EP1_IN_Callback(void);
 /* Function declaration */
 void USB30D_init(FunctionalState sta);
 
 void USB3_force(void);
 
+struct usb_cdc_line_coding {
+	uint32_t dwDTERate;
+	uint8_t bCharFormat;
+	uint8_t bParityType;
+	uint8_t bDataBits;
+} __attribute__((packed));
 // For USB Descriptors see CH56x_usb_devbulk_desc_cmd.c & CH56x_usb_devbulk_desc_cmd.h
 
 #ifdef __cplusplus

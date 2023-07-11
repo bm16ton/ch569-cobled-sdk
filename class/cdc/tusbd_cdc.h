@@ -1,28 +1,28 @@
-/*       
- *         _______                    _    _  _____ ____  
- *        |__   __|                  | |  | |/ ____|  _ \ 
+/*
+ *         _______                    _    _  _____ ____
+ *        |__   __|                  | |  | |/ ____|  _ \
  *           | | ___  ___ _ __  _   _| |  | | (___ | |_) |
- *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ < 
+ *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ <
  *           | |  __/  __/ | | | |_| | |__| |____) | |_) |
- *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/ 
- *                               __/ |                    
- *                              |___/                     
+ *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/
+ *                               __/ |
+ *                              |___/
  *
  * TeenyUSB - light weight usb stack for micro controllers
- * 
+ *
  * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
  *                         www.tusb.org
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -38,6 +38,8 @@
 #include "tusb_cdc.h"
 
 typedef struct _tusb_cdc_device tusb_cdc_device_t;
+
+int16_t cdc_ctrl (tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req, uint8_t* buf);
 
 /** Type define for CDC device
  *  Add capacity D3 in CDC ACM descriptor to enable the set break feature
@@ -62,6 +64,7 @@ struct _tusb_cdc_device
     tusb_cdc_state_t state;
 };
 
+int tusb_cdc_device_request(tusb_cdc_device_t* cdc, tusb_setup_packet* setup_req);
 
 /**  send CDC data */
 #define tusb_cdc_device_send(cdc, data, len) \

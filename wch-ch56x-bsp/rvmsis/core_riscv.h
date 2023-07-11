@@ -16,7 +16,7 @@ extern "C" {
 #endif
 
 #include "CH56xSFR.h"
-
+#include <stdint.h>
 /* IO definitions */
 #ifdef __cplusplus
 #define     __I     volatile                /*!< defines 'read only' permissions      */

@@ -267,11 +267,11 @@ uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor] =
 	0x0b,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
 	0x00, // max packet size - 1024 bytes
 	0x04, // max packet size - high
-	0x06, // polling interval in milliseconds (1 for iso)
+	0x07, // polling interval in milliseconds (1 for iso)
 	//endp1_compansion_desc
 	0x06, // length of this endpoint compansion descriptor
 	0x30,
-	0x00, // max burst size
+	0x01, // max burst size
 	0x00, // no stream
 	0x00,
 	0x00,
@@ -290,7 +290,7 @@ uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor] =
 	0x07,   // length of this endpoint descriptor
 	0x05,   // ENDPOINT (5)
 	0x81,   // endpoint direction (80 is in) and address
-	0x02,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
+	0x0a,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
 	0x00, // max packet size - 1024 bytes
 	0x04, // max packet size - high
 	0x00, // polling interval in milliseconds (1 for iso)
@@ -306,7 +306,7 @@ uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor] =
 	0x07,   // length of this endpoint descriptor
 	0x05,   // ENDPOINT (5)
 	0x01,   // endpoint direction (80 is in) and address
-	0x02,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
+	0x0a,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
 	0x00, // max packet size - 1024 bytes
 	0x04, // max packet size - high
 	0x00, // polling interval in milliseconds (1 for iso)
@@ -318,6 +318,7 @@ uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor] =
 	0x00,
 	0x00,
 };
+
 
 /*********************/
 /* String Descriptor */
@@ -505,7 +506,7 @@ uint8_t USB_MSOS20DescriptorSet[LEN_USB_MSOS20DescriptorSet] =
 	0x04, 0x00,             // wDescriptorType 4 for Registry Property
 	0x04, 0x00,             // wPropertyDataType - 4 for REG_DWORD
 	0x30, 0x00,             // wPropertyNameLength 48 bytes
-	0x53, 0x00, 0x65, 0x00, // Property Name - SelectiveSuspendEnabled??
+	0x53, 0x00, 0x65, 0x00,
 	0x6C, 0x00, 0x65, 0x00,
 	0x63, 0x00, 0x74, 0x00,
 	0x69, 0x00, 0x76, 0x00,

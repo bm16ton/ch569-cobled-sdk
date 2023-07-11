@@ -15,6 +15,10 @@
 extern "C" {
 #endif
 
+#include "CH56xSFR.h"
+
+#include <stdint.h>
+
 #include "stdio.h"
 #include "string.h"
 #include "core_riscv.h"
@@ -43,7 +47,7 @@ extern "C" {
 
 /* SystemCoreClock */
 #ifndef	 FREQ_SYS
-#define  FREQ_SYS 80000000
+#define  FREQ_SYS 120000000
 #endif
 
 #define DelayMs(x) mDelaymS(x)
@@ -53,5 +57,5 @@ extern "C" {
 }
 #endif
 
-#endif  // __CH56x_COMM_H__	 
+#endif  // __CH56x_COMM_H__
 

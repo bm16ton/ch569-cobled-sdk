@@ -1,28 +1,28 @@
-/*       
- *         _______                    _    _  _____ ____  
- *        |__   __|                  | |  | |/ ____|  _ \ 
+/*
+ *         _______                    _    _  _____ ____
+ *        |__   __|                  | |  | |/ ____|  _ \
  *           | | ___  ___ _ __  _   _| |  | | (___ | |_) |
- *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ < 
+ *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ <
  *           | |  __/  __/ | | | |_| | |__| |____) | |_) |
- *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/ 
- *                               __/ |                    
- *                              |___/                     
+ *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/
+ *                               __/ |
+ *                              |___/
  *
  * TeenyUSB - light weight usb stack for micro controllers
- * 
+ *
  * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
  *                         www.tusb.org
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -59,6 +59,7 @@ void tusb_set_device_config(tusb_device_t* dev, tusb_device_config_t* dev_config
 /**
  * general device reconfig handler
  */
+ /*
 void tusb_reconfig(tusb_device_t* dev)
 {
     tusb_device_config_t* dev_config = dev->user_data;
@@ -71,14 +72,16 @@ void tusb_reconfig(tusb_device_t* dev)
         }
     }
 }
-
+*/
 /**
- * General device class request
+ * General device class req
+ uest
  */
+
 int tusb_class_request(tusb_device_t* dev, tusb_setup_packet* setup_req)
 {
     tusb_device_config_t* dev_config = dev->user_data;
-    if(dev_config && 
+    if(dev_config &&
       (setup_req->bmRequestType & USB_REQ_RECIPIENT_MASK) == USB_REQ_RECIPIENT_INTERFACE ){
         uint16_t iInterfce = setup_req->wIndex;
         if(iInterfce<dev_config->if_count){
@@ -95,6 +98,7 @@ int tusb_class_request(tusb_device_t* dev, tusb_setup_packet* setup_req)
 /**
  * General device transfer complete callback handler
  */
+ /*
 void tusb_on_tx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len)
 {
     tusb_device_config_t* dev_config = dev->user_data;
@@ -106,10 +110,11 @@ void tusb_on_tx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len)
         }
     }
 }
-
+*/
 /**
  * General device receive complete callback handler
  */
+ /*
 int tusb_on_rx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len)
 {
     tusb_device_config_t* dev_config = dev->user_data;
@@ -121,6 +126,6 @@ int tusb_on_rx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len)
     }
     return 0;
 }
-
+*/
 
 

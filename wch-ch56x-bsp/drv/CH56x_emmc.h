@@ -15,7 +15,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+typedef unsigned long *puint32_t;
+typedef unsigned short *puint16_t;
 /* CMD code */
 #define EMMC_CMD0  0  /* rsp:none */
 #define EMMC_CMD1  1  /* rsp:R3 SEND_OP_COND */
