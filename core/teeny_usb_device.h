@@ -1,28 +1,28 @@
-/*       
- *         _______                    _    _  _____ ____  
- *        |__   __|                  | |  | |/ ____|  _ \ 
+/*
+ *         _______                    _    _  _____ ____
+ *        |__   __|                  | |  | |/ ____|  _ \
  *           | | ___  ___ _ __  _   _| |  | | (___ | |_) |
- *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ < 
+ *           | |/ _ \/ _ \ '_ \| | | | |  | |\___ \|  _ <
  *           | |  __/  __/ | | | |_| | |__| |____) | |_) |
- *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/ 
- *                               __/ |                    
- *                              |___/                     
+ *           |_|\___|\___|_| |_|\__, |\____/|_____/|____/
+ *                               __/ |
+ *                              |___/
  *
  * TeenyUSB - light weight usb stack for micro controllers
- * 
+ *
  * Copyright (c) 2020 XToolBox  - admin@xtoolbox.org
  *                         www.tusb.org
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -112,7 +112,7 @@ struct _tusb_device{
     uint32_t                   a_hnp:1;           /**< OTG only, hnp for A device                     */
     uint32_t                   a_alt_hnp:1;       /**< OTG only, hnp for A device on other port       */
     uint32_t                   flag_padding:13;   /**< padding the bit flags                          */
-    uint16_t                   temp_buffer;       /**< temp buffer to hold data <= 2 bytes, 
+    uint16_t                   temp_buffer;       /**< temp buffer to hold data <= 2 bytes,
                                                        must align at 32bit boundary                   */
     uint16_t                   status;            /**< device status                                  */
     uint8_t    alt_cfg[TUSB_MAX_INTERFACE_COUNT]; /**< device interface alernate configuration        */
@@ -132,7 +132,7 @@ struct _tusb_device{
 /** Open USB device
  *
  *  \ingroup Group_Device
- * 
+ *
  *  \param[in] dev              USB device handle
  *  \param[in] driver_param     parameter pass to the driver
  *
@@ -141,12 +141,12 @@ struct _tusb_device{
 static inline int tusb_open_device(tusb_device_t* dev, const tusb_hardware_param_t* driver_param)
 { return tusb_dev_drv_open(&dev->dev_drv, driver_param, dev); }
 
-/** close USB device 
+/** close USB device
  *
  *  \ingroup Group_Device
  *
  *  \param  dev          USB device handle, init by \ref tusb_open_device
- * 
+ *
  *  \return 0 for success, otherwise fail
  */
 static inline int tusb_close_device(tusb_device_t* dev)
@@ -279,7 +279,7 @@ static inline void tusb_set_rx_valid(tusb_device_t* dev, uint8_t EPn)
  *  \param[in]  data         data buffer
  *  \param[in]  len          actual xfer data length
  *  \param[in]  isSetup      0 - normal data, 1 - setup data
- * 
+ *
  *  \return          0 - means received data processed, the Rx/OUT endpoint will set to valid again, previous set received buffer will be used
  *           otherwise - means the data will be processed later, call \ref tusb_set_rx_valid to enable the Rx/OUT endpoint again
  *               in case of ISO out endpoint, return 0 will use current receive buffer to rx data again
@@ -303,7 +303,7 @@ void tusb_device_reset(tusb_device_driver_t* drv);
 
 /** Called when data transmit complete
  *  This is a WEAK function, default do nothing
- *  user application can override it to get the data transmit complete event 
+ *  user application can override it to get the data transmit complete event
  *
  *  \ingroup Group_Device
  *  \ingroup Group_Event
@@ -315,7 +315,7 @@ void tusb_on_tx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len)
 
 /** called when data receive complete
  *  This is a WEAK function, default always return 0, this will set Rx/OUT endpoint valid again
- *  user application can override it to get the data send done event 
+ *  user application can override it to get the data send done event
  *  there are two conditions to trigger this callback
  *    1. Received data is large or equal to the buffer length set by tusb_set_recv_buffer
  *    2. Received data packed size is less than the end point max packet size
@@ -331,7 +331,7 @@ void tusb_on_tx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len)
  *  \return          0 - means received data processed, the Rx/OUT endpoint will set to valid aging, previous set received buffer will be used
  *           otherwise - means the data will be processed later, call \ref tusb_set_rx_valid to enable this endpoint again
  *               in case of ISO out endpoint, return 0 will use current receive buffer to rx data again
- *               otherwise the follow data will be dropped untill call tusb_set_rx_valid        
+ *               otherwise the follow data will be dropped untill call tusb_set_rx_valid
  */
 int tusb_on_rx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len);
 
@@ -340,7 +340,7 @@ int tusb_on_rx_done(tusb_device_t* dev, uint8_t EPn, const void* data, int len);
  *  user application can override it to setup the endpoint and initial device status
  *
  *  \ingroup Group_Device
- * 
+ *
  *  \ingroup Group_Event
  *
  *  \param[in]  dev          Indicate witch USB device fire the reset event
@@ -359,7 +359,7 @@ void tusb_reconfig(tusb_device_t* dev);
  *
  *  \return       0 - the setup request is not processed by class, will be handle in TeenyUSB stack
  *                1 - the setup request is processed by class, TeenyUSB stack will ignore it
- * 
+ *
  *  \remark    the class request not only receive class request, it receive all request before it pass
  *             to the teeny usb stack
  */

@@ -342,7 +342,7 @@ int bsp_gpio_read(e_bsp_PortPinType gpioPortPin)
 }
 
 /*******************************************************************************
- * @fn     bsp_gpio_set
+ * @fn     gpio_set
  *
  * @brief  Set GPIO PortPin state
  *         Precondition: call to bsp_gpio_cfg()
@@ -351,7 +351,7 @@ int bsp_gpio_read(e_bsp_PortPinType gpioPortPin)
  *
  * @return None
  **/
-void bsp_gpio_set(e_bsp_PortPinType gpioPortPin)
+void gpio_set(e_bsp_PortPinType gpioPortPin)
 {
 	uint32_t pinBit = (gpioPortPin & BSP_PINBIT_MASK);
 	/* Read Port Pin */
@@ -366,7 +366,7 @@ void bsp_gpio_set(e_bsp_PortPinType gpioPortPin)
 }
 
 /*******************************************************************************
- * @fn     bsp_gpio_clr
+ * @fn     gpio_clear
  *
  * @brief  Read GPIO PortPin state
  *         Precondition: call to bsp_gpio_cfg()
@@ -375,7 +375,7 @@ void bsp_gpio_set(e_bsp_PortPinType gpioPortPin)
  *
  * @return None
  **/
-void bsp_gpio_clr(e_bsp_PortPinType gpioPortPin)
+void gpio_clear(e_bsp_PortPinType gpioPortPin)
 {
 	uint32_t pinBit = (gpioPortPin & BSP_PINBIT_MASK);
 	/* Read Port Pin */
@@ -416,12 +416,12 @@ int bsp_sync2boards(e_bsp_PortPinType gpio1, e_bsp_PortPinType gpio2, e_bsp_Type
 	{
 		i = 0;
 		/* Configure gpio1 as input pull-down */
-		bsp_gpio_clr(gpio1);
+		gpio_clear(gpio1);
 		bsp_gpio_cfg(gpio1, GPIO_ModeIN_PD_SMT); // Input
 		/* Configure gpio2 as output */
-		bsp_gpio_clr(gpio2);
+		gpio_clear(gpio2);
 		bsp_gpio_cfg(gpio2, GPIO_Highspeed_PP_8mA); // Output
-		bsp_gpio_set(gpio2); // Set state to "1"
+		gpio_set(gpio2); // Set state to "1"
 		/* Wait Device Synchronization signal "1" (ACK) on gpio1 */
 		while(1)
 		{
@@ -439,12 +439,12 @@ int bsp_sync2boards(e_bsp_PortPinType gpio1, e_bsp_PortPinType gpio2, e_bsp_Type
 	{
 		i = 0;
 		/* Configure gpio2 as input pull-down */
-		bsp_gpio_clr(gpio2);
+		gpio_clear(gpio2);
 		bsp_gpio_cfg(gpio2, GPIO_ModeIN_PD_SMT); // Input
 		/* Configure gpio1 as output */
-		bsp_gpio_clr(gpio1);
+		gpio_clear(gpio1);
 		bsp_gpio_cfg(gpio1, GPIO_Highspeed_PP_8mA); // Output
-		bsp_gpio_set(gpio1); // Set state to "1"
+		gpio_set(gpio1); // Set state to "1"
 		/* Wait Device Synchro signal "1" (ACK) on gpio2 */
 		while(1)
 		{

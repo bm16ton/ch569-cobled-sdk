@@ -13,13 +13,8 @@
 #include "CH56x_usb30_devbulk.h"
 #include "CH56x_usb30_devbulk_LIB.h"
 #include "CH56x_usb_devbulk_desc_cmd.h"
-#include "teeny_usb_device.h"
-#include "teeny_usb_device_driver.h"
-#include "tusbd_cdc.h"
-#include "tusb_cdc.h"
+
 #include "CH56x_debug_log.h"
-#include "winusb30.h"
-#include "teeny_usb_util.h"
 //#define DEBUG_USB2_REQ 1 // Debug USB Req (can have impact real-time to correctly enumerate USB2)
 //#define DEBUG_USB2_EP0 1 // Debug ON EP0 have timing issue with real-time to enumerate USB2
 //#define DEBUG_USB2_EPX 1 // EPX is EP1 to EP7
@@ -33,7 +28,6 @@
 /* Global define */
 
 /* Global Variable */
-extern tusb_cdc_device_t* cdc_dev;
 vuint16_t  U20_EndpnMaxSize = 512;
 vuint16_t  SetupReqLen=0;            //Host request data length
 vuint16_t  SetupLen = 0;             //The length of data actually sent or received during the data phase
@@ -173,12 +167,6 @@ void USB20_Device_Setaddress(uint32_t address)
  *
  * @return None
  */
-
-extern tusb_device_t g_dev;
-
-
-
- static const char* stop_name[] = {"1", "1.5", "2"};
 uint16_t U20_NonStandard_Request(void)
 {
 	uint16_t len = 0;
@@ -186,111 +174,6 @@ uint16_t U20_NonStandard_Request(void)
 	SetupLen = 0;
 	endp_dir = UsbSetupBuf->bRequestType & 0x80;
 
-if( (UsbSetupBuf->bRequestType & USB_REQ_TYPE_MASK) == USB_REQ_TYPE_CLASS){
-
-  switch(UsbSetupBuf->bRequest)
-  {
-  case CDC_SEND_ENCAPSULATED_COMMAND:
-  cprintf("CDC_SEND_ENCAPSULATED_COMMAND\n");
-
-    break;
-
-  case CDC_GET_ENCAPSULATED_RESPONSE:
-  cprintf("CDC_GET_ENCAPSULATED_RESPONSE\n");
-
-    break;
-
-  case CDC_SET_COMM_FEATURE:
-  cprintf("CDC_SET_COMM_FEATURE\n");
-
-    break;
-
-  case CDC_GET_COMM_FEATURE:
-  cprintf("CDC_GET_COMM_FEATURE\n");
-
-    break;
-
-  case CDC_CLEAR_COMM_FEATURE:
-  cprintf("CDC_CLEAR_COMM_FEATURE\n");
-
-    break;
-
-  case CDC_SET_LINE_CODING:
-
-		//    cdc_dev->line_coding.bitrate = (uint32_t)(endp0RTbuff[0] | (endp0RTbuff[1] << 8) | (endp0RTbuff[2] << 16) | (endp0RTbuff[3] << 24));
-		//    cdc_dev->line_coding.stopbits = endp0RTbuff[4];
-//    cdc_uart_set_stopbits(UART1, cdc_dev->line_coding.stopbits);
- //   cprintf("stopbits = %d\n", cdc_dev->line_coding.stopbits);
- 		//   cdc_dev->line_coding.parity = endp0RTbuff[5];
-//    cprintf("parity = %d\n", cdc_dev->line_coding.parity);
-/*	if (cdc_dev->line_coding.parity) {
-    cdc_dev->line_coding.databits = (endp0RTbuff[6]  + 1);
-    } else {
-    cdc_dev->line_coding.databits = endp0RTbuff[6];
-    }
-    */
-//    cprintf("databits = %d\n", cdc_dev->line_coding.databits);
-
-    if(cdc_dev->on_line_coding_change){
-      cdc_dev->on_line_coding_change(cdc_dev);
-    }
-
-    SetupLen = 0;
-    return 1;
-    break;
-
-  case CDC_GET_LINE_CODING:
-    pDescr[0] = (uint8_t)(cdc_dev->line_coding.bitrate);
-    pDescr[1] = (uint8_t)(cdc_dev->line_coding.bitrate >> 8);
-    pDescr[2] = (uint8_t)(cdc_dev->line_coding.bitrate >> 16);
-    pDescr[3] = (uint8_t)(cdc_dev->line_coding.bitrate >> 24);
-    pDescr[4] = cdc_dev->line_coding.stopbits;
-    pDescr[5] = cdc_dev->line_coding.parity;
-    pDescr[6] = cdc_dev->line_coding.databits;
-    TUSB_LOGD("CDC get line coding <%d %c %d %s>\n",
-        (int)cdc_dev->line_coding.bitrate,
-        cdc_dev->line_coding.parity   ["NOEMS"],
-        cdc_dev->line_coding.databits,
-        cdc_dev->line_coding.stopbits [stop_name]
-    );
-
-    SetupLen = 10;
-    memcpy(endp0RTbuff, pDescr, SetupLen);
-    return SetupLen;
-    break;
-
-  case CDC_SET_CONTROL_LINE_STATE:
- //   if(cdc_dev->on_line_state_change){
- //     cdc_dev->on_line_state_change(cdc_dev, UsbSetupBuf->wValue);
- //   }
-      	char buf[10];
-	struct usb_cdc_notification *notif = (void*)buf;
-	/* We echo signals back to host as notification */
-	notif->bmRequestType = 0xA1;
-	notif->bNotification = 0x20;   //NOTIFY
-	notif->wValue = 0;
-	notif->wIndex = 0;
-	notif->wLength = 2;
-	pDescr[8] = 2;
-	pDescr[9] = 0;
-	/* FIXME: Remove magic numbers */
-	memcpy(endp0RTbuff, pDescr, 10);
-
- //   TUSB_LOGD("CDC Set Linestate DTR=%d, RTS=%d\n", UsbSetupBuf->wValue&TUSB_CDC_DTR, (UsbSetupBuf->wValue&TUSB_CDC_RTS)>>1);
-    TUSB_LOGD("UsbSetupBuf->wvalue %d UsbSetupBuf->wIndex; %d UsbSetupBuf->bRequest; %d\n", UsbSetupBuf->wValue, UsbSetupBuf->wIndex, UsbSetupBuf->bRequest);
-    return 10;
-    break;
-
-  case CDC_SEND_BREAK:
-//    if(cdc_dev->on_set_break){
-//      cdc_dev->on_set_break(cdc_dev, UsbSetupBuf->wValue);
- //   }
-    TUSB_LOGD("CDC Send break %d ms\n", UsbSetupBuf->wValue);
-    return 0;
-    break;
-	}
-
-  }
 	switch(SetupReq)
 	{
 		case 0x01: // Microsoft OS 2.0 Descriptors
@@ -660,9 +543,6 @@ uint16_t U20_Standard_Request()
  *
  * @return   None
  */
-
- extern uint16_t placem;
-
 __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 {
 	uint32_t end_num;
@@ -773,32 +653,19 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 				if(rx_token == PID_IN)
 				{
 					//log_printf("EP1 IN\n");
-			//		RxBuff += U20_MAXPACKET_LEN;
-//UART2_SendString( (uint8_t *)endp1Rbuff, R16_UEP1_T_LEN );
-					if (placem > 0) {
-					memcpy(endp1Tbuff, RxBuff, placem);
-					memset(RxBuff, 0x0, 1024);
-					cprintf("placem = %d\n", placem);
-					R16_UEP1_T_LEN = placem;
-					placem = 0;
-										// Flip the synchronization trigger bit to be sent next time bulk transfer data0 data1 flip back and forth
+					pUEP1_TX_data += U20_MAXPACKET_LEN;
+					memcpy(endp1Tbuff, pUEP1_TX_data, U20_MAXPACKET_LEN);
+
+					// Flip the synchronization trigger bit to be sent next time bulk transfer data0 data1 flip back and forth
 					R32_UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff;
 					R8_UEP1_TX_CTRL ^= RB_UEP_T_TOG_1;
 
 					// The endpoint status is set to ACK, if the transmission length remains unchanged,
 					// there is no need to rewrite the R16_UEP1_T_LEN register
-
 					R8_UEP1_TX_CTRL = (R8_UEP1_TX_CTRL & ~RB_UEP_TRES_MASK) | UEP_T_RES_ACK;
-					} else {
-					;
-					}
-
-
 				}
 				else if(rx_token == PID_OUT)
 				{
-
-					UART2_SendString( (uint8_t *)endp1Rbuff, U20_MAXPACKET_LEN );
 					if(EP1_OUT_seq_num == 0)
 					{
 						pUEP1_TX_data = (uint8_t *)endp1Tbuff;
@@ -812,8 +679,7 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 					EP1_OUT_seq_num++;
 					if(EP1_OUT_seq_num == 8) // 4096 Bytes Buffer (8x512 Bytes)
 					{
-			//			usb_cmd_rx(USB_TYPE_USB2, endp1Rbuff, endp1Tbuff);
-
+//						usb_cmd_rx(USB_TYPE_USB2, endp1Rbuff, endp1Tbuff);
 						EP1_OUT_seq_num = 0;
 						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
 						R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)pUEP1_RX_data;

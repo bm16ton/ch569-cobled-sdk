@@ -20,6 +20,9 @@
 /* All GPIOA except Pin7 & Pin8 used by UART1 */
 #define GENERIC_GPIOA_Pins (GPIO_Pin_All & ~(GPIO_Pin_7 | GPIO_Pin_8) )
 
+int bsp_ubtn(void) {
+return 1;
+}
 /*******************************************************************************
  * @fn     bsp_gpio_init
  *

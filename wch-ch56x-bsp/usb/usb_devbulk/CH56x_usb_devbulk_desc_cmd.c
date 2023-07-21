@@ -297,7 +297,8 @@ uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor] =
 	//endp1_compansion_desc
 	0x06, // length of this endpoint compansion descriptor
 	0x30,
-	DEF_ENDP1_IN_BURST_LEVEL - 1, // max burst size
+//	DEF_ENDP1_IN_BURST_LEVEL - 1, // max burst size
+	0x01,
 	0x00, // no stream
 	0x00,
 	0x00,
@@ -313,7 +314,8 @@ uint8_t USB_SS_ConfigDescriptor[LEN_USB_SS_ConfigDescriptor] =
 	//endp1_compansion_desc
 	0x06, // length of this endpoint compansion descriptor
 	0x30,
-	DEF_ENDP1_OUT_BURST_LEVEL - 1, // max burst size
+//	DEF_ENDP1_OUT_BURST_LEVEL - 1, // max burst size
+	0x01,
 	0x00, // no stream
 	0x00,
 	0x00,

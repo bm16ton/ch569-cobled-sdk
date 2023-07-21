@@ -181,7 +181,6 @@ typedef struct __PACKED
 // USB30_Device_Init
 //static int USB30_Device_Open(void)
 
-
 /*
 static int USB30_device_close(void)
 {

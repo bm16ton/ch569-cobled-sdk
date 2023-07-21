@@ -138,6 +138,13 @@ void cdc_line_coding_change(tusb_cdc_device_t* cdc)
 cprintf("from change struct bitrate %d parity %d stopbits\n",cdc->line_coding.bitrate, cdc->line_coding.parity, cdc->line_coding.stopbits);
 }
 
+/* Blink time in ms */
+#define BLINK_FAST (50) // Blink LED each 100ms (50*2)
+
+#define BLINK_USB3 (250) // Blink LED each 500ms (250*2)
+#define BLINK_USB2 (500) // Blink LED each 1000ms (500*2)
+
+int blink_ms = BLINK_USB2;
 
 static tusb_device_interface_t* device_interfaces[] = {
   (tusb_device_interface_t*)&cdc_dev, 0,   // CDC need two interfaces
@@ -153,23 +160,48 @@ static tusb_device_t g_dev;
 void board_init(void);
 int main(void)
 {
-  generic_bsp_gpio_init();
-  board_init();
-  bsp_init(FREQ_SYS);
-  log_init(&log_buf);
-  Delay_Init(FREQ_SYS);
-  UART1_init(UART1_BAUD, FREQ_SYS);
-  memset(&unique_id, 0, 8);
-  FLASH_ROMA_READ(FLASH_ROMA_UID_ADDR, (uint32_t*)&unique_id, 8);
-  TUSB_LOGD("cdcacm device begin\n");
-  usb_descriptor_set_string_serial_number(&unique_id);
+	int old_DeviceUsbType = -1;
+	/* HydraUSB3 configure GPIO In/Out */
+	generic_bsp_gpio_init();
+
+	/* Init BSP (MCU Frequency & SysTick) */
+	bsp_init(FREQ_SYS);
+	log_init(&log_buf);
+
+#if(defined DEBUG)
+	/* Configure serial debugging for printf()/log_printf()... */
+	UART1_init(UART1_BAUD, FREQ_SYS);
+#endif
+	log_printf("Start\n");
+	log_printf("ChipID(Hex)=%02X\n", R8_CHIP_ID);
+
+	memset(&unique_id, 0, 8);
+	FLASH_ROMA_READ(FLASH_ROMA_UID_ADDR, (uint32_t*)&unique_id, 8);
+	log_printf("FLASH_ROMA_UID(Hex)=%02X %02X %02X %02X %02X %02X %02X %02X\n",
+			   unique_id.sn_8b[0], unique_id.sn_8b[1], unique_id.sn_8b[2], unique_id.sn_8b[3],
+			   unique_id.sn_8b[4], unique_id.sn_8b[5], unique_id.sn_8b[6], unique_id.sn_8b[7]);
+
+	log_printf("HydraUSB3_USB FW v1.0.1 22-Aug-2022(CPU Freq=%d MHz)\n", (FREQ_SYS/1000000));
+	log_printf("DEF_ENDP1_MAX_SIZE=%d DEF_ENDP2_MAX_SIZE=%d\n", DEF_ENDP1_MAX_SIZE, DEF_ENDP2_MAX_SIZE);
+
+	// USB2 & USB3 Init
+	// USB2 & USB3 are managed in LINK_IRQHandler()/TMR0_IRQHandler()/USBHS_IRQHandler()/USBSS_IRQHandler()
+	R32_USB_CONTROL = 0;
+	PFIC_EnableIRQ(USBSS_IRQn);
+	PFIC_EnableIRQ(LINK_IRQn);
+
+	PFIC_EnableIRQ(TMR0_IRQn);
+	R8_TMR0_INTER_EN = RB_TMR_IE_CYC_END;
+	TMR0_TimerInit(67000000); // USB3.0 connection failure timeout about 0.56 seconds
+
+	/* USB Descriptor set String Serial Number with CH569 Unique ID */
+	usb_descriptor_set_string_serial_number(&unique_id);
 
 	/* USB Descriptor set USB VID/PID */
-  usb_descriptor_set_usb_vid_pid(&vid_pid);
-  SetDescriptor(&g_dev, &BULK30_descriptors);
-  tusb_set_device_config(&g_dev, &device_config);
-  tusb_open_device(&g_dev, (const tusb_hardware_param_t*)&BULK20_descriptors);
-  TUSB_LOGD("Work in %c Speed mode\n", "HFLS"[tusb_get_device_speed(&g_dev)]);
+	usb_descriptor_set_usb_vid_pid(&vid_pid);
+
+	/* USB3.0 initialization, make sure that the two USB3.0 interrupts are enabled before initialization */
+	USB30D_init(ENABLE);
   GPIOA_SetBits(GPIO_Pin_3);
   GPIOA_ModeCfg(GPIO_Pin_2, GPIO_ModeIN_PU_NSMT);			// RXD
   GPIOA_ModeCfg(GPIO_Pin_3, GPIO_Slowascent_PP_8mA);		// TXD
@@ -178,24 +210,63 @@ int main(void)
   trigB = 7;
   UART2_INTCfg( ENABLE, RB_IER_RECV_RDY|RB_IER_LINE_STAT );
   PFIC_EnableIRQ( UART2_IRQn );
-
-  while(1){
-
-						generic_uled_on();
-						generic_uled2_off();
-						tusb_delay_poo();
-						tusb_delay_poo();
-						tusb_delay_poo();
-						tusb_delay_poo();
-						generic_uled_off();
-						generic_uled2_on();
-						tusb_delay_poo();
-						tusb_delay_poo();
-						tusb_delay_poo();
-						tusb_delay_poo();
-
+	// Infinite loop USB2/USB3 managed with Interrupt
+	while(1)
+	{
+		if( bsp_ubtn() )
+		{
+			blink_ms = BLINK_FAST;
+			generic_uled_on();
+			bsp_wait_ms_delay(blink_ms);
+			generic_uled_off();
+			bsp_wait_ms_delay(blink_ms);
 		}
+		else
+		{
+			if(g_DeviceConnectstatus == USB_INT_CONNECT_ENUM)
+			{
+				switch(g_DeviceUsbType)
+				{
+					case USB_U20_SPEED: // USB2
+					{
+						if(g_DeviceUsbType != old_DeviceUsbType)
+						{
+							old_DeviceUsbType = g_DeviceUsbType;
+							log_printf("USB2\n");
+						}
+						blink_ms = BLINK_USB2;
+						generic_uled_on();
+						bsp_wait_ms_delay(blink_ms);
+						generic_uled_off();
+						bsp_wait_ms_delay(blink_ms);
+					}
+					break;
 
+					case USB_U30_SPEED: // USB3
+					{
+						if(g_DeviceUsbType != old_DeviceUsbType)
+						{
+							old_DeviceUsbType = g_DeviceUsbType;
+							log_printf("USB3\n");
+						}
+						blink_ms = BLINK_USB3;
+						generic_uled_on();
+						bsp_wait_ms_delay(blink_ms);
+						generic_uled_off();
+						bsp_wait_ms_delay(blink_ms);
+					}
+					break;
+
+					default:
+						generic_uled_on(); // LED is steady until USB3 SS or USB2 HS is ready
+				}
+			}
+			else
+			{
+				generic_uled_on(); // LED is steady until USB3 SS or USB2 HS is ready
+			}
+		}
+	}
 }
 
 uint16_t placem = 0;

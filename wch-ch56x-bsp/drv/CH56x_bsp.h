@@ -271,7 +271,7 @@ void bsp_gpio_cfg(e_bsp_PortPinType gpioPortPin, GPIOModeTypeDef mode);
 int bsp_gpio_read(e_bsp_PortPinType gpioPortPin);
 
 /*******************************************************************************
- * @fn     bsp_gpio_set
+ * @fn     gpio_set
  *
  * @brief  Set GPIO PortPin state
  *         Precondition: call to bsp_gpio_cfg()
@@ -280,10 +280,10 @@ int bsp_gpio_read(e_bsp_PortPinType gpioPortPin);
  *
  * @return None
  **/
-void bsp_gpio_set(e_bsp_PortPinType gpioPortPin);
+void gpio_set(e_bsp_PortPinType gpioPortPin);
 
 /*******************************************************************************
- * @fn     bsp_gpio_clr
+ * @fn     gpio_clear
  *
  * @brief  Read GPIO PortPin state
  *         Precondition: call to bsp_gpio_cfg()
@@ -292,7 +292,7 @@ void bsp_gpio_set(e_bsp_PortPinType gpioPortPin);
  *
  * @return None
  **/
-void bsp_gpio_clr(e_bsp_PortPinType gpioPortPin);
+void gpio_clear(e_bsp_PortPinType gpioPortPin);
 
 /*******************************************************************************
  * @fn     bsp_sync2boards
