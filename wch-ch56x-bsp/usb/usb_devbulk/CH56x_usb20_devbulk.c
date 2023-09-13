@@ -84,7 +84,7 @@ void USB20_Endp_Init(void)
 	R32_UEP0_RT_DMA = (uint32_t)(uint8_t *)endp0RTbuff;
 
 	R32_UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff;
-	R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)endp1Rbuff;
+//	R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)endp1Rbuff;
 
 	R32_UEP2_TX_DMA = (uint32_t)(uint8_t *)endp2RTbuff;
 	R32_UEP2_RX_DMA = (uint32_t)(uint8_t *)endp2RTbuff;
@@ -669,7 +669,7 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 					if(EP1_OUT_seq_num == 0)
 					{
 						pUEP1_TX_data = (uint8_t *)endp1Tbuff;
-						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
+//						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
 					}
 					if(EP1_OUT_seq_num < 7)
 					{
@@ -681,7 +681,7 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 					{
 //						usb_cmd_rx(USB_TYPE_USB2, endp1Rbuff, endp1Tbuff);
 						EP1_OUT_seq_num = 0;
-						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
+//						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
 						R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)pUEP1_RX_data;
 					}
 					R8_UEP1_RX_CTRL ^= RB_UEP_R_TOG_1;

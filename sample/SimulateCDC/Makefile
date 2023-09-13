@@ -1,15 +1,19 @@
 COMPILER_PREFIX ?= riscv-none-elf
 BOARD ?= ch565w_evk
-TARGET = usbcdc
+TARGET = winusb30
 BOARD_PATH = ../boards/ch565w_evk/
-BOARD_SRC = ../boards/ch565w_evk/
 
+BOARD_SRC = ../boards/ch565w_evk/
+# TeenyDT format descriptor
+TEENYDT = winusb30_desc.lua
+USBMEM = 4096
+USBEP = 16
 # project source
 
 SOURCES  += Main.c \
-	syscalls.c \
-	tft.c \
-	cdc.c
+           cdc.c \
+           syscalls.c \
+           CH56x_usb30.c
 
 INCLUDES += .
 DEFINES  = __forceinline=inline NO_HOST
@@ -19,17 +23,23 @@ INCLUDES += $(BOARD_INC)
 DEFINES  += $(BOARD_DEF)
 
 # Teeny USB source
+TUSB_PATH = ../../core
 SOURCES  += $(wildcard ../boards/ch565w_evk/*.c)
 SOURCES  += $(wildcard ../../wch-ch56x-bsp/rvmsis/*.c)
 SOURCES  += $(wildcard ../../wch-ch56x-bsp/drv/*.c)
 SOURCES  += $(wildcard ../../wch-ch56x-bsp/board/gen/*.c)
-SOURCES  += $(wildcard ../../wch-ch56x-bsp/usb/usb_devbulk/*.c)
+INCLUDES += ../../class
+INCLUDES += ../../class/user
 INCLUDES += ../../wch-ch56x-bsp/rvmsis
+INCLUDES += ../../driver_ch56x
 INCLUDES += ../boards/ch565w_evk
 INCLUDES += ./
+INCLUDES += ../../core
 INCLUDES += ../../wch-ch56x-bsp/board/gen
+INCLUDES += ../../class/cdc
 INCLUDES += ../../wch-ch56x-bsp/drv
 INCLUDES += ../../wch-ch56x-bsp/usb/usb_devbulk
+INCLUDES += ../../driver_ch56x/ch56xlib/Peripheral/inc
 
 # MCU driver source
 
@@ -49,11 +59,11 @@ CPU ?=
 CCFLAGS     += -march=rv32imac_zicsr -mabi=ilp32  -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g
 CCFLAGS     += $(addprefix -D, $(DEFINES))
 CCFLAGS     += $(addprefix -I, $(INCLUDES))
-CCFLAGS		+= -DDEBUG -DDebug_UART1 -DDEBUG_USB3_REQ -DDEBUG_USB2_REQ -DDEBUG_USB3_EP
+CCFLAGS		+= -DDEBUG -DDebug_UART1 -DDEBUG_USB3_REQ -DDEBUG_USB2_REQ
 CCFLAGS     += -ffunction-sections -fdata-sections
 LDFLAGS     += $(CCFLAGS)
 LDFLAGS     += -Wl,--script=../../wch-ch56x-bsp/ld/Link.ld -Wl,-Map=$(OUTDIR)/$(TARGET).map  -std=gnu99 -MMD -MP -MT"$(@)"
-LDFLAGS     += -Wl,--gc-sections -nostartfiles -Xlinker --gc-sections -Xlinker --print-memory-usage -Wl,-Map,"$(PROJECT).map" --specs=nano.specs -specs=nosys.specs
+LDFLAGS     += -Wl,--gc-sections  -nostartfiles -Xlinker --gc-sections -Xlinker --print-memory-usage -Wl,-Map,"$(PROJECT).map" --specs=nano.specs -specs=nosys.specs
 
 
 OUTDIR = ./output
@@ -68,15 +78,15 @@ vpath %.s $(SRCPATH)
 all: ch565w_evk
 
 ch565w_evk:
-	@echo Building USB-CDC example
-	@$(MAKE) demo TARGET=usbcdc BOARD='ch565w_evk'
+	@echo Building HydraUSB3_USB
+	@$(MAKE) demo TARGET='winusb30' BOARD='ch565w_evk'
 
 
 demo: $(OUTDIR) $(OUTDIR)/$(TARGET).bin $(OUTDIR)/$(TARGET).hex
 
 $(OBJDIR)/%.o:%.c
 	@echo building $<
-	@$(CC) $(CCFLAGS) -c $< -o $@ -lm
+	@$(CC) $(CCFLAGS) -c $< -o $@
 $(OBJDIR)/%.o:%.s
 	@echo building $<
 	@$(CC) $(ASFLAGS) -c $< -o $@
@@ -97,15 +107,25 @@ $(OUTDIR)/$(TARGET).bin:$(OUTDIR)/$(TARGET).elf
 	@$(OBJCOPY) -Obinary $< $@
 $(OUTDIR)/$(TARGET).elf: $(OBJDIR) $(OBJECTS)
 	@echo linking $@
-	@$(LD) $(LDFLAGS) $(OBJECTS) -o $@ -lm
+	@$(LD) $(LDFLAGS) $(OBJECTS) -o $@
 	@$(SIZE) $@
 
 USBMEM ?= 4096
 USBEP  ?= 7
 
+desc: teeny_usb_desc.c
+
+
+#PWD = $(shell pwd)
+#teeny_usb_desc.h teeny_usb_desc.c:$(TEENYDT)
+#	@echo generate USB descriptor
+#	cd $(PWD)/../../TeenyDT && \
+#	lua gen_descriptor.lua $(PWD)/$< -maxmem=$(USBMEM) -maxep=$(USBEP) && \
+#	cd $(PWD)
+
+
 clean:
 	rm -Rf $(OUTDIR)/* $(OBJDIR)/*
-	rm -Rf ./obj/gud
 clear:
 	$(RM) $(OUTDIR) obj
 

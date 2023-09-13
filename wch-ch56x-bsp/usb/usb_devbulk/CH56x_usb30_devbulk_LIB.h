@@ -131,6 +131,7 @@ typedef struct __PACKED
 	uint16_t       wLength;
 } *PUSB_SETUP;
 
+
 #define UsbSetupBuf ((PUSB_SETUP)endp0RTbuff)// endpoint 0
 #define ENDP0_MAXPACK 512
 

@@ -9,7 +9,11 @@
 * SPDX-License-Identifier: Apache-2.0
 *******************************************************************************/
 #include "CH56x_common.h"
+#include "CH56x_debug_log.h"
 
+
+//static uint32_t aux_serial_active_baud_rate;
+extern vuint32_t vitrul_buad;
 /*******************************************************************************
  * @fn     UART0_init
  *
@@ -22,6 +26,8 @@
  *
  * @return   None
  **/
+ 
+ 
 void UART0_init(uint32_t baudrate, uint32_t systemclck)
 {
 	uint32_t x;
@@ -749,51 +755,187 @@ uint16_t UART3_rx(uint8_t* buf, int buf_len_max)
 	return (len);
 }
 
-void uart_set_stopbits(uint32_t uart, uint32_t stopbits)
-{
-	R8_UART_LCR(uart) |= stopbits;
+void usbuart_set_line_coding(struct usb_cdc_line_coding *coding) {
+	if (coding->parity)
+//		uart_set_databits(UART2, (coding->databits + 1 <= 8 ? 8 : 9));
+//	else
+//		uart_set_databits(UART2, (coding->databits <= 8 ? 8 : 9));
+/*
+	switch(coding->stopbits) {
+	case 0:
+		uart_set_stopbits(UART2, UART_STOPBITS_1);
+		break;
+	case 1:
+	default:
+		uart_set_stopbits(UART2, UART_STOPBITS_2);
+		break;
+	}
+*/
+	switch(coding->parity) {
+	case 0:
+		uart_set_parity(UART2, UART_PARITY_CLR);
+		break;
+	case 1:
+		uart_set_parity(UART2, UART_PARITY_ODD);
+		break;
+	case 2:
+	default:
+		uart_set_parity(UART2, UART_PARITY_EVEN);
+		break;
+	}
 }
 
-void cdc_uart_set_stopbits(uint32_t uart, uint32_t stopbits)
+void aux_serial_get_encoding(usb_cdc_line_coding_s *const coding)
 {
+	coding->bitrate = vitrul_buad;
+
+	switch (uart_get_stopbits(UART2)) {
+	case UART_STOPBITS_1:
+		coding->stopbits = UART_STOPBITS_1;
+		break;
+
+	case UART_STOPBITS_2:
+	default:
+		coding->stopbits = UART_STOPBITS_2;
+		break;
+	}
+
+	switch (uart_get_parity(UART2)) {
+	case UART_PARITY_CLR:
+	default:
+		coding->parity = UART_PARITY_CLR;
+		break;
+	case UART_PARITY_ODD:
+		coding->parity = UART_PARITY_ODD;
+		break;
+	case UART_PARITY_EVEN:
+		coding->parity = UART_PARITY_EVEN;
+		break;
+	}
+
+	const uint32_t data_bits = uart_get_databits(UART2);
+	if (coding->parity == UART_PARITY_CLR)
+		coding->databits = data_bits;
+	else
+		coding->databits = data_bits - 1;
+}
+/*
+uint32_t usart_get_parity(uint32_t usart)
+{
+	const uint32_t reg32 = USART_CR1(usart);
+	return reg32 & USART_PARITY_MASK;
+}
+*/
+/*
+void uart_set_stopbits(volatile uint32_t uart, uint8_t stopbits)
+{
+//	volatile uint32_t reg32 = R8_UART_LCR(uart);
+//	volatile uint32_t reg32 = (stopbits << 2);
+//	R8_UART2_LCR = reg32; 
+	
 	uint32_t reg32;
 
-	reg32 = R8_UART_LCR(uart);
-	reg32 = (reg32 & ~UART_STOPBITS_2) | stopbits;
-	R8_UART_LCR(uart) = reg32;
-
+	reg32 = POOPUART_LCR((volatile uint32_t)uart);
+	reg32 = (reg32 &= ~UART_STOPBITMSK);
+	reg32 = (reg32 & (stopbits << 2));
+	POOPUART_LCR((volatile uint32_t)uart) = reg32;
+	
 }
-
-uint32_t uart_get_stopbits(uint32_t uart)
+*/
+uint32_t uart_get_parity(uint32_t uart)
 {
-	const uint32_t reg32 = R8_UART_LCR(uart);
-	return reg32 & UART_STOPBITS_2;
+	const uint32_t reg32 = R8_UART_LCR((volatile uint32_t)uart);
+	return reg32 & (0x03 << 4);
 }
 
 void uart_set_parity(uint32_t uart, uint32_t parity)
 {
 	uint32_t reg32;
-
-	R8_UART_LCR(uart) |= UART_PARITY_EN;
-	reg32 = R8_UART_LCR(uart);
+    R8_UART2_LCR |= UART_PARITY_EN;
+	reg32 = R8_UART2_LCR;
 	reg32 = (reg32 & ~UART_PARITY_CLR) | parity;
-	R8_UART_LCR(uart) = reg32;
+	R8_UART2_LCR = reg32;
 }
 
-uint32_t uart_get_parity(uint32_t uart)
-{
-	const uint32_t reg32 = R8_UART_LCR(uart);
-	return reg32 & UART_PARITY_CLR;
+
+/*
+void UART2_set_stopbits(uint8_t stopbits) {
+    R8_UART2_LCR |= ((R8_UART2_LCR) & (stopbits << 2));
 }
 
-void uart_set_wordsize(uint32_t uart, uint32_t wsize)
+static const char* stop_name[] = {"1", "1.5", "2"};
+uint32_t uart_get_stopbits(volatile uint32_t uart)
 {
-		R8_UART_LCR(uart) |= wsize;  /*  data bits */
+//	const uint32_t reg32 = R8_UART_LCR(uart);
+//	cprintf("in get R8_UART_LCR = %02x\n", (reg32 & UART_STOPBITS_1));
+//	return reg32 & UART_STOPBITS_1;
+	
+//	const uint32_t reg32 = R8_UART_LCR(uart);
+//	cprintf("in get R8_UART_LCR = %02x\n", (reg32 & UART_STOPBITMSK));
+//	return reg32 & UART_STOPBITMSK;
+    return (R8_UART2_LCR & (0x02 << 2));
+}
+*/
+/*
+uint32_t uart_get_parity(volatile uint32_t uart)
+{
+	const uint32_t reg32 = R8_UART_LCR((volatile uint32_t)uart);
+	return R8_UART2_LCR & UART_PARITY_CLR;
+}
+*/
+void uart_set_databits(uint32_t uart, uint32_t bits)
+{
+	if (bits == 8) {
+		R8_UART_LCR(uart) = R8_UART_LCR(uart) |= (0x03 << 0); 
+	} else if (bits == 7) {
+		R8_UART_LCR(uart) = R8_UART_LCR(uart) |= (0x02 << 0);  
+	} else if (bits == 6) {
+	    R8_UART_LCR(uart) = R8_UART_LCR(uart) |= (0x01 << 0);
+	} else if (bits == 5) {   
+	    R8_UART_LCR(uart) = R8_UART_LCR(uart) |= (0x00 << 0);
+	}
 }
 
 uint32_t uart_get_databits(uint32_t uart)
 {
-	const uint32_t reg32 = R8_UART_LCR(uart) & UART_WORDSIZE_8;
+	const uint32_t reg32 = R8_UART_LCR(uart) & 0x0;
+	if (reg32 == 0x03) {
+		return 8;
+	} else if (reg32 == 0x02) {
+		return 7;
+	} else if (reg32 == 0x01) {
+	    return 6;
+	} else if (reg32 == 0x00) {
+	    return 5;
+	}
+}
+
+void uart_set_stopbits(uint32_t uart, uint32_t stopbits)
+{
+	uint32_t reg32;
+
+	reg32 = R8_UART_LCR(uart);
+	reg32 = (reg32 & ~UART_STOPBITMSK) | (stopbits << 2);
+	R8_UART_LCR(uart) = reg32;
+}
+
+uint32_t uart_get_stopbits(uint32_t uart)
+{
+	const uint32_t reg32 = R8_UART_LCR(uart);
+	return reg32 & UART_STOPBITMSK;
+}
+
+/*
+void uart_set_databits(volatile uint32_t uart, uint8_t wsize)
+{
+	volatile uint32_t reg32 = POOPUART_LCR(uart);	
+	reg32 |= (wsize << 0);  
+	POOPUART_LCR(uart) = (uint8_t)reg32;
+}
+
+uint32_t uart_get_databits(volatile uint32_t uart)
+{
+	const uint32_t reg32 = POOPUART_LCR(uart) & UART_DATABITS_OFFSET;
 	if (reg32 == 0x00)
 		return 5;
 	if (reg32 == 0x01)
@@ -805,11 +947,12 @@ uint32_t uart_get_databits(uint32_t uart)
 	else
 		return 8;
 }
-
-void uart_set_break(uint32_t uart, bool enable)
+*/
+void uart_set_break(volatile uint32_t uart, bool enable)
 {
-		if (enable == 1)
-			R8_UART_LCR(uart) |= UART_BREAK_EN;  /*enable break */
-		else
-			R8_UART_LCR(uart) &= ~UART_BREAK_EN;
+    volatile uint32_t reg32 = R8_UART_LCR(uart);	
+	if (enable == 1)
+		reg32 |= UART_BREAK_EN;  /*enable break */
+    else
+		reg32 &= ~UART_BREAK_EN;
 }

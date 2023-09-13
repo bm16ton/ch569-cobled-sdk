@@ -17,6 +17,9 @@ extern "C" {
 
 #include "stdint.h"
 #include "CH56xSFR.h"
+#include "usb_cdc.h"
+
+extern vuint32_t vitrul_buad;
 
 #if defined (__ASSEMBLER__)
 #define MMIO32(addr)		(addr)
@@ -55,17 +58,20 @@ extern "C" {
 #define UART_WORDSIZE_6		(0x01 << 0)
 #define UART_WORDSIZE_7		(0x02 << 0)
 #define UART_WORDSIZE_8		(0x03 << 0)
+#define UART_DATABITS_OFFS  0x00
 
-#define UART_STOPBITS_OFFS		2U
 #define UART_STOPBITS_1		(0x00 << 2)   /* 1 stop bit */
 #define UART_STOPBITS_2		(0x01 << 2)   /* 2 stop bits */
+#define UART_STOPBITMSK		(0x01 << 2)
+#define UART_STOPBITS_OFFS	(0x02)
 
-#define UART_PARITY_EN			(0x01 << 3)  /* MUST BE SET BEFORE PARITY LEVEL */
+#define UART_PARITY_EN		(0x01 << 3)  /* MUST BE SET BEFORE PARITY LEVEL */
 
 #define UART_PARITY_ODD		(0x00 << 4)
-#define UART_PARITY_EVEN		(0x01 << 4)
-#define UART_PARITY_MARK		(0x02 << 4)
+#define UART_PARITY_EVEN	(0x01 << 4)
+#define UART_PARITY_MARK	(0x02 << 4)
 #define UART_PARITY_CLR		(0x03 << 4)
+#define UART_PARITY_OFFS    0x04
 
 #define UART_BREAK_EN  		(0x01 << 6)
 
@@ -94,15 +100,23 @@ typedef enum
 
 } UARTByteTRIGTypeDef;
 
-
+void usbuart_set_line_coding(struct usb_cdc_line_coding *coding);
+void aux_serial_get_encoding(usb_cdc_line_coding_s *const coding);
+//void uart_set_stopbits(uint32_t uart, uint8_t stopbits);
 void uart_set_stopbits(uint32_t uart, uint32_t stopbits);
+//uint32_t uart_get_stopbits(uint32_t uart);
 uint32_t uart_get_stopbits(uint32_t uart);
-void cdc_uart_set_stopbits(uint32_t uart, uint32_t stopbits);
+//void cdc_uart_set_stopbits(uint32_t uart, uint8_t stopbits);
 void uart_set_parity(uint32_t uart, uint32_t parity);
 uint32_t uart_get_parity(uint32_t uart);
-void uart_set_wordsize(uint32_t uart, uint32_t wsize);
+
+//void uart_set_databits(uint32_t uart, uint8_t wsize);
+void uart_set_databits(uint32_t uart, uint32_t bits);
+//uint32_t uart_get_databits(uint32_t uart);
 uint32_t uart_get_databits(uint32_t uart);
 void uart_set_break(uint32_t uart, bool enable);
+
+void UART2_set_stopbits(uint8_t stopbits);
 /****************** UART0 */
 void UART0_init(uint32_t baudrate, uint32_t systemclck);
 void UART0_DefInit(void); /* Serial Default initialization configuration */

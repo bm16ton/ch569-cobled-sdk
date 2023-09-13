@@ -1,0 +1,1 @@
+Usb to serial (cdc) example for ch569 IE hydrausb3. Currently works but have only lightly tested and only in usb3 mode. Setting baud and bit size works, stop bits and parity may? work? Very much a WIP
