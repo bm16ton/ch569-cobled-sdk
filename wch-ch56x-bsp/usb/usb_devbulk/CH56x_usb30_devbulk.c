@@ -502,25 +502,17 @@ cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %
         
   cprintf("first 8 of endp buf = %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10]);      
         
-  R8_UART2_LCR = R8_UART2_LCR | (coding.stopbits << 2);
+//  R8_UART2_LCR = R8_UART2_LCR | (coding.stopbits << 2);
   coding.parity = endp0RTbuff[5];
 
   cprintf("parity %02x %d\n", coding.parity, coding.parity);
 
-  if (coding.parity) {
-    R8_UART2_LCR |= (1 << 3);
-    coding.databits = (endp0RTbuff[6]);
-    R8_UART2_LCR |= (coding.parity << 4);
-  } else {
-    coding.databits = (endp0RTbuff[6]);
-    R8_UART2_LCR |= (0 << 3);
-    }
-    
+
 //    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
 //  usbuart_set_line_coding(&coding);
 
     cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
-    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
+//    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
     coding.databits = (coding.databits - 0x05);
   
   CDC_reinit(vitrul_buad);
@@ -528,9 +520,17 @@ cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %
   R8_UART2_LCR = R8_UART2_LCR & ~((uint8_t)coding.databits << RB_LCR_WORD_SZ);
   R8_UART2_LCR = R8_UART2_LCR | ((uint8_t)coding.databits << 0);
   R8_UART2_LCR = R8_UART2_LCR | ((uint8_t)coding.stopbits << RB_LCR_STOP_BIT);
-
+  if (coding.parity) {
+    R8_UART2_LCR = R8_UART2_LCR | (1 << 3);
+    coding.databits = (endp0RTbuff[6]);
+    R8_UART2_LCR = R8_UART2_LCR | (coding.parity << 4);
+  } else {
+    coding.databits = (endp0RTbuff[6]);
+    R8_UART2_LCR = R8_UART2_LCR | (0 << 3);
+  }
+    
   cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
-
+cprintf("parity %02x %d\n", (R8_UART2_LCR & 2), (R8_UART2_LCR & 2));
   uint16_t len=0;
   return len;
 }
