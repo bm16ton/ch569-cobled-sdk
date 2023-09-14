@@ -18,7 +18,7 @@
 #include "cdc.h"
 
 vuint32_t vitrul_buad  = 115200;
-
+volatile int lineupdate = 0;
 /* Global define */
 /* Global Variable */
 vuint8_t tx_lmp_port = 0;
@@ -185,17 +185,18 @@ cprintf("bRequestType %02x\n", UsbSetupBuf->bRequestType);
   switch(UsbSetupBuf->bRequest)
   {
   /*  Open the serial port and send the baud rate  */
-  case 0x20:
+  case CDC_SET_LINE_CODING:
+  lineupdate = 1;
     USB30_OUT_set(ENDP_0, ACK, 1 );
   break;
   /*  Read the current serial port configuration  */
-  case 0x21:
-    *(uint32_t  *)&endp0RTbuff[50] = coding.bitrate;;
+  case CDC_GET_LINE_CODING:
+    *(uint32_t  *)&endp0RTbuff[50] = coding.bitrate;
     endp0RTbuff[54]=coding.stopbits;endp0RTbuff[55]=coding.parity;endp0RTbuff[56]=coding.databits;
     SetupLen = 7;
   break;
   /*  Close uart  */
-  case 0x22:
+  case CDC_SET_CONTROL_LINE_STATE:
     CDC_Variable_Clear();
   break;
 
@@ -464,7 +465,10 @@ struct usb_cdc_line_coding coding;
 
 cprintf("out \n");
 cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x \n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12], endp0RTbuff[13], endp0RTbuff[14], endp0RTbuff[15], endp0RTbuff[16], endp0RTbuff[17], endp0RTbuff[18], endp0RTbuff[19], endp0RTbuff[20], endp0RTbuff[21], endp0RTbuff[22], endp0RTbuff[23], endp0RTbuff[24], endp0RTbuff[25], endp0RTbuff[26],  endp0RTbuff[27], endp0RTbuff[28], endp0RTbuff[29], endp0RTbuff[30], endp0RTbuff[31], endp0RTbuff[32], endp0RTbuff[33], endp0RTbuff[34],  endp0RTbuff[35], endp0RTbuff[36], endp0RTbuff[37], endp0RTbuff[38], endp0RTbuff[39], endp0RTbuff[40], endp0RTbuff[41], endp0RTbuff[42], endp0RTbuff[43], endp0RTbuff[44], endp0RTbuff[45], endp0RTbuff[46],  endp0RTbuff[47], endp0RTbuff[48], endp0RTbuff[49], endp0RTbuff[50], endp0RTbuff[65], endp0RTbuff[66], endp0RTbuff[67], endp0RTbuff[68], endp0RTbuff[69],  endp0RTbuff[70]);
+  cprintf("first 8 of endp buf = %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10]);    
 #endif
+if (lineupdate == 1) {
+  lineupdate = 0;
   coding.bitrate = (uint32_t)(endp0RTbuff[0] | (endp0RTbuff[1] << 8) | (endp0RTbuff[2] << 16) | (endp0RTbuff[3] << 24));
   vitrul_buad = coding.bitrate;
   coding.stopbits = (endp0RTbuff[4]);
@@ -472,8 +476,6 @@ cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %
     coding.stopbits = 1;
     }
         
-  cprintf("first 8 of endp buf = %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10]);      
-
   coding.parity = endp0RTbuff[5];
   coding.databits = (endp0RTbuff[6]);
 #if DEBUG_USB3_EP0
@@ -496,7 +498,7 @@ uint32_t serial = R8_UART2_LCR;
   }
   R8_UART2_LCR = serial;
   serial = R8_UART2_LCR;
-  cprintf("serial %08x\n", serial);
+  
 /*
   R8_UART2_LCR = R8_UART2_LCR &= ~(1 << 0);
   R8_UART2_LCR = R8_UART2_LCR | ((unsigned int)coding.databits << 0);
@@ -511,11 +513,12 @@ uint32_t serial = R8_UART2_LCR;
   }
 */
 #if DEBUG_USB3_EP0
-  cprintf("R8_UART2_LCR %0x %08x %08x %08x %08x %08x %08x %08x\n", (R8_UART2_LCR & 0), (R8_UART2_LCR & 1), (R8_UART2_LCR & 2), (R8_UART2_LCR & 3), (R8_UART2_LCR & 4), (R8_UART2_LCR & 5), (R8_UART2_LCR & 6), (R8_UART2_LCR & 7));
-  cprintf("R8_UART2_LCR %08x\n", R8_UART2_LCR);
-  cprintf("databits %02x %d\n", (R8_UART2_LCR & 0), (R8_UART2_LCR & 0));
-  cprintf("parity %02x %d\n", (R8_UART2_LCR & 4), (R8_UART2_LCR & 4));
+  cprintf("serial %08x\n", serial);
+  cprintf("R8_UART2_LCR %08x\n", serial);
+  cprintf("databits %02x %d\n", (serial & 0), (serial & 0));
+  cprintf("parity %02x %d\n", (serial & 4), (serial & 4));
 #endif  
+}
   uint16_t len=0;
   return len;
 }
