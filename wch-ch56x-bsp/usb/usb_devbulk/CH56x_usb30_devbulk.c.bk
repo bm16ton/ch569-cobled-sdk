@@ -465,7 +465,6 @@ void CDC_reinit( uint32_t baudrate )
 {
     uint32_t x;
     uint32_t t = FREQ_SYS;
-    struct usb_cdc_line_coding coding;
     PFIC_DisableIRQ( UART2_IRQn );
     UART2_Reset();
     x = 10 * t * 2 / 16 / baudrate;
@@ -474,8 +473,6 @@ void CDC_reinit( uint32_t baudrate )
     R16_UART2_DL = x;
     R8_UART2_FCR = RB_FCR_FIFO_TRIG | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN;
     R8_UART2_IER = RB_IER_TXD_EN;
-
-    cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
 
     UART2_ByteTrigCfg( UART_7BYTE_TRIG );
     UART2_INTCfg( ENABLE, RB_IER_RECV_RDY|RB_IER_LINE_STAT );
@@ -519,17 +516,20 @@ cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %
 //    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
 //  usbuart_set_line_coding(&coding);
 
-    cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
-    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
-    coding.databits = (coding.databits - 0x05);
-  
+
+  cprintf("1st raw lcr 8x = %08x %d\n", R8_UART2_LCR, R8_UART2_LCR);
+  cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
+  R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
+  coding.databits = (coding.databits - 0x05);
+
   CDC_reinit(vitrul_buad);
   
-  R8_UART2_LCR = R8_UART2_LCR & ~((uint8_t)coding.databits << RB_LCR_WORD_SZ);
-  R8_UART2_LCR = R8_UART2_LCR | ((uint8_t)coding.databits << 0);
+  R8_UART2_LCR = R8_UART2_LCR & ~((int)coding.databits << RB_LCR_WORD_SZ);
+  R8_UART2_LCR = (uint8_t)coding.databits;
   R8_UART2_LCR = R8_UART2_LCR | ((uint8_t)coding.stopbits << RB_LCR_STOP_BIT);
 
   cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
+  
 
   uint16_t len=0;
   return len;

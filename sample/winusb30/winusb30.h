@@ -1,9 +1,0 @@
-
-
-#define USB_VID_BYTE_MSB (0x16)
-#define USB_VID_BYTE_LSB (0xC0)
-#define USB_VID ((USB_VID_BYTE_MSB << 8) | USB_VID_BYTE_LSB)
-
-#define USB_PID_BYTE_MSB (0x05)
-#define USB_PID_BYTE_LSB (0xDC)
-#define USB_PID ((USB_PID_BYTE_MSB << 8) | USB_PID_BYTE_LSB)

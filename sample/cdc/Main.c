@@ -210,7 +210,7 @@ volatile uint8_t trigB = 7;
 
 int main()
 {
-  uint8_t i;
+
   lcddma = 1;
   SystemInit(FREQ_SYS);
   Delay_Init(FREQ_SYS);

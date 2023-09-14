@@ -1119,7 +1119,7 @@ Linker script and memory map
                 0x00000000000000c0                . = ALIGN (0x40)
  *fill*         0x0000000000000098       0x28 
 
-.text           0x00000000000000c0    0x1032c
+.text           0x00000000000000c0    0x10314
                 0x00000000000000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000000000c0       0x16 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-memcpy-asm.o)
@@ -1320,354 +1320,355 @@ Linker script and memory map
                 0x0000000000002fba       0x6a ./obj/usbcdc/CH56x_usb30_devbulk.o
                 0x0000000000002fba                EP0_IN_Callback
  .text.CDC_reinit
-                0x0000000000003024       0x6a ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x0000000000003024       0x7c ./obj/usbcdc/CH56x_usb30_devbulk.o
                 0x0000000000003024                CDC_reinit
  .text.EP0_OUT_Callback
-                0x000000000000308e      0x186 ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x000000000000308e                EP0_OUT_Callback
+                0x00000000000030a0      0x176 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x00000000000030a0                EP0_OUT_Callback
  .text.USB30_Setup_Status
-                0x0000000000003214       0x1e ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x0000000000003214                USB30_Setup_Status
+                0x0000000000003216       0x1e ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x0000000000003216                USB30_Setup_Status
  .text.TMR0_IRQHandler
-                0x0000000000003232       0x86 ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x0000000000003232                TMR0_IRQHandler
+                0x0000000000003234       0x86 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x0000000000003234                TMR0_IRQHandler
  .text.LINK_IRQHandler
-                0x00000000000032b8      0x224 ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x00000000000032b8                LINK_IRQHandler
+                0x00000000000032ba      0x224 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x00000000000032ba                LINK_IRQHandler
  .text.EP2_IN_Callback
-                0x00000000000034dc       0x22 ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x00000000000034dc                EP2_IN_Callback
+                0x00000000000034de       0x22 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x00000000000034de                EP2_IN_Callback
  .text.EP2_OUT_Callback
-                0x00000000000034fe       0x26 ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x00000000000034fe                EP2_OUT_Callback
+                0x0000000000003500       0x26 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x0000000000003500                EP2_OUT_Callback
  .text.USBSS_IRQHandler
-                0x0000000000003524      0x176 ./obj/usbcdc/CH56x_usb30_devbulk.o
-                0x0000000000003524                USBSS_IRQHandler
+                0x0000000000003526      0x176 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x0000000000003526                USBSS_IRQHandler
  .text.usb_descriptor_set_usb_vid_pid
-                0x000000000000369a       0x52 ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
-                0x000000000000369a                usb_descriptor_set_usb_vid_pid
+                0x000000000000369c       0x52 ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
+                0x000000000000369c                usb_descriptor_set_usb_vid_pid
  .text.usb_descriptor_set_string_serial_number
-                0x00000000000036ec       0x3e ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
-                0x00000000000036ec                usb_descriptor_set_string_serial_number
+                0x00000000000036ee       0x3e ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
+                0x00000000000036ee                usb_descriptor_set_string_serial_number
  .text.vector_handler
-                0x000000000000372a       0x32 ./obj/usbcdc/startup_CH56x.o
-                0x000000000000372a                NMI_Handler
-                0x000000000000372c                HardFault_Handler
-                0x000000000000372e                SysTick_Handler
-                0x0000000000003730                SW_Handler
-                0x0000000000003732                WDOG_IRQHandler
-                0x0000000000003736                GPIO_IRQHandler
-                0x0000000000003738                SPI0_IRQHandler
-                0x000000000000373e                TMR1_IRQHandler
-                0x0000000000003742                UART0_IRQHandler
-                0x0000000000003746                EMMC_IRQHandler
-                0x0000000000003748                DVP_IRQHandler
-                0x000000000000374a                HSPI_IRQHandler
-                0x000000000000374c                SPI1_IRQHandler
-                0x000000000000374e                UART1_IRQHandler
-                0x0000000000003752                UART3_IRQHandler
-                0x0000000000003754                SERDES_IRQHandler
-                0x0000000000003756                ETH_IRQHandler
-                0x0000000000003758                PMT_IRQHandler
-                0x000000000000375a                ECDC_IRQHandler
+                0x000000000000372c       0x32 ./obj/usbcdc/startup_CH56x.o
+                0x000000000000372c                NMI_Handler
+                0x000000000000372e                HardFault_Handler
+                0x0000000000003730                SysTick_Handler
+                0x0000000000003732                SW_Handler
+                0x0000000000003734                WDOG_IRQHandler
+                0x0000000000003738                GPIO_IRQHandler
+                0x000000000000373a                SPI0_IRQHandler
+                0x0000000000003740                TMR1_IRQHandler
+                0x0000000000003744                UART0_IRQHandler
+                0x0000000000003748                EMMC_IRQHandler
+                0x000000000000374a                DVP_IRQHandler
+                0x000000000000374c                HSPI_IRQHandler
+                0x000000000000374e                SPI1_IRQHandler
+                0x0000000000003750                UART1_IRQHandler
+                0x0000000000003754                UART3_IRQHandler
+                0x0000000000003756                SERDES_IRQHandler
+                0x0000000000003758                ETH_IRQHandler
+                0x000000000000375a                PMT_IRQHandler
+                0x000000000000375c                ECDC_IRQHandler
  .text.handle_reset
-                0x000000000000375c       0x8a ./obj/usbcdc/startup_CH56x.o
-                0x000000000000375c                handle_reset
- .text.cos      0x00000000000037e6       0x78 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_cos.o)
-                0x00000000000037e6                cos
- .text.sin      0x000000000000385e       0x7c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_sin.o)
-                0x000000000000385e                sin
+                0x000000000000375e       0x8a ./obj/usbcdc/startup_CH56x.o
+                0x000000000000375e                handle_reset
+ .text.cos      0x00000000000037e8       0x78 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_cos.o)
+                0x00000000000037e8                cos
+ .text.sin      0x0000000000003860       0x7c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_sin.o)
+                0x0000000000003860                sin
  .text.__ieee754_rem_pio2
-                0x00000000000038da      0x414 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-e_rem_pio2.o)
-                0x00000000000038da                __ieee754_rem_pio2
+                0x00000000000038dc      0x414 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-e_rem_pio2.o)
+                0x00000000000038dc                __ieee754_rem_pio2
  .text.__kernel_cos
-                0x0000000000003cee      0x1b8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_cos.o)
-                0x0000000000003cee                __kernel_cos
+                0x0000000000003cf0      0x1b8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_cos.o)
+                0x0000000000003cf0                __kernel_cos
  .text.__kernel_rem_pio2
-                0x0000000000003ea6      0x79c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_rem_pio2.o)
-                0x0000000000003ea6                __kernel_rem_pio2
+                0x0000000000003ea8      0x79c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_rem_pio2.o)
+                0x0000000000003ea8                __kernel_rem_pio2
  .text.__kernel_sin
-                0x0000000000004642      0x192 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_sin.o)
-                0x0000000000004642                __kernel_sin
- .text.fabs     0x00000000000047d4        0xe /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_fabs.o)
-                0x00000000000047d4                fabs
- .text.floor    0x00000000000047e2      0x13a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_floor.o)
-                0x00000000000047e2                floor
- .text.scalbn   0x000000000000491c      0x100 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_scalbn.o)
-                0x000000000000491c                scalbn
+                0x0000000000004644      0x192 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_sin.o)
+                0x0000000000004644                __kernel_sin
+ .text.fabs     0x00000000000047d6        0xe /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_fabs.o)
+                0x00000000000047d6                fabs
+ .text.floor    0x00000000000047e4      0x13a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_floor.o)
+                0x00000000000047e4                floor
+ .text.scalbn   0x000000000000491e      0x100 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-s_scalbn.o)
+                0x000000000000491e                scalbn
  .text.__adddf3
-                0x0000000000004a1c      0x6e8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(adddf3.o)
-                0x0000000000004a1c                __adddf3
+                0x0000000000004a1e      0x6e8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(adddf3.o)
+                0x0000000000004a1e                __adddf3
  .text.__divdf3
-                0x0000000000005104      0x5ae /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(divdf3.o)
-                0x0000000000005104                __divdf3
- .text.__eqdf2  0x00000000000056b2       0x6c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(eqdf2.o)
-                0x00000000000056b2                __eqdf2
-                0x00000000000056b2                __nedf2
- .text.__gedf2  0x000000000000571e       0xbe /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(gedf2.o)
-                0x000000000000571e                __gtdf2
-                0x000000000000571e                __gedf2
+                0x0000000000005106      0x5ae /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(divdf3.o)
+                0x0000000000005106                __divdf3
+ .text.__eqdf2  0x00000000000056b4       0x6c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(eqdf2.o)
+                0x00000000000056b4                __eqdf2
+                0x00000000000056b4                __nedf2
+ .text.__gedf2  0x0000000000005720       0xbe /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(gedf2.o)
+                0x0000000000005720                __gtdf2
+                0x0000000000005720                __gedf2
  .text.__muldf3
-                0x00000000000057dc      0x54a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(muldf3.o)
-                0x00000000000057dc                __muldf3
+                0x00000000000057de      0x54a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(muldf3.o)
+                0x00000000000057de                __muldf3
  .text.__subdf3
-                0x0000000000005d26      0x732 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(subdf3.o)
-                0x0000000000005d26                __subdf3
+                0x0000000000005d28      0x732 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(subdf3.o)
+                0x0000000000005d28                __subdf3
  .text.__fixdfsi
-                0x0000000000006458       0x68 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(fixdfsi.o)
-                0x0000000000006458                __fixdfsi
+                0x000000000000645a       0x68 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(fixdfsi.o)
+                0x000000000000645a                __fixdfsi
  .text.__floatsidf
-                0x00000000000064c0       0x6e /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(floatsidf.o)
-                0x00000000000064c0                __floatsidf
+                0x00000000000064c2       0x6e /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(floatsidf.o)
+                0x00000000000064c2                __floatsidf
  .text.__clzsi2
-                0x000000000000652e       0x6e /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(_clzsi2.o)
-                0x000000000000652e                __clzsi2
+                0x0000000000006530       0x6e /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(_clzsi2.o)
+                0x0000000000006530                __clzsi2
  .text._fwrite_r
-                0x000000000000659c       0xf0 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fwrite.o)
-                0x000000000000659c                _fwrite_r
- .text.fwrite   0x000000000000668c       0x10 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fwrite.o)
-                0x000000000000668c                fwrite
+                0x000000000000659e       0xf0 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fwrite.o)
+                0x000000000000659e                _fwrite_r
+ .text.fwrite   0x000000000000668e       0x10 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fwrite.o)
+                0x000000000000668e                fwrite
  .text.__retarget_lock_init_recursive
-                0x000000000000669c        0x2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-lock.o)
-                0x000000000000669c                __retarget_lock_init_recursive
- .text.__retarget_lock_acquire_recursive
                 0x000000000000669e        0x2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-lock.o)
-                0x000000000000669e                __retarget_lock_acquire_recursive
- .text.__retarget_lock_release_recursive
+                0x000000000000669e                __retarget_lock_init_recursive
+ .text.__retarget_lock_acquire_recursive
                 0x00000000000066a0        0x2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-lock.o)
-                0x00000000000066a0                __retarget_lock_release_recursive
- .text.printf   0x00000000000066a2       0x3a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-printf.o)
-                0x00000000000066a2                printf
-                0x00000000000066a2                iprintf
- .text._puts_r  0x00000000000066dc      0x112 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-puts.o)
-                0x00000000000066dc                _puts_r
- .text.puts     0x00000000000067ee        0xa /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-puts.o)
-                0x00000000000067ee                puts
+                0x00000000000066a0                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x00000000000066a2        0x2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-lock.o)
+                0x00000000000066a2                __retarget_lock_release_recursive
+ .text.printf   0x00000000000066a4       0x3a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-printf.o)
+                0x00000000000066a4                printf
+                0x00000000000066a4                iprintf
+ .text._puts_r  0x00000000000066de      0x112 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-puts.o)
+                0x00000000000066de                _puts_r
+ .text.puts     0x00000000000067f0        0xa /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-puts.o)
+                0x00000000000067f0                puts
  .text._vsnprintf_r
-                0x00000000000067f8       0x64 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-vsnprintf.o)
-                0x00000000000067f8                _vsnprintf_r
-                0x00000000000067f8                _vsniprintf_r
+                0x00000000000067fa       0x64 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-vsnprintf.o)
+                0x00000000000067fa                _vsnprintf_r
+                0x00000000000067fa                _vsniprintf_r
  .text.vsnprintf
-                0x000000000000685c       0x10 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-vsnprintf.o)
-                0x000000000000685c                vsnprintf
-                0x000000000000685c                vsniprintf
+                0x000000000000685e       0x10 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-vsnprintf.o)
+                0x000000000000685e                vsnprintf
+                0x000000000000685e                vsniprintf
  .text.__swbuf_r
-                0x000000000000686c       0xc0 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-wbuf.o)
-                0x000000000000686c                __swbuf_r
+                0x000000000000686e       0xc0 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-wbuf.o)
+                0x000000000000686e                __swbuf_r
  .text.__swsetup_r
-                0x000000000000692c       0xfa /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-wsetup.o)
-                0x000000000000692c                __swsetup_r
+                0x000000000000692e       0xfa /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-wsetup.o)
+                0x000000000000692e                __swsetup_r
  .text.__sflush_r
-                0x0000000000006a26      0x138 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fflush.o)
-                0x0000000000006a26                __sflush_r
+                0x0000000000006a28      0x138 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fflush.o)
+                0x0000000000006a28                __sflush_r
  .text._fflush_r
-                0x0000000000006b5e       0x8e /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fflush.o)
-                0x0000000000006b5e                _fflush_r
- .text.std      0x0000000000006bec       0x6a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006b60       0x8e /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fflush.o)
+                0x0000000000006b60                _fflush_r
+ .text.std      0x0000000000006bee       0x6a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x0000000000006c56        0xa /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006c56                _cleanup_r
+                0x0000000000006c58        0xa /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006c58                _cleanup_r
  .text.__sfmoreglue
-                0x0000000000006c60       0x46 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006c60                __sfmoreglue
+                0x0000000000006c62       0x46 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006c62                __sfmoreglue
  .text.__sfp_lock_acquire
-                0x0000000000006ca6        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006ca6                __sfp_lock_acquire
+                0x0000000000006ca8        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006ca8                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0000000000006cae        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006cae                __sfp_lock_release
+                0x0000000000006cb0        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006cb0                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x0000000000006cb6        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006cb6                __sinit_lock_acquire
+                0x0000000000006cb8        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006cb8                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x0000000000006cbe        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006cbe                __sinit_lock_release
- .text.__sinit  0x0000000000006cc6       0x72 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006cc6                __sinit
- .text.__sfp    0x0000000000006d38       0xb2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000006d38                __sfp
+                0x0000000000006cc0        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006cc0                __sinit_lock_release
+ .text.__sinit  0x0000000000006cc8       0x72 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006cc8                __sinit
+ .text.__sfp    0x0000000000006d3a       0xb2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000006d3a                __sfp
  .text._fwalk_reent
-                0x0000000000006dea       0x6a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fwalk.o)
-                0x0000000000006dea                _fwalk_reent
+                0x0000000000006dec       0x6a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-fwalk.o)
+                0x0000000000006dec                _fwalk_reent
  .text.__swhatbuf_r
-                0x0000000000006e54       0x5c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-makebuf.o)
-                0x0000000000006e54                __swhatbuf_r
+                0x0000000000006e56       0x5c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-makebuf.o)
+                0x0000000000006e56                __swhatbuf_r
  .text.__smakebuf_r
-                0x0000000000006eb0       0xa6 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-makebuf.o)
-                0x0000000000006eb0                __smakebuf_r
- .text._free_r  0x0000000000006f56       0xa2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-freer.o)
-                0x0000000000006f56                _free_r
+                0x0000000000006eb2       0xa6 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-makebuf.o)
+                0x0000000000006eb2                __smakebuf_r
+ .text._free_r  0x0000000000006f58       0xa2 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-freer.o)
+                0x0000000000006f58                _free_r
  .text.sbrk_aligned
-                0x0000000000006ff8       0x5a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000006ffa       0x5a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-mallocr.o)
  .text._malloc_r
-                0x0000000000007052      0x114 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-mallocr.o)
-                0x0000000000007052                _malloc_r
+                0x0000000000007054      0x114 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000007054                _malloc_r
  .text.__ssputs_r
-                0x0000000000007166       0xec /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000000007166                __ssputs_r
+                0x0000000000007168       0xec /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000000007168                __ssputs_r
  .text._svfprintf_r
-                0x0000000000007252      0x276 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000000007252                _svfprintf_r
-                0x0000000000007252                _svfiprintf_r
+                0x0000000000007254      0x276 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000000007254                _svfprintf_r
+                0x0000000000007254                _svfiprintf_r
  .text._printf_common
-                0x00000000000074c8      0x110 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000000074c8                _printf_common
+                0x00000000000074ca      0x110 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000000074ca                _printf_common
  .text._printf_i
-                0x00000000000075d8      0x284 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000000075d8                _printf_i
+                0x00000000000075da      0x284 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000000075da                _printf_i
  .text.__sfputc_r
-                0x000000000000785c       0x2a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000000785e       0x2a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x0000000000007886       0x44 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000000007886                __sfputs_r
+                0x0000000000007888       0x44 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000007888                __sfputs_r
  .text._vfprintf_r
-                0x00000000000078ca      0x2dc /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
-                0x00000000000078ca                _vfiprintf_r
-                0x00000000000078ca                _vfprintf_r
- .text._sbrk_r  0x0000000000007ba6       0x26 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-sbrkr.o)
-                0x0000000000007ba6                _sbrk_r
- .text.__sread  0x0000000000007bcc       0x32 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
-                0x0000000000007bcc                __sread
+                0x00000000000078cc      0x2dc /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00000000000078cc                _vfiprintf_r
+                0x00000000000078cc                _vfprintf_r
+ .text._sbrk_r  0x0000000000007ba8       0x26 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-sbrkr.o)
+                0x0000000000007ba8                _sbrk_r
+ .text.__sread  0x0000000000007bce       0x32 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
+                0x0000000000007bce                __sread
  .text.__swrite
-                0x0000000000007bfe       0x50 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
-                0x0000000000007bfe                __swrite
- .text.__sseek  0x0000000000007c4e       0x38 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
-                0x0000000000007c4e                __sseek
+                0x0000000000007c00       0x50 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
+                0x0000000000007c00                __swrite
+ .text.__sseek  0x0000000000007c50       0x38 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
+                0x0000000000007c50                __sseek
  .text.__sclose
-                0x0000000000007c86        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
-                0x0000000000007c86                __sclose
+                0x0000000000007c88        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-stdio.o)
+                0x0000000000007c88                __sclose
  .text._write_r
-                0x0000000000007c8e       0x2c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-writer.o)
-                0x0000000000007c8e                _write_r
- .text.memchr   0x0000000000007cba       0x1a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-memchr.o)
-                0x0000000000007cba                memchr
+                0x0000000000007c90       0x2c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-writer.o)
+                0x0000000000007c90                _write_r
+ .text.memchr   0x0000000000007cbc       0x1a /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-memchr.o)
+                0x0000000000007cbc                memchr
  .text.__malloc_lock
-                0x0000000000007cd4        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-mlock.o)
-                0x0000000000007cd4                __malloc_lock
+                0x0000000000007cd6        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-mlock.o)
+                0x0000000000007cd6                __malloc_lock
  .text.__malloc_unlock
-                0x0000000000007cdc        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-mlock.o)
-                0x0000000000007cdc                __malloc_unlock
+                0x0000000000007cde        0x8 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-mlock.o)
+                0x0000000000007cde                __malloc_unlock
  .text._realloc_r
-                0x0000000000007ce4       0x7c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-reallocr.o)
-                0x0000000000007ce4                _realloc_r
+                0x0000000000007ce6       0x7c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-reallocr.o)
+                0x0000000000007ce6                _realloc_r
  .text._malloc_usable_size_r
-                0x0000000000007d60       0x14 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-msizer.o)
-                0x0000000000007d60                _malloc_usable_size_r
- .text._sbrk    0x0000000000007d74       0x1c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libnosys.a(sbrk.o)
-                0x0000000000007d74                _sbrk
+                0x0000000000007d62       0x14 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-msizer.o)
+                0x0000000000007d62                _malloc_usable_size_r
+ .text._sbrk    0x0000000000007d76       0x1c /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libnosys.a(sbrk.o)
+                0x0000000000007d76                _sbrk
  *(.rodata)
  *(.rodata*)
- *fill*         0x0000000000007d90        0x0 
+ *fill*         0x0000000000007d92        0x2 
  .rodata.main.str1.4
-                0x0000000000007d90       0x6e ./obj/usbcdc/Main.o
- *fill*         0x0000000000007dfe        0x2 
+                0x0000000000007d94       0x6e ./obj/usbcdc/Main.o
+ *fill*         0x0000000000007e02        0x2 
  .rodata.b16ton
-                0x0000000000007e00        0xc ./obj/usbcdc/Main.o
-                0x0000000000007e00                b16ton
+                0x0000000000007e04        0xc ./obj/usbcdc/Main.o
+                0x0000000000007e04                b16ton
  .rodata.image_data_b16ton
-                0x0000000000007e0c     0x7b00 ./obj/usbcdc/Main.o
+                0x0000000000007e10     0x7b00 ./obj/usbcdc/Main.o
  .rodata.UART2_IRQHandler.str1.4
-                0x000000000000f90c        0xa ./obj/usbcdc/cdc.o
- *fill*         0x000000000000f916        0x2 
+                0x000000000000f910        0xa ./obj/usbcdc/cdc.o
+ *fill*         0x000000000000f91a        0x2 
  .rodata.GPIOA_ModeCfg
-                0x000000000000f918       0x2c ./obj/usbcdc/CH56x_gpio.o
+                0x000000000000f91c       0x2c ./obj/usbcdc/CH56x_gpio.o
  .rodata.U20_NonStandard_Request.str1.4
-                0x000000000000f944       0xdd ./obj/usbcdc/CH56x_usb20_devbulk.o
- *fill*         0x000000000000fa21        0x3 
+                0x000000000000f948       0xdd ./obj/usbcdc/CH56x_usb20_devbulk.o
+ *fill*         0x000000000000fa25        0x3 
  .rodata.U20_NonStandard_Request
-                0x000000000000fa24       0x14 ./obj/usbcdc/CH56x_usb20_devbulk.o
+                0x000000000000fa28       0x14 ./obj/usbcdc/CH56x_usb20_devbulk.o
  .rodata.U20_Standard_Request.str1.4
-                0x000000000000fa38      0x249 ./obj/usbcdc/CH56x_usb20_devbulk.o
- *fill*         0x000000000000fc81        0x3 
+                0x000000000000fa3c      0x249 ./obj/usbcdc/CH56x_usb20_devbulk.o
+ *fill*         0x000000000000fc85        0x3 
  .rodata.U20_Standard_Request
-                0x000000000000fc84       0x30 ./obj/usbcdc/CH56x_usb20_devbulk.o
+                0x000000000000fc88       0x30 ./obj/usbcdc/CH56x_usb20_devbulk.o
  .rodata.USBHS_IRQHandler.str1.4
-                0x000000000000fcb4       0x16 ./obj/usbcdc/CH56x_usb20_devbulk.o
+                0x000000000000fcb8       0x16 ./obj/usbcdc/CH56x_usb20_devbulk.o
                                          0x1a (size before relaxing)
- *fill*         0x000000000000fcca        0x2 
+ *fill*         0x000000000000fcce        0x2 
  .rodata.USB30D_init.str1.4
-                0x000000000000fccc       0x17 ./obj/usbcdc/CH56x_usb30_devbulk.o
- *fill*         0x000000000000fce3        0x1 
+                0x000000000000fcd0       0x17 ./obj/usbcdc/CH56x_usb30_devbulk.o
+ *fill*         0x000000000000fce7        0x1 
  .rodata.USB30_NonStandardReq.str1.4
-                0x000000000000fce4      0x1de ./obj/usbcdc/CH56x_usb30_devbulk.o
- *fill*         0x000000000000fec2        0x2 
+                0x000000000000fce8      0x1de ./obj/usbcdc/CH56x_usb30_devbulk.o
+ *fill*         0x000000000000fec6        0x2 
  .rodata.USB30_NonStandardReq
-                0x000000000000fec4       0x14 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x000000000000fec8       0x14 ./obj/usbcdc/CH56x_usb30_devbulk.o
  .rodata.USB30_StandardReq.str1.4
-                0x000000000000fed8       0x38 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x000000000000fedc       0x38 ./obj/usbcdc/CH56x_usb30_devbulk.o
  .rodata.USB30_StandardReq
-                0x000000000000ff10       0x30 ./obj/usbcdc/CH56x_usb30_devbulk.o
+                0x000000000000ff14       0x30 ./obj/usbcdc/CH56x_usb30_devbulk.o
+ .rodata.CDC_reinit.str1.4
+                0x000000000000ff44       0x12 ./obj/usbcdc/CH56x_usb30_devbulk.o
+ *fill*         0x000000000000ff56        0x2 
  .rodata.EP0_OUT_Callback.str1.4
-                0x000000000000ff40       0x8e ./obj/usbcdc/CH56x_usb30_devbulk.o
- *fill*         0x000000000000ffce        0x2 
- .rodata.htoa   0x000000000000ffd0       0x10 ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
+                0x000000000000ff58       0x60 ./obj/usbcdc/CH56x_usb30_devbulk.o
+ .rodata.htoa   0x000000000000ffb8       0x10 ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
  .rodata.npio2_hw
-                0x000000000000ffe0       0x80 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-e_rem_pio2.o)
+                0x000000000000ffc8       0x80 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x0000000000010060      0x108 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-e_rem_pio2.o)
- *fill*         0x0000000000010168        0x0 
- .rodata.PIo2   0x0000000000010168       0x40 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_rem_pio2.o)
+                0x0000000000010048      0x108 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-e_rem_pio2.o)
+ .rodata.PIo2   0x0000000000010150       0x40 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x00000000000101a8       0x10 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_rem_pio2.o)
+                0x0000000000010190       0x10 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libm_nano.a(lib_a-k_rem_pio2.o)
  .rodata.__divdf3
-                0x00000000000101b8       0x40 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(divdf3.o)
+                0x00000000000101a0       0x40 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(divdf3.o)
  .rodata.__clz_tab
-                0x00000000000101f8      0x100 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(_clz.o)
-                0x00000000000101f8                __clz_tab
+                0x00000000000101e0      0x100 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/libgcc.a(_clz.o)
+                0x00000000000101e0                __clz_tab
  .rodata.__sf_fake_stderr
-                0x00000000000102f8       0x20 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x00000000000102f8                __sf_fake_stderr
+                0x00000000000102e0       0x20 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x00000000000102e0                __sf_fake_stderr
  .rodata.__sf_fake_stdout
-                0x0000000000010318       0x20 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000010318                __sf_fake_stdout
+                0x0000000000010300       0x20 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000010300                __sf_fake_stdout
  .rodata.__sf_fake_stdin
-                0x0000000000010338       0x20 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
-                0x0000000000010338                __sf_fake_stdin
+                0x0000000000010320       0x20 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-findfp.o)
+                0x0000000000010320                __sf_fake_stdin
  .rodata._svfprintf_r.str1.4
-                0x0000000000010358       0x13 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-svfprintf.o)
- *fill*         0x000000000001036b        0x1 
+                0x0000000000010340       0x13 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-svfprintf.o)
+ *fill*         0x0000000000010353        0x1 
  .rodata._printf_i.str1.4
-                0x000000000001036c       0x25 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
- *fill*         0x0000000000010391        0x3 
+                0x0000000000010354       0x25 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x0000000000010379        0x3 
  .rodata._printf_i
-                0x0000000000010394       0x58 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000001037c       0x58 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf_i.o)
  .rodata._vfprintf_r.str1.4
-                0x00000000000103ec       0x13 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00000000000103d4       0x13 /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/libg_nano.a(lib_a-nano-vfprintf.o)
  *(.glue_7)
  *(.glue_7t)
  *(.gnu.linkonce.t.*)
-                0x0000000000010400                . = ALIGN (0x4)
+                0x00000000000103e8                . = ALIGN (0x4)
 
-.rela.dyn       0x00000000000103ec        0x0
- .rela.init     0x00000000000103ec        0x0 ./obj/usbcdc/Main.o
- .rela.vector   0x00000000000103ec        0x0 ./obj/usbcdc/Main.o
+.rela.dyn       0x00000000000103d4        0x0
+ .rela.init     0x00000000000103d4        0x0 ./obj/usbcdc/Main.o
+ .rela.vector   0x00000000000103d4        0x0 ./obj/usbcdc/Main.o
  .rela.text.handle_reset
-                0x00000000000103ec        0x0 ./obj/usbcdc/Main.o
+                0x00000000000103d4        0x0 ./obj/usbcdc/Main.o
  .rela.text._svfprintf_r
-                0x00000000000103ec        0x0 ./obj/usbcdc/Main.o
+                0x00000000000103d4        0x0 ./obj/usbcdc/Main.o
  .rela.text._vfprintf_r
-                0x00000000000103ec        0x0 ./obj/usbcdc/Main.o
+                0x00000000000103d4        0x0 ./obj/usbcdc/Main.o
  .rela.text._sbrk
-                0x00000000000103ec        0x0 ./obj/usbcdc/Main.o
+                0x00000000000103d4        0x0 ./obj/usbcdc/Main.o
 
-.fini           0x00000000000103ec        0x0
+.fini           0x00000000000103d4        0x0
  *(SORT_NONE(.fini))
-                0x00000000000103ec                . = ALIGN (0x4)
+                0x00000000000103d4                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x00000000000103ec        0x0
+.preinit_array  0x00000000000103d4        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00000000000103ec        0x0
+.init_array     0x00000000000103d4        0x0
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x00000000000103ec        0x0
+.fini_array     0x00000000000103d4        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -1687,15 +1688,15 @@ Linker script and memory map
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x00000000000103ec
+.dalign         0x0000000020000000        0x0 load address 0x00000000000103d4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x00000000000103ec        0x0
-                0x00000000000103ec                . = ALIGN (0x4)
-                0x00000000000103ec                PROVIDE (_data_lma = .)
+.dlalign        0x00000000000103d4        0x0
+                0x00000000000103d4                . = ALIGN (0x4)
+                0x00000000000103d4                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000      0x444 load address 0x00000000000103ec
+.data           0x0000000020000000      0x444 load address 0x00000000000103d4
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
  .data.USB_PropertyHeader
@@ -1810,7 +1811,7 @@ Linker script and memory map
                 0x0000000020000444                . = ALIGN (0x4)
                 0x0000000020000444                PROVIDE (_edata = .)
 
-.bss            0x0000000020000448       0x9c load address 0x0000000000010830
+.bss            0x0000000020000448       0x9c load address 0x0000000000010818
                 0x0000000020000448                . = ALIGN (0x4)
                 0x0000000020000448                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -1944,7 +1945,7 @@ Linker script and memory map
                 [!provide]                        PROVIDE (_end = _ebss)
                 0x00000000200004e4                PROVIDE (end = .)
 
-.DMADATA        0x0000000020020000     0x3600 load address 0x0000000000010830
+.DMADATA        0x0000000020020000     0x3600 load address 0x0000000000010818
                 0x0000000020020000                . = ALIGN (0x10)
                 0x0000000020020000                PROVIDE (_dmadata_start = .)
  *(.dmadata*)
@@ -2011,39 +2012,39 @@ LOAD /opt/xpack-riscv-none-elf-gcc-12.2.0-1/bin/../lib/gcc/riscv-none-elf/12.2.0
 END GROUP
 OUTPUT(output/usbcdc.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000    0x121d0
- .debug_info    0x0000000000000000     0x1875 ./obj/usbcdc/Main.o
- .debug_info    0x0000000000001875      0xc9e ./obj/usbcdc/syscalls.o
- .debug_info    0x0000000000002513     0x8d6b ./obj/usbcdc/tft.o
- .debug_info    0x000000000000b27e      0xe3e ./obj/usbcdc/cdc.o
- .debug_info    0x000000000000c0bc      0x8e5 ./obj/usbcdc/CH56x_bsp.o
- .debug_info    0x000000000000c9a1      0x15d ./obj/usbcdc/CH56x_clk.o
- .debug_info    0x000000000000cafe      0xe27 ./obj/usbcdc/CH56x_debug_log.o
- .debug_info    0x000000000000d925      0x2a9 ./obj/usbcdc/CH56x_gpio.o
- .debug_info    0x000000000000dbce      0x545 ./obj/usbcdc/CH56x_spi.o
- .debug_info    0x000000000000e113      0x2bf ./obj/usbcdc/CH56x_sys.o
- .debug_info    0x000000000000e3d2      0x401 ./obj/usbcdc/CH56x_timer.o
- .debug_info    0x000000000000e7d3      0xbdf ./obj/usbcdc/CH56x_uart.o
- .debug_info    0x000000000000f3b2     0x102a ./obj/usbcdc/CH56x_usb20_devbulk.o
- .debug_info    0x00000000000103dc     0x19c7 ./obj/usbcdc/CH56x_usb30_devbulk.o
- .debug_info    0x0000000000011da3      0x42d ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
+.debug_info     0x0000000000000000    0x121d4
+ .debug_info    0x0000000000000000     0x186b ./obj/usbcdc/Main.o
+ .debug_info    0x000000000000186b      0xc9e ./obj/usbcdc/syscalls.o
+ .debug_info    0x0000000000002509     0x8d6b ./obj/usbcdc/tft.o
+ .debug_info    0x000000000000b274      0xe3e ./obj/usbcdc/cdc.o
+ .debug_info    0x000000000000c0b2      0x8e5 ./obj/usbcdc/CH56x_bsp.o
+ .debug_info    0x000000000000c997      0x15d ./obj/usbcdc/CH56x_clk.o
+ .debug_info    0x000000000000caf4      0xe27 ./obj/usbcdc/CH56x_debug_log.o
+ .debug_info    0x000000000000d91b      0x2a9 ./obj/usbcdc/CH56x_gpio.o
+ .debug_info    0x000000000000dbc4      0x545 ./obj/usbcdc/CH56x_spi.o
+ .debug_info    0x000000000000e109      0x2bf ./obj/usbcdc/CH56x_sys.o
+ .debug_info    0x000000000000e3c8      0x401 ./obj/usbcdc/CH56x_timer.o
+ .debug_info    0x000000000000e7c9      0xbdf ./obj/usbcdc/CH56x_uart.o
+ .debug_info    0x000000000000f3a8     0x102a ./obj/usbcdc/CH56x_usb20_devbulk.o
+ .debug_info    0x00000000000103d2     0x19d5 ./obj/usbcdc/CH56x_usb30_devbulk.o
+ .debug_info    0x0000000000011da7      0x42d ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
 
-.debug_abbrev   0x0000000000000000     0x285a
- .debug_abbrev  0x0000000000000000      0x33f ./obj/usbcdc/Main.o
- .debug_abbrev  0x000000000000033f      0x241 ./obj/usbcdc/syscalls.o
- .debug_abbrev  0x0000000000000580      0x3c5 ./obj/usbcdc/tft.o
- .debug_abbrev  0x0000000000000945      0x3da ./obj/usbcdc/cdc.o
- .debug_abbrev  0x0000000000000d1f      0x2fb ./obj/usbcdc/CH56x_bsp.o
- .debug_abbrev  0x000000000000101a       0xce ./obj/usbcdc/CH56x_clk.o
- .debug_abbrev  0x00000000000010e8      0x333 ./obj/usbcdc/CH56x_debug_log.o
- .debug_abbrev  0x000000000000141b      0x128 ./obj/usbcdc/CH56x_gpio.o
- .debug_abbrev  0x0000000000001543      0x227 ./obj/usbcdc/CH56x_spi.o
- .debug_abbrev  0x000000000000176a      0x150 ./obj/usbcdc/CH56x_sys.o
- .debug_abbrev  0x00000000000018ba      0x117 ./obj/usbcdc/CH56x_timer.o
- .debug_abbrev  0x00000000000019d1      0x32c ./obj/usbcdc/CH56x_uart.o
- .debug_abbrev  0x0000000000001cfd      0x450 ./obj/usbcdc/CH56x_usb20_devbulk.o
- .debug_abbrev  0x000000000000214d      0x5a2 ./obj/usbcdc/CH56x_usb30_devbulk.o
- .debug_abbrev  0x00000000000026ef      0x16b ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
+.debug_abbrev   0x0000000000000000     0x284a
+ .debug_abbrev  0x0000000000000000      0x330 ./obj/usbcdc/Main.o
+ .debug_abbrev  0x0000000000000330      0x241 ./obj/usbcdc/syscalls.o
+ .debug_abbrev  0x0000000000000571      0x3c5 ./obj/usbcdc/tft.o
+ .debug_abbrev  0x0000000000000936      0x3da ./obj/usbcdc/cdc.o
+ .debug_abbrev  0x0000000000000d10      0x2fb ./obj/usbcdc/CH56x_bsp.o
+ .debug_abbrev  0x000000000000100b       0xce ./obj/usbcdc/CH56x_clk.o
+ .debug_abbrev  0x00000000000010d9      0x333 ./obj/usbcdc/CH56x_debug_log.o
+ .debug_abbrev  0x000000000000140c      0x128 ./obj/usbcdc/CH56x_gpio.o
+ .debug_abbrev  0x0000000000001534      0x227 ./obj/usbcdc/CH56x_spi.o
+ .debug_abbrev  0x000000000000175b      0x150 ./obj/usbcdc/CH56x_sys.o
+ .debug_abbrev  0x00000000000018ab      0x117 ./obj/usbcdc/CH56x_timer.o
+ .debug_abbrev  0x00000000000019c2      0x32c ./obj/usbcdc/CH56x_uart.o
+ .debug_abbrev  0x0000000000001cee      0x450 ./obj/usbcdc/CH56x_usb20_devbulk.o
+ .debug_abbrev  0x000000000000213e      0x5a1 ./obj/usbcdc/CH56x_usb30_devbulk.o
+ .debug_abbrev  0x00000000000026df      0x16b ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
 
 .debug_loclists
                 0x0000000000000000     0x4cab
@@ -2143,22 +2144,22 @@ OUTPUT(output/usbcdc.elf elf32-littleriscv)
  .debug_rnglists
                 0x0000000000001131       0x44 ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
 
-.debug_line     0x0000000000000000     0xea2c
- .debug_line    0x0000000000000000     0x1a64 ./obj/usbcdc/Main.o
- .debug_line    0x0000000000001a64      0x1e7 ./obj/usbcdc/syscalls.o
- .debug_line    0x0000000000001c4b     0x34ed ./obj/usbcdc/tft.o
- .debug_line    0x0000000000005138      0xc67 ./obj/usbcdc/cdc.o
- .debug_line    0x0000000000005d9f      0x777 ./obj/usbcdc/CH56x_bsp.o
- .debug_line    0x0000000000006516      0x327 ./obj/usbcdc/CH56x_clk.o
- .debug_line    0x000000000000683d      0x671 ./obj/usbcdc/CH56x_debug_log.o
- .debug_line    0x0000000000006eae      0xdf3 ./obj/usbcdc/CH56x_gpio.o
- .debug_line    0x0000000000007ca1      0xee4 ./obj/usbcdc/CH56x_spi.o
- .debug_line    0x0000000000008b85      0x38b ./obj/usbcdc/CH56x_sys.o
- .debug_line    0x0000000000008f10      0x5c6 ./obj/usbcdc/CH56x_timer.o
- .debug_line    0x00000000000094d6     0x1692 ./obj/usbcdc/CH56x_uart.o
- .debug_line    0x000000000000ab68     0x18e3 ./obj/usbcdc/CH56x_usb20_devbulk.o
- .debug_line    0x000000000000c44b     0x2376 ./obj/usbcdc/CH56x_usb30_devbulk.o
- .debug_line    0x000000000000e7c1      0x26b ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
+.debug_line     0x0000000000000000     0xea3c
+ .debug_line    0x0000000000000000     0x1a5e ./obj/usbcdc/Main.o
+ .debug_line    0x0000000000001a5e      0x1e7 ./obj/usbcdc/syscalls.o
+ .debug_line    0x0000000000001c45     0x34ed ./obj/usbcdc/tft.o
+ .debug_line    0x0000000000005132      0xc67 ./obj/usbcdc/cdc.o
+ .debug_line    0x0000000000005d99      0x777 ./obj/usbcdc/CH56x_bsp.o
+ .debug_line    0x0000000000006510      0x327 ./obj/usbcdc/CH56x_clk.o
+ .debug_line    0x0000000000006837      0x671 ./obj/usbcdc/CH56x_debug_log.o
+ .debug_line    0x0000000000006ea8      0xdf3 ./obj/usbcdc/CH56x_gpio.o
+ .debug_line    0x0000000000007c9b      0xee4 ./obj/usbcdc/CH56x_spi.o
+ .debug_line    0x0000000000008b7f      0x38b ./obj/usbcdc/CH56x_sys.o
+ .debug_line    0x0000000000008f0a      0x5c6 ./obj/usbcdc/CH56x_timer.o
+ .debug_line    0x00000000000094d0     0x1692 ./obj/usbcdc/CH56x_uart.o
+ .debug_line    0x000000000000ab62     0x18e3 ./obj/usbcdc/CH56x_usb20_devbulk.o
+ .debug_line    0x000000000000c445     0x238c ./obj/usbcdc/CH56x_usb30_devbulk.o
+ .debug_line    0x000000000000e7d1      0x26b ./obj/usbcdc/CH56x_usb_devbulk_desc_cmd.o
 
 .debug_str      0x0000000000000000     0x4070
  .debug_str     0x0000000000000000      0x768 ./obj/usbcdc/Main.o
