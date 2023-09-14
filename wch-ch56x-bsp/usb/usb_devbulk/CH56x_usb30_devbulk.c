@@ -18,11 +18,6 @@
 #include "cdc.h"
 
 vuint32_t vitrul_buad  = 115200;
-//struct usb_cdc_line_coding coding;
-//#include "usb_cdc.h"
-//#define DEBUG_USB3_REQ 1 // Debug USB Req (have impact on real-time to correctly enumerate USB 3.0..)
-//#define DEBUG_USB3_EP0 1 // Debug EP0 (have impact on real-time to correctly enumerate USB 3.0..)
-//#define DEBUG_USB3_EPX 1 // Debug EP1 to EP7
 
 /* Global define */
 /* Global Variable */
@@ -397,28 +392,7 @@ uint16_t USB30_StandardReq()
   }
   return len;
 }
-/*
-void uart_set_parity(uint32_t uart)
-{
-//  uint32_t reg32;
-  uint8_t temp;
-  uint8_t parity;
-  temp = line_coding.parity;
-  volatile uint32_t reg32 = R8_UART_LCR((volatile uint32_t)UART2);
-  if (temp = 0x0) {
-  parity = UART_PARITY_CLR;
-  } else if (temp = 0x01) {
-  parity = UART_PARITY_ODD;
-  } else if (temp = 0x02) {
-  parity = UART_PARITY_EVEN;
-  }
-  reg32 |= UART_PARITY_EN;
-//  R8_UART_LCR((volatile uint32_t)uart) = reg32;
-//  reg32 = R8_UART_LCR((volatile uint32_t)uart);
-  reg32 = (reg32 & ~UART_PARITY_CLR) | (parity << 4);
-  R8_UART2_LCR = reg32;
-}
-*/
+
 /*******************************************************************************
  * @fn   EP0_IN_Callback
  *
@@ -465,7 +439,7 @@ void CDC_reinit( uint32_t baudrate )
 {
     uint32_t x;
     uint32_t t = FREQ_SYS;
-    struct usb_cdc_line_coding coding;
+
     PFIC_DisableIRQ( UART2_IRQn );
     UART2_Reset();
     x = 10 * t * 2 / 16 / baudrate;
@@ -474,8 +448,6 @@ void CDC_reinit( uint32_t baudrate )
     R16_UART2_DL = x;
     R8_UART2_FCR = RB_FCR_FIFO_TRIG | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN;
     R8_UART2_IER = RB_IER_TXD_EN;
-
-    cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
 
     UART2_ByteTrigCfg( UART_7BYTE_TRIG );
     UART2_INTCfg( ENABLE, RB_IER_RECV_RDY|RB_IER_LINE_STAT );
@@ -501,36 +473,49 @@ cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %
     }
         
   cprintf("first 8 of endp buf = %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10]);      
-        
-//  R8_UART2_LCR = R8_UART2_LCR | (coding.stopbits << 2);
+
   coding.parity = endp0RTbuff[5];
-
-  cprintf("parity %02x %d\n", coding.parity, coding.parity);
-
-
-//    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
-//  usbuart_set_line_coding(&coding);
-
-    cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
-//    R8_UART2_LCR = (R8_UART2_LCR |= (coding.stopbits << 2));
-    coding.databits = (coding.databits - 0x05);
-  
-  CDC_reinit(vitrul_buad);
-  
-  R8_UART2_LCR = R8_UART2_LCR & ~((uint8_t)coding.databits << RB_LCR_WORD_SZ);
-  R8_UART2_LCR = R8_UART2_LCR | ((uint8_t)coding.databits << 0);
-  R8_UART2_LCR = R8_UART2_LCR | ((uint8_t)coding.stopbits << RB_LCR_STOP_BIT);
-  if (coding.parity) {
-    R8_UART2_LCR = R8_UART2_LCR | (1 << 3);
-    coding.databits = (endp0RTbuff[6]);
-    R8_UART2_LCR = R8_UART2_LCR | (coding.parity << 4);
-  } else {
-    coding.databits = (endp0RTbuff[6]);
-    R8_UART2_LCR = R8_UART2_LCR | (0 << 3);
+  coding.databits = (endp0RTbuff[6]);
+#if DEBUG_USB3_EP0
+    cprintf("parity %02x %d\n", coding.parity, coding.parity);
+    cprintf("databits %02x %d\n", endp0RTbuff[6], coding.databits);
+#endif 
+  coding.databits = (coding.databits - 0x05);
+ 
+CDC_reinit(vitrul_buad);
+uint32_t serial = R8_UART2_LCR;
+  serial |= ((unsigned int)coding.databits << 0);
+  serial |= ((unsigned int)coding.stopbits << 2);
+      if (coding.parity >= 1) {
+    coding.parity = coding.parity - 1;  
+    serial |= ((unsigned int)1 << 3);
+    serial |= ((unsigned int)coding.parity << 4);
+  } else if (coding.parity == 0) {
+    serial &= ~((unsigned int)1 << 3);
+ //   R8_UART2_LCR = R8_UART2_LCR | (4 << 4);
   }
-    
-  cprintf("databits %02x %d\n", R8_UART2_LCR, R8_UART2_LCR);
-cprintf("parity %02x %d\n", (R8_UART2_LCR & 2), (R8_UART2_LCR & 2));
+  R8_UART2_LCR = serial;
+  serial = R8_UART2_LCR;
+  cprintf("serial %08x\n", serial);
+/*
+  R8_UART2_LCR = R8_UART2_LCR &= ~(1 << 0);
+  R8_UART2_LCR = R8_UART2_LCR | ((unsigned int)coding.databits << 0);
+  R8_UART2_LCR = R8_UART2_LCR | ((unsigned int)coding.stopbits << 2);
+  
+    if (coding.parity >= 1) {
+    R8_UART2_LCR = R8_UART2_LCR | ((unsigned int)1 << 3);
+    R8_UART2_LCR = R8_UART2_LCR | ((unsigned int)coding.parity << 4);
+  } else if (coding.parity == 0) {
+    R8_UART2_LCR = R8_UART2_LCR &= ~((unsigned int)1 << 3);
+ //   R8_UART2_LCR = R8_UART2_LCR | (4 << 4);
+  }
+*/
+#if DEBUG_USB3_EP0
+  cprintf("R8_UART2_LCR %0x %08x %08x %08x %08x %08x %08x %08x\n", (R8_UART2_LCR & 0), (R8_UART2_LCR & 1), (R8_UART2_LCR & 2), (R8_UART2_LCR & 3), (R8_UART2_LCR & 4), (R8_UART2_LCR & 5), (R8_UART2_LCR & 6), (R8_UART2_LCR & 7));
+  cprintf("R8_UART2_LCR %08x\n", R8_UART2_LCR);
+  cprintf("databits %02x %d\n", (R8_UART2_LCR & 0), (R8_UART2_LCR & 0));
+  cprintf("parity %02x %d\n", (R8_UART2_LCR & 4), (R8_UART2_LCR & 4));
+#endif  
   uint16_t len=0;
   return len;
 }

@@ -7,11 +7,8 @@
 * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
 * SPDX-License-Identifier: Apache-2.0
  *******************************************************************************/
-#include <math.h>
+
 #include "CH56x_common.h"
-#include "tft.h"
-#include "fonts/bitmap_typedefs.h"
-#include "fonts/16ton.h"
 #include "CH56x_usb30_devbulk_LIB.h"
 #include "CH56x_usb_devbulk_desc_cmd.h"
 #include "CH56x_usb30_devbulk.h"
@@ -26,11 +23,9 @@
 #define USB_PID_BYTE_MSB (0x05)
 #define USB_PID_BYTE_LSB (0xDC)
 #define USB_PID ((USB_PID_BYTE_MSB << 8) | USB_PID_BYTE_LSB)
-extern int lcddma;
+
 extern volatile int linechange;
 extern struct usb_cdc_line_coding coding;
-uint8_t spiBuff[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6};
-uint8_t spiBuffrev[16];
 
 #undef FREQ_SYS
 /* System clock / MCU frequency in Hz */
@@ -53,39 +48,7 @@ uint8_t RxBuff[1024];
  * @return   None
  */
 
- #define d2r(d) ((d) * 6.2831853 / 360.0)
 
-  int p1 = 0;
-  int p2 = 45; 
-  int p3 = 90;
-  int pp1 = 0;
-  int pp2 = 45;
-  int pp3 = 90;
-
-void planets(void)
-{
-  pp1 = (p1 - 3) % 360;
-  pp2 = (p2 - 2) % 360;
-  pp3 = (p3 - 1) % 360;
-
-    st_fill_circle(120 + (sin(d2r(pp1)) * 55),
-       160 + (cos(d2r(pp1)) * 55), 5, ST_COLOR_RED);
-  st_fill_circle(120 + (sin(d2r(pp2)) * 75),
-       160 + (cos(d2r(pp2)) * 75), 10, ST_COLOR_RED);
-  st_fill_circle(120 + (sin(d2r(pp3)) * 100),
-       160 + (cos(d2r(pp3)) * 100), 8, ST_COLOR_RED);
-
-  st_fill_circle(120 + (sin(d2r(p1)) * 55),
-       160 + (cos(d2r(p1)) * 55), 5, ST_COLOR_PURPLE);
-  st_fill_circle(120 + (sin(d2r(p2)) * 75),
-       160 + (cos(d2r(p2)) * 75), 10, ST_COLOR_BLACK);
-  st_fill_circle(120 + (sin(d2r(p3)) * 100),
-       160 + (cos(d2r(p3)) * 100), 8, ST_COLOR_DARKGREEN);
-  p1 = (p1 + 3) % 360;
-  p2 = (p2 + 2) % 360;
-  p3 = (p3 + 1) % 360;
-  
-}
 
 void DebugInit(uint32_t  baudrate)
 {
@@ -112,88 +75,6 @@ void DebugInit(uint32_t  baudrate)
  * @return  none
  */
 
-void tftinit(void) {
-  CS_ACTIVE; //always use even if use_cs not set
-
-  // Hardwae reset is not mandatory if software rest is done
-#ifdef ST_HAS_RST
-  ST_RST_ACTIVE;
-  DelayMs(100);
-  ST_RST_IDLE;
-#endif
-#ifdef USE_CS
-  CS_ACTIVE;
-#endif
-  DelayMs(100);
-
-  _write_command_8bit(0x01); // SW reset
-
-  DelayMs(100);
-  _write_command_8bit(0x11); // Sleep out, also SW reset
-  DelayMs(100);
-
-  _write_command_8bit(0x3A);
-
-  _write_data_8bit(0x55);       // 16 bit colour interface
-
-
-  _write_command_8bit(0xC2);
-  _write_data_8bit(0x44);
-
-  _write_command_8bit(0xC5);
-  _write_data_8bit(0x00);
-  _write_data_8bit(0x00);
-  _write_data_8bit(0x00);
-  _write_data_8bit(0x00);
-
-  _write_command_8bit(0xE0);
-  _write_data_8bit(0x0F);
-  _write_data_8bit(0x1F);
-  _write_data_8bit(0x1C);
-  _write_data_8bit(0x0C);
-  _write_data_8bit(0x0F);
-  _write_data_8bit(0x08);
-  _write_data_8bit(0x48);
-  _write_data_8bit(0x98);
-  _write_data_8bit(0x37);
-  _write_data_8bit(0x0A);
-  _write_data_8bit(0x13);
-  _write_data_8bit(0x04);
-  _write_data_8bit(0x11);
-  _write_data_8bit(0x0D);
-  _write_data_8bit(0x00);
-
-  _write_command_8bit(0xE1);
-  _write_data_8bit(0x0F);
-  _write_data_8bit(0x32);
-  _write_data_8bit(0x2E);
-  _write_data_8bit(0x0B);
-  _write_data_8bit(0x0D);
-  _write_data_8bit(0x05);
-  _write_data_8bit(0x47);
-  _write_data_8bit(0x75);
-  _write_data_8bit(0x37);
-  _write_data_8bit(0x06);
-  _write_data_8bit(0x10);
-  _write_data_8bit(0x03);
-  _write_data_8bit(0x24);
-  _write_data_8bit(0x20);
-  _write_data_8bit(0x00);
-
-  _write_command_8bit(ST7789_INVOFF);
-
-  _write_command_8bit(0x36);
-  _write_data_8bit(0x28);
-  _write_data_8bit(0x00);
-  _write_command_8bit(0x29);           // display on
-  CS_IDLE; //always use even if use_cs not set
-  DC_DATA;
-  DelayMs(100);
-  CS_ACTIVE;  //always use even if use_cs not set
-  DelayMs(100);
-
-}
-
 
 #define FLASH_ROMA_UID_ADDR (0x77fe4)
 usb_descriptor_serial_number_t unique_id;
@@ -211,7 +92,6 @@ volatile uint8_t trigB = 7;
 int main()
 {
 
-  lcddma = 1;
   SystemInit(FREQ_SYS);
   Delay_Init(FREQ_SYS);
 struct usb_cdc_line_coding coding;
@@ -222,18 +102,6 @@ struct usb_cdc_line_coding coding;
 #endif
   printf("Start @ChipID=%02X\r\n", R8_CHIP_ID);
 
-
-  printf("1.spi1 mul master mode send data ...\n");
-  DelayMs(100);
-
-
-  CS_IDLE;
-
-  R32_PB_PD &= ~(1 << 10 | 1 << 11 | 1 << 12 | 1 << 13);
-  R32_PB_DRV &= ~(1 << 10 | 1 << 11 | 1 << 12 | 1 << 13);
-  R32_PB_DIR |= (1 << 10 | 1 << 11 | 1 << 12 | 1 << 13);
-
-  SPI1_MasterDefInit();
   TMR2_TimerInit1();
   R32_USB_CONTROL = 0;
   PFIC_EnableIRQ(USBSS_IRQn);
@@ -260,25 +128,10 @@ struct usb_cdc_line_coding coding;
   UART2_ByteTrigCfg( UART_7BYTE_TRIG );
   trigB = 7;
 
-#ifdef USE_CS
-  CS_ACTIVE;
-#endif
-
-  tftinit();
-#ifdef USE_CS
-  CS_IDLE;
-#endif
   DelayMs(1);
-  st_fill_screen(ST_COLOR_YELLOW);
 
-  st_draw_bitmap(1, 10, &b16ton);
-  DelayMs(5000);
-
-  st_fill_screen(ST_COLOR_RED);
-  st_fill_circle(120, 160, 40, ST_COLOR_YELLOW);
   while (1) {
     CDC_Uart_Deal();
-    planets();
     if (linechange == 1) {
     R8_UART_LCR(UART2) = R8_UART_LCR(UART2) |= coding.stopbits << 2;
     R8_UART_LCR(UART2) = R8_UART_LCR(UART2) |= coding.databits;

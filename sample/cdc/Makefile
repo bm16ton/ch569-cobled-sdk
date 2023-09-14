@@ -8,7 +8,6 @@ BOARD_SRC = ../boards/ch565w_evk/
 
 SOURCES  += Main.c \
 	syscalls.c \
-	tft.c \
 	cdc.c
 
 INCLUDES += .
@@ -49,7 +48,7 @@ CPU ?=
 CCFLAGS     += -march=rv32imac_zicsr -mabi=ilp32  -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g
 CCFLAGS     += $(addprefix -D, $(DEFINES))
 CCFLAGS     += $(addprefix -I, $(INCLUDES))
-CCFLAGS		+= -DDEBUG -DDebug_UART1 -DDEBUG_USB3_REQ -DDEBUG_USB2_REQ -DDEBUG_USB3_EP
+CCFLAGS		+= -DDEBUG -DDebug_UART1 -DDEBUG_USB3_REQ -DDEBUG_USB2_REQ -DDEBUG_USB3_EP -DDEBUG_USB3_EP0
 CCFLAGS     += -ffunction-sections -fdata-sections
 LDFLAGS     += $(CCFLAGS)
 LDFLAGS     += -Wl,--script=../../wch-ch56x-bsp/ld/Link.ld -Wl,-Map=$(OUTDIR)/$(TARGET).map  -std=gnu99 -MMD -MP -MT"$(@)"
@@ -76,7 +75,7 @@ demo: $(OUTDIR) $(OUTDIR)/$(TARGET).bin $(OUTDIR)/$(TARGET).hex
 
 $(OBJDIR)/%.o:%.c
 	@echo building $<
-	@$(CC) $(CCFLAGS) -c $< -o $@ -lm
+	@$(CC) $(CCFLAGS) -c $< -o $@
 $(OBJDIR)/%.o:%.s
 	@echo building $<
 	@$(CC) $(ASFLAGS) -c $< -o $@
@@ -97,7 +96,7 @@ $(OUTDIR)/$(TARGET).bin:$(OUTDIR)/$(TARGET).elf
 	@$(OBJCOPY) -Obinary $< $@
 $(OUTDIR)/$(TARGET).elf: $(OBJDIR) $(OBJECTS)
 	@echo linking $@
-	@$(LD) $(LDFLAGS) $(OBJECTS) -o $@ -lm
+	@$(LD) $(LDFLAGS) $(OBJECTS) -o $@
 	@$(SIZE) $@
 
 USBMEM ?= 4096
