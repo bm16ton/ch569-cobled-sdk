@@ -18,6 +18,7 @@ extern volatile uint8_t  UploadPoint2_Busy;
 extern volatile uint8_t  DownloadPoint2_Busy;
 extern volatile uint16_t Uart_Sendlenth;
 
+void CDC_reinit( uint32_t baudrate );
 void CDC_Uart_Init( uint32_t baudrate );
 void TMR2_TimerInit1( void );
 void CDC_Uart_Deal( void );

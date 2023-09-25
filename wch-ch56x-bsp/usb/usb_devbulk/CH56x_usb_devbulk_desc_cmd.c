@@ -138,72 +138,79 @@ uint8_t USB_HS_ConfigDescriptor[LEN_USB_HS_ConfigDescriptor] =
     0x00, 	//function oprotocol
     0x01, 	//ifunction
     // interface
-	0x09,   // length of the interface descriptor
-	0x04,   // INTERFACE (4)
-	0x00,   // Zero based index 0f this interface
-	0x00,   // Alternate setting value (?)
-	0x01,   // Number of endpoints (not counting 0)
-	0x02,   // Interface class, ff is vendor specific
-	0x02,   // Interface sub-class
-	0x00,   // Interface protocol
-	0x00,   // Index to string descriptor for this interface
-	//cs interface
-	0x05,	//length
-	0x24,	//type cs_interface
-	0x00,	//header functional descriptor
-	0x10,	//cdc
-	0x01,
-	//comms descriptor
-	0x05,	//length
-	0x24,	//type cs_interfdace
-	0x01,	//desc subtype
-	0x00, 	//bmcapabilities
-	0x01,	//data interface
-	//comms desc
-	0x04,	//length
-	0x24,	//desc type cs_interface
-	0x02,	//acm desc
-	0x02,	//bmcapabilities
-	//comms desc
-	0x05,	//length
-	0x24,	//cs_interface
-	0x06,	//subtype union
-	0x00,	//control interface
-	0x01, 	//sub interface
-	//Endpoint 1 Descriptor
-	0x07,   // length of this endpoint descriptor
-	0x05,   // ENDPOINT (5)
-	0x82,   // endpoint direction (80 is in) and address
-	0x0b,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
-	0x00,   // max packet size - 512 bytes
-	0x02,   // max packet size - high
-	0x07,   // polling interval in milliseconds (1 for iso)
-    // interface
-	0x09,   // length of the interface descriptor
-	0x04,   // INTERFACE (4)
-	0x01,   // Zero based index 0f this interface
-	0x00,   // Alternate setting value (?)
-	0x02,   // Number of endpoints (not counting 0)
-	0x0a,   // Interface class, ff is vendor specific
-	0x00,   // Interface sub-class
-	0x00,   // Interface protocol
-	0x00,   // Index to string descriptor for this interface
-	//Endpoint 2 Descriptor
-	0x07,   // length of this endpoint descriptor
-	0x05,   // ENDPOINT (5)
-	0x81,   // endpoint direction (80 is in) and address
-	0x0a,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
-	0x00,   // max packet size - 512 bytes
-	0x02,   // max packet size - high
-	0x07,   // polling interval in milliseconds (1 for iso)
-	//Endpoint 3 Descriptor
-	0x07,   // length of this endpoint descriptor
-	0x05,   // ENDPOINT (5)
-	0x01,   // endpoint direction (80 is in) and address
-	0x0a,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
-	0x00,   // max packet size - 512 bytes
-	0x02,   // max packet size - high
-	0x07,    // polling interval in milliseconds (1 for iso)
+    0x09,   // length of the interface descriptor
+    0x04,   // INTERFACE (4)
+    0x00,   // Zero based index 0f this interface
+    0x00,   // Alternate setting value (?)
+    0x01,   // Number of endpoints (not counting 0)
+    0x02,   // Interface class, ff is vendor specific
+    0x02,   // Interface sub-class
+    0x01,   // Interface protocol
+    0x00,   // Index to string descriptor for this interface
+
+        /*Header Functional Descriptor*/
+    0x05,   /* bLength: Endpoint Descriptor size */
+    0x24,   /* bDescriptorType: CS_INTERFACE */
+    0x00,   /* bDescriptorSubtype: Header Func Desc */
+    0x10,   /* bcdCDC: spec release number */
+    0x01,
+        /*Call Management Functional Descriptor*/
+    0x05,   /* bFunctionLength */
+    0x24,   /* bDescriptorType: CS_INTERFACE */
+    0x01,   /* bDescriptorSubtype: Call Management Func Desc */
+    0x00,
+    0x01,
+
+    0x04,
+    0x24,
+    0x02,
+    0x02,
+
+    0x05,
+    0x24,
+    0x06,
+    0x00,
+    0x01,
+
+
+    0x07,   // length of this endpoint descriptor
+    0x05,   // ENDPOINT (5)
+    0x81,   // endpoint direction (80 is in) and address
+    0x03,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
+    0x40,   // max packet size - 1024 bytes
+    0x00,   // max packet size - high
+    0x01,   // polling interval in milliseconds (1 for iso)
+
+
+        /*data interface*/
+    0x09,   // length of the interface descriptor
+    0x04,   // INTERFACE (4)
+    0x01,   // Zero based index 0f this interface
+    0x00,   // Alternate setting value (?)
+    0x02,   // Number of endpoints (not counting 0)
+    0x0a,   // Interface class, ff is vendor specific
+    0x00,   // Interface sub-class
+    0x00,   // Interface protocol
+    0x00,   // Index to string descriptor for this interface
+
+    //Endpoint 2 Descriptor
+    0x07,   // length of this endpoint descriptor
+    0x05,   // ENDPOINT (5)
+    0x82,   // endpoint direction (80 is in) and address
+    0x02,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
+    0x00,   // max packet size - 1024 bytes
+    0x02,   // max packet size - high
+    0x00,   // polling interval in milliseconds (1 for iso)
+
+
+    //endp2_descriptor
+    0x07,   // length of this endpoint descriptor
+    0x05,   // ENDPOINT (5)
+    0x02,   // endpoint direction (00 is out) and address
+    0x02,   // transfer type - 00 = control, 01 = iso, 10 = bulk, 11 = int
+    0x00,   // max packet size - 1024 bytes
+    0x02,   // max packet size - high
+    0x00,    // polling interval in milliseconds (1 for iso)
 };
 
 /* USB3.0 SuperSpeed configuration descriptor */

@@ -32,14 +32,16 @@ vuint16_t  U20_EndpnMaxSize = 512;
 vuint16_t  SetupReqLen=0;            //Host request data length
 vuint16_t  SetupLen = 0;             //The length of data actually sent or received during the data phase
 vuint32_t seq_num = 0;
+volatile int u20_lineupdate = 0;
+extern vuint32_t vitrul_buad;
 DevInfo_Typedef  g_devInfo;
 static vuint8_t SetupReqType = 0;    //Host request descriptor type
 static vuint8_t SetupReq = 0;        //Host request descriptor type
 static puint8_t pDescr;
 extern vuint8_t link_sta;
-static puint8_t pUEP1_TX_data;
-static puint8_t pUEP1_RX_data;
 vuint32_t EP1_OUT_seq_num = 0;
+
+uint16_t U20_EP0_OUT_Callback(void);
 
 __attribute__ ((aligned(16))) uint8_t vendor_buff[16]  __attribute__((section(".DMADATA"))); //Endpoint 0 data transceiver buffer
 /* Function declaration */
@@ -86,20 +88,19 @@ void USB20_Endp_Init(void)
 	R32_UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff;
 //	R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)endp1Rbuff;
 
-	R32_UEP2_TX_DMA = (uint32_t)(uint8_t *)endp2RTbuff;
+	R32_UEP2_TX_DMA = (uint32_t)(uint8_t *)endp2Txbuff;
 	R32_UEP2_RX_DMA = (uint32_t)(uint8_t *)endp2RTbuff;
 
 	R16_UEP0_T_LEN = 0;
-	R8_UEP0_TX_CTRL = 0;
+	R8_UEP0_TX_CTRL = UEP_T_RES_NAK;
 	R8_UEP0_RX_CTRL = 0;
 
-	R16_UEP1_T_LEN = U20_MAXPACKET_LEN;
-	R8_UEP1_TX_CTRL = UEP_T_RES_ACK | RB_UEP_T_TOG_0;
-	R8_UEP1_RX_CTRL = UEP_R_RES_ACK | RB_UEP_R_TOG_0;
+    R16_UEP1_T_LEN = 0;
+    R8_UEP1_TX_CTRL = UEP_T_RES_NAK ;
 
-	R16_UEP2_T_LEN = U20_MAXPACKET_LEN;
-	R8_UEP2_TX_CTRL = UEP_T_RES_ACK | RB_UEP_T_TOG_0;
-	R8_UEP2_RX_CTRL = UEP_R_RES_ACK | RB_UEP_R_TOG_0;
+    R16_UEP2_T_LEN = U20_MAXPACKET_LEN;
+    R8_UEP2_TX_CTRL = UEP_T_RES_NAK | RB_UEP_T_TOG_0;
+    R8_UEP2_RX_CTRL = UEP_R_RES_ACK | RB_UEP_R_TOG_0;
 
 	R16_UEP3_T_LEN = 0;
 	R8_UEP3_TX_CTRL = UEP_T_RES_NAK;
@@ -171,11 +172,33 @@ uint16_t U20_NonStandard_Request(void)
 {
 	uint16_t len = 0;
 	uint8_t endp_dir;
+	struct usb_cdc_line_coding coding;
+    coding.bitrate  = 115200; 
+    coding.stopbits  =   0; 
+    coding.parity  =   0; 
+    coding.databits  =  8;   
 	SetupLen = 0;
 	endp_dir = UsbSetupBuf->bRequestType & 0x80;
 
 	switch(SetupReq)
 	{
+	          /* Open the serial port and send the baud rate */
+                case CDC_SET_LINE_CODING:
+                    u20_lineupdate = 1;
+                    R8_UEP0_RX_CTRL = UEP_R_RES_ACK | RB_UEP_R_TOG_1;
+                    break;
+          /* Read the current serial port configuration */
+                case CDC_GET_LINE_CODING:
+                   *(uint32_t  *)&endp0RTbuff[0] = vitrul_buad;
+                   endp0RTbuff[4]=coding.stopbits;endp0RTbuff[5]=coding.parity;endp0RTbuff[6]=coding.databits;
+                   len = 7;
+                    break;
+          /* Close uart */
+                case CDC_SET_CONTROL_LINE_STATE:
+                    CDC_Variable_Clear();
+                    break;
+                case CDC_SET_COMM_FEATURE:
+                    break;
 		case 0x01: // Microsoft OS 2.0 Descriptors
 			switch(UsbSetupBuf->wIndex.bw.bb1)
 			{
@@ -224,24 +247,6 @@ uint16_t U20_NonStandard_Request(void)
 				default:
 #if DEBUG_USB2_REQ
 					cprintf(" 01D:INVALID_REQ_CODE\n");
-#endif
-					return USB_DESCR_UNSUPPORTED;
-					break;
-			}
-			break;
-		case 0x02: // user-defined command
-			switch(UsbSetupBuf->wIndex.bw.bb1)
-			{
-				/*
-				    case 0x05:
-				        cprintf(" NS2:PropertyHeader\n");
-				        SetupLen = ( SetupReqLen > sizeof(PropertyHeader) )? sizeof(PropertyHeader):SetupReqLen;
-				        pDescr = (puint8_t)PropertyHeader;
-				        break;
-				*/
-				default:
-#if DEBUG_USB2_REQ
-					cprintf(" 02D:INVALID_REQ_CODE\n");
 #endif
 					return USB_DESCR_UNSUPPORTED;
 					break;
@@ -631,6 +636,7 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 				}
 				else if( rx_token == PID_OUT ) // Endpoint zero receive complete interrupt
 				{
+				    U20_EP0_OUT_Callback();
 					SetupLen -= SetupLen > R16_USB_RX_LEN ? R16_USB_RX_LEN :SetupLen;
 					if( SetupLen > 0 ) // There is still data to be received
 					{
@@ -650,63 +656,23 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 #if DEBUG_USB2_EPX
 				cprintf("EP1\n");
 #endif
-				if(rx_token == PID_IN)
-				{
-					//log_printf("EP1 IN\n");
-					pUEP1_TX_data += U20_MAXPACKET_LEN;
-					memcpy(endp1Tbuff, pUEP1_TX_data, U20_MAXPACKET_LEN);
-
-					// Flip the synchronization trigger bit to be sent next time bulk transfer data0 data1 flip back and forth
-					R32_UEP1_TX_DMA = (uint32_t)(uint8_t *)endp1Tbuff;
-					R8_UEP1_TX_CTRL ^= RB_UEP_T_TOG_1;
-
-					// The endpoint status is set to ACK, if the transmission length remains unchanged,
-					// there is no need to rewrite the R16_UEP1_T_LEN register
-					R8_UEP1_TX_CTRL = (R8_UEP1_TX_CTRL & ~RB_UEP_TRES_MASK) | UEP_T_RES_ACK;
-				}
-				else if(rx_token == PID_OUT)
-				{
-					if(EP1_OUT_seq_num == 0)
-					{
-						pUEP1_TX_data = (uint8_t *)endp1Tbuff;
-//						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
-					}
-					if(EP1_OUT_seq_num < 7)
-					{
-						pUEP1_RX_data += U20_MAXPACKET_LEN;
-						R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)pUEP1_RX_data;
-					}
-					EP1_OUT_seq_num++;
-					if(EP1_OUT_seq_num == 8) // 4096 Bytes Buffer (8x512 Bytes)
-					{
-//						usb_cmd_rx(USB_TYPE_USB2, endp1Rbuff, endp1Tbuff);
-						EP1_OUT_seq_num = 0;
-//						pUEP1_RX_data = (uint8_t *)endp1Rbuff;
-						R32_UEP1_RX_DMA = (uint32_t)(uint8_t *)pUEP1_RX_data;
-					}
-					R8_UEP1_RX_CTRL ^= RB_UEP_R_TOG_1;
-					R8_UEP1_RX_CTRL = (R8_UEP1_RX_CTRL &~RB_UEP_RRES_MASK)|UEP_R_RES_ACK;
-				}
-				break;
+                break;
 			case 2: /* Endpoint 2 */
 #if DEBUG_USB2_EPX
 				cprintf("EP2\n");
 #endif
 				if(rx_token == PID_IN)
 				{
-					// Flip the synchronization trigger bit to be sent next time bulk transfer data0 data1 flip back and forth
-					R32_UEP2_TX_DMA = (uint32_t)(uint8_t *)endp2RTbuff;
-					R8_UEP2_TX_CTRL ^= RB_UEP_T_TOG_1;
-
-					// The endpoint status is set to ACK, if the transmission length remains unchanged,
-					// there is no need to rewrite the R16_UEP2_T_LEN register
-					R8_UEP2_TX_CTRL = (R8_UEP2_TX_CTRL & ~RB_UEP_TRES_MASK) | UEP_T_RES_ACK;
+                   R16_UEP2_T_LEN = 0;
+                   R8_UEP2_TX_CTRL ^= RB_UEP_T_TOG_1;
+                   R8_UEP2_TX_CTRL = (R8_UEP2_TX_CTRL & ~RB_UEP_TRES_MASK) | UEP_T_RES_NAK;
+                   UploadPoint2_Busy = 0;
 				}
 				else if(rx_token == PID_OUT)
 				{
-					R32_UEP2_RX_DMA = (uint32_t)(uint8_t *)endp2RTbuff;
-					R8_UEP2_RX_CTRL ^= RB_UEP_R_TOG_1;
-					R8_UEP2_RX_CTRL = (R8_UEP2_RX_CTRL &~RB_UEP_RRES_MASK)|UEP_R_RES_ACK;
+                   USBByteCount = R16_USB_RX_LEN;
+                   R8_UEP2_RX_CTRL ^= RB_UEP_R_TOG_1;
+                   R8_UEP2_RX_CTRL = (R8_UEP2_RX_CTRL &~RB_UEP_RRES_MASK) | UEP_R_RES_NAK;
 				}
 				break;
 			default:
@@ -737,6 +703,8 @@ __attribute__((interrupt("WCH-Interrupt-fast"))) void USBHS_IRQHandler(void)
 	}
 }
 
+
+
 /*******************************************************************************
  * @fn       U20_Endp0_IN_Callback
  *
@@ -764,4 +732,46 @@ uint16_t U20_Endp0_IN_Callback(void)
 			break;
 	}
 	return len;
+}
+
+uint16_t U20_EP0_OUT_Callback(void)
+{
+    struct usb_cdc_line_coding coding;
+#if DEBUG_USB3_EP0
+  cprintf("USB3 EP0 OUT\n");
+#endif
+    if (u20_lineupdate == 1) {
+        u20_lineupdate = 0;
+        coding.bitrate = (uint32_t)(endp0RTbuff[0] | (endp0RTbuff[1] << 8) | (endp0RTbuff[2] << 16) | (endp0RTbuff[3] << 24));
+        vitrul_buad = coding.bitrate;
+        coding.stopbits = (endp0RTbuff[4]);
+    if (coding.stopbits == 2) {
+        coding.stopbits = 1;
+    }
+        
+    coding.parity = endp0RTbuff[5];
+    coding.databits = (endp0RTbuff[6]);
+#if DEBUG_USB3_EP0
+    cprintf("parity %02x %d\n", coding.parity, coding.parity);
+    cprintf("databits %02x %d\n", endp0RTbuff[6], coding.databits);
+#endif 
+    coding.databits = (coding.databits - 0x05);
+ 
+    CDC_reinit(vitrul_buad);
+    uint32_t serial = R8_UART2_LCR;
+    serial |= ((unsigned int)coding.databits << 0);
+    serial |= ((unsigned int)coding.stopbits << 2);
+    if (coding.parity >= 1) {
+        coding.parity = coding.parity - 1;  
+        serial |= ((unsigned int)1 << 3);
+        serial |= ((unsigned int)coding.parity << 4);
+    } else if (coding.parity == 0) {
+        serial &= ~((unsigned int)1 << 3);
+    }
+    R8_UART2_LCR = serial;
+    serial = R8_UART2_LCR;
+
+}
+    uint16_t len=0;
+    return len;
 }

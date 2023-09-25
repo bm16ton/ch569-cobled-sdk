@@ -36,6 +36,25 @@ volatile uint16_t Uart_Sendlenth = 0;         //USB upload data length
 void TMR2_IRQHandler (void) __attribute__((interrupt()));
 void UART2_IRQHandler (void) __attribute__((interrupt("WCH-Interrupt-fast")));
 
+
+void CDC_reinit( uint32_t baudrate )
+{
+    uint32_t x;
+    uint32_t t = FREQ_SYS;
+
+    PFIC_DisableIRQ( UART2_IRQn );
+    UART2_Reset();
+    x = 10 * t * 2 / 16 / baudrate;
+    x = ( x + 5 ) / 10;
+    R8_UART2_DIV = 1;
+    R16_UART2_DL = x;
+    R8_UART2_FCR = RB_FCR_FIFO_TRIG | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN;
+    R8_UART2_IER = RB_IER_TXD_EN;
+
+    UART2_ByteTrigCfg( UART_7BYTE_TRIG );
+    UART2_INTCfg( ENABLE, RB_IER_RECV_RDY|RB_IER_LINE_STAT );
+    PFIC_EnableIRQ( UART2_IRQn );
+}
 /*******************************************************************************
  * @fn        CDC_Uart_Init
  *
@@ -159,15 +178,18 @@ void U20_CDC_UartRx_Deal( void )
         Uart_Sendlenth = UartByteCount;
         if(Uart_Sendlenth>0)
         {
-
+//            printf("sendlength is greater then 0 \n");
             if( (Uart_Sendlenth >= (UART_REV_LEN/4)) || Uart_Timecount > UART_TIMEOUT )
             {
+//                printf("sendlength > uart-rev-len/4\n");
                 if(Uart_Output_Point+Uart_Sendlenth>UART_REV_LEN)
                 {
+//                    printf("Uart_Output_Point+Uart_Sendlenth>UART_REV_LEN\n");
                     Uart_Sendlenth = UART_REV_LEN - Uart_Output_Point;
                 }
                 if(Uart_Sendlenth > (UART_REV_LEN/4))
                 {
+//                    printf("Uart_Sendlenth > UART_REV_LEN/4\n");
                     Uart_Sendlenth = (UART_REV_LEN/4);
                 }
 
@@ -176,6 +198,7 @@ void U20_CDC_UartRx_Deal( void )
                 Uart_Output_Point+=Uart_Sendlenth;
                 if(Uart_Output_Point>=UART_REV_LEN)
                 {
+//                    printf("Uart_Output_Point>=UART_REV_LEN\n");
                     Uart_Output_Point = 0;
                 }
 

@@ -174,7 +174,7 @@ uint16_t USB30_NonStandardReq()
 #if DEBUG_USB3_REQ
   cprintf("length %d\n", UsbSetupBuf->wLength);
 
-  cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x \n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12], endp0RTbuff[13], endp0RTbuff[14], endp0RTbuff[15], endp0RTbuff[16], endp0RTbuff[17], endp0RTbuff[18], endp0RTbuff[19], endp0RTbuff[20], endp0RTbuff[21], endp0RTbuff[22], endp0RTbuff[23], endp0RTbuff[24], endp0RTbuff[25], endp0RTbuff[26],  endp0RTbuff[27], endp0RTbuff[28], endp0RTbuff[29], endp0RTbuff[30], endp0RTbuff[31], endp0RTbuff[32], endp0RTbuff[33], endp0RTbuff[34],  endp0RTbuff[35], endp0RTbuff[36], endp0RTbuff[37], endp0RTbuff[38], endp0RTbuff[39], endp0RTbuff[40], endp0RTbuff[41], endp0RTbuff[42], endp0RTbuff[43], endp0RTbuff[44], endp0RTbuff[45], endp0RTbuff[46],  endp0RTbuff[47], endp0RTbuff[48], endp0RTbuff[49], endp0RTbuff[50], endp0RTbuff[65], endp0RTbuff[66], endp0RTbuff[67], endp0RTbuff[68], endp0RTbuff[69],  endp0RTbuff[70]);
+  cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12]);
 
 cprintf("wIndex.bw.bb1 %d\n", UsbSetupBuf->wIndex.bw.bb1);
 cprintf("wValue %08x\n", UsbSetupBuf->wValue);
@@ -436,25 +436,6 @@ uint16_t EP0_IN_Callback(void)
  * @return length
  */
 
-void CDC_reinit( uint32_t baudrate )
-{
-    uint32_t x;
-    uint32_t t = FREQ_SYS;
-
-    PFIC_DisableIRQ( UART2_IRQn );
-    UART2_Reset();
-    x = 10 * t * 2 / 16 / baudrate;
-    x = ( x + 5 ) / 10;
-    R8_UART2_DIV = 1;
-    R16_UART2_DL = x;
-    R8_UART2_FCR = RB_FCR_FIFO_TRIG | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN;
-    R8_UART2_IER = RB_IER_TXD_EN;
-
-    UART2_ByteTrigCfg( UART_7BYTE_TRIG );
-    UART2_INTCfg( ENABLE, RB_IER_RECV_RDY|RB_IER_LINE_STAT );
-    PFIC_EnableIRQ( UART2_IRQn );
-}
-
 volatile int linechange = 0;
  
 uint16_t EP0_OUT_Callback(void)
@@ -464,8 +445,8 @@ struct usb_cdc_line_coding coding;
   cprintf("USB3 EP0 OUT\n");
 
 cprintf("out \n");
-cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x \n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12], endp0RTbuff[13], endp0RTbuff[14], endp0RTbuff[15], endp0RTbuff[16], endp0RTbuff[17], endp0RTbuff[18], endp0RTbuff[19], endp0RTbuff[20], endp0RTbuff[21], endp0RTbuff[22], endp0RTbuff[23], endp0RTbuff[24], endp0RTbuff[25], endp0RTbuff[26],  endp0RTbuff[27], endp0RTbuff[28], endp0RTbuff[29], endp0RTbuff[30], endp0RTbuff[31], endp0RTbuff[32], endp0RTbuff[33], endp0RTbuff[34],  endp0RTbuff[35], endp0RTbuff[36], endp0RTbuff[37], endp0RTbuff[38], endp0RTbuff[39], endp0RTbuff[40], endp0RTbuff[41], endp0RTbuff[42], endp0RTbuff[43], endp0RTbuff[44], endp0RTbuff[45], endp0RTbuff[46],  endp0RTbuff[47], endp0RTbuff[48], endp0RTbuff[49], endp0RTbuff[50], endp0RTbuff[65], endp0RTbuff[66], endp0RTbuff[67], endp0RTbuff[68], endp0RTbuff[69],  endp0RTbuff[70]);
-  cprintf("first 8 of endp buf = %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10]);    
+cprintf("NSU3:%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", endp0RTbuff[0], endp0RTbuff[1], endp0RTbuff[2], endp0RTbuff[3], endp0RTbuff[4], endp0RTbuff[5], endp0RTbuff[6], endp0RTbuff[7], endp0RTbuff[8], endp0RTbuff[9], endp0RTbuff[10], endp0RTbuff[11], endp0RTbuff[12]);
+   
 #endif
 if (lineupdate == 1) {
   lineupdate = 0;

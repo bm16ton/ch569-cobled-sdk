@@ -13,7 +13,7 @@
 
 
 //static uint32_t aux_serial_active_baud_rate;
-extern vuint32_t vitrul_buad;
+//extern vuint32_t vitrul_buad;
 /*******************************************************************************
  * @fn     UART0_init
  *
@@ -787,7 +787,7 @@ void usbuart_set_line_coding(struct usb_cdc_line_coding *coding) {
 
 void aux_serial_get_encoding(usb_cdc_line_coding_s *const coding)
 {
-	coding->bitrate = vitrul_buad;
+//	coding->bitrate = vitrul_buad;
 
 	switch (uart_get_stopbits(UART2)) {
 	case UART_STOPBITS_1:

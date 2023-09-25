@@ -94,7 +94,7 @@ int main()
 
   SystemInit(FREQ_SYS);
   Delay_Init(FREQ_SYS);
-struct usb_cdc_line_coding coding;
+
   DebugInit(115200);
   #if(defined DEBUG)
   /* Configure serial debugging for printf()/log_printf()... */
@@ -132,13 +132,7 @@ struct usb_cdc_line_coding coding;
 
   while (1) {
     CDC_Uart_Deal();
-    if (linechange == 1) {
-    R8_UART_LCR(UART2) = R8_UART_LCR(UART2) |= coding.stopbits << 2;
-    R8_UART_LCR(UART2) = R8_UART_LCR(UART2) |= coding.databits;
-    cprintf("get stopbits = %02x\n", uart_get_stopbits(UART2));
-    cprintf("get data bits = %02x\n", uart_get_databits(UART2));
-    linechange = 0;
-  }
+
  }
 }
 
